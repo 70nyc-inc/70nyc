@@ -78,7 +78,31 @@
   const sections = document.querySelectorAll('section[id], main > section');
   const navLinks = document.querySelectorAll('.nav a');
 
+  function normalizePath(pathname) {
+    var path = pathname.replace(/\/index\.html$/, '');
+    if (path.length > 1 && path.endsWith('/')) {
+      path = path.slice(0, -1);
+    }
+    return path || '/';
+  }
+
   function highlightNav() {
+    if (document.body.classList.contains('page-sub')) {
+      var currentPath = normalizePath(window.location.pathname);
+      navLinks.forEach(function (link) {
+        var href = link.getAttribute('href');
+        if (!href || href.charAt(0) === '#') return;
+        var linkPath;
+        try {
+          linkPath = normalizePath(new URL(href, window.location.origin).pathname);
+        } catch (e) {
+          return;
+        }
+        link.classList.toggle('active', linkPath === currentPath);
+      });
+      return;
+    }
+
     let current = '';
     sections.forEach(function (section) {
       const top = section.offsetTop - 120;
@@ -88,8 +112,11 @@
     });
 
     navLinks.forEach(function (link) {
-      const href = link.getAttribute('href').slice(1);
-      link.classList.toggle('active', href === current || (href === 'home' && current === 'home'));
+      const dataNav = link.getAttribute('data-nav');
+      const href = link.getAttribute('href') || '';
+      const hashId = href.charAt(0) === '#' ? href.slice(1) : '';
+      const matchId = dataNav || hashId;
+      link.classList.toggle('active', matchId === current || (matchId === 'home' && (current === 'home' || !current)));
     });
   }
 

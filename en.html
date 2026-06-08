@@ -52,28 +52,38 @@
     "sameAs":["https://70nyc.com/","https://70nyc.com/en.html"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type": "SiteNavigationElement", "name": "Home", "url": "https://70nyc.com/en.html"},
+      {"@type": "SiteNavigationElement", "name": "Services", "url": "https://70nyc.com/en/services/"},
+      {"@type": "SiteNavigationElement", "name": "Process", "url": "https://70nyc.com/en/process/"},
+      {"@type": "SiteNavigationElement", "name": "About", "url": "https://70nyc.com/en/about/"},
+      {"@type": "SiteNavigationElement", "name": "FAQ", "url": "https://70nyc.com/en/faq/"},
+      {"@type": "SiteNavigationElement", "name": "Contact", "url": "https://70nyc.com/en/contact/"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header" id="header">
-    <a class="logo" href="#home"><span>70</span>NYC<small>NYC Digital Marketing</small></a>
+    <a class="logo" href="/en.html"><span>70</span>NYC<small>NYC Digital Marketing</small></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="#home" class="active">Home</a>
-      <a href="#services">Web Design</a>
-      <a href="#seo">SEO</a>
-      <a href="#ads">Google Ads</a>
-      <a href="#ai">AI Marketing</a>
-      <a href="#social">Social Media</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="/en.html" data-nav="home" class="active">Home</a>
+      <a href="/en/services/" data-nav="services">Services</a>
+      <a href="/en/process/" data-nav="process">Process</a>
+      <a href="/en/about/" data-nav="about">About</a>
+      <a href="/en/faq/" data-nav="faq">FAQ</a>
+      <a href="/en/contact/" data-nav="contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a class="lang-switch" href="index.html" hreflang="zh-CN">中文</a>
+      <a class="lang-switch" href="/" hreflang="zh-CN">中文</a>
       <a class="phone" href="tel:3863161848">386-316-1848</a>
-      <a class="btn btn-gold" href="#contact">Free Consult</a>
+      <a class="btn btn-gold" href="/en/contact/">Free Consult</a>
     </div>
   </header>
 
@@ -891,20 +901,20 @@
       </div>
       <nav class="footer-col" aria-label="About">
         <b>About</b>
-        <a href="#about">About Us</a>
-        <a href="#about">Our Team</a>
-        <a href="#contact">Contact</a>
-        <a href="#faq">FAQ</a>
+        <a href="/en/about/">About Us</a>
+        <a href="/en/about/">Our Team</a>
+        <a href="/en/contact/">Contact</a>
+        <a href="/en/faq/">FAQ</a>
       </nav>
       <nav class="footer-col" aria-label="Services">
         <b>Services</b>
-        <a href="#web">Web Design & Development</a>
-        <a href="#app">Mobile App Development</a>
-        <a href="#ads">Digital Advertising</a>
-        <a href="#seo">SEO</a>
-        <a href="#industries">Restaurant Websites</a>
-        <a href="#process">Our Process</a>
-        <a href="sitemap.xml">Sitemap</a>
+        <a href="/en/services/#web">Web Design &amp; Development</a>
+        <a href="/en/services/#app">Mobile App Development</a>
+        <a href="/en/services/#ads">Digital Advertising</a>
+        <a href="/en/services/#seo">SEO</a>
+        <a href="/en/services/#social">Social Media</a>
+        <a href="/en/process/">Our Process</a>
+        <a href="/sitemap.xml">Sitemap</a>
       </nav>
     </div>
     <p class="footer-seo">

@@ -1,53 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://70nyc.com/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en.html" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://70nyc.com/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en.html" />
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://70nyc.com/en</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://70nyc.com/#web</loc>
+    <loc>https://70nyc.com/services/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://70nyc.com/#app</loc>
+    <loc>https://70nyc.com/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/process/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/process/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/process/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/process/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/process/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/process/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/about/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/about/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/faq/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://70nyc.com/#seo</loc>
+    <loc>https://70nyc.com/en/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/faq/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://70nyc.com/#ads</loc>
+    <loc>https://70nyc.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/contact/" />
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://70nyc.com/#about</loc>
+    <loc>https://70nyc.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/contact/" />
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://70nyc.com/#industries</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://70nyc.com/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>

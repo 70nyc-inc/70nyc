@@ -3058,8 +3058,10 @@ img, video { display: block; max-width: 100%; }
   background:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(155deg, #1c1c1c 0%, var(--black) 48%, #0d0d0d 100%);
+    linear-gradient(155deg, rgba(28, 28, 28, 0.72) 0%, rgba(10, 10, 10, 0.76) 48%, rgba(13, 13, 13, 0.74) 100%);
   background-size: 28px 28px, 28px 28px, 100% 100%;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -3088,14 +3090,22 @@ img, video { display: block; max-width: 100%; }
 .faq-list {
   display: grid;
   gap: 10px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  background: rgba(10, 10, 10, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .faq-item {
   background:
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(155deg, #1c1c1c 0%, var(--black) 48%, #0d0d0d 100%);
+    linear-gradient(155deg, rgba(28, 28, 28, 0.72) 0%, rgba(10, 10, 10, 0.76) 48%, rgba(13, 13, 13, 0.74) 100%);
   background-size: 28px 28px, 28px 28px, 100% 100%;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: var(--radius);
   overflow: hidden;
@@ -3812,12 +3822,27 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
 
   .service-card,
   .process-card,
+  .faq-contact-card,
+  .faq-list,
   .faq-item,
   .testimonial-card,
   .industry-card,
   .matrix-item {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+  }
+
+  .faq-contact-card,
+  .faq-item {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(155deg, rgba(28, 28, 28, 0.88) 0%, rgba(10, 10, 10, 0.9) 48%, rgba(13, 13, 13, 0.88) 100%);
+    background-size: 28px 28px, 28px 28px, 100% 100%;
+  }
+
+  .faq-list {
+    background: rgba(10, 10, 10, 0.28);
   }
 
   .stats { flex-direction: column; }
@@ -3861,4 +3886,9 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
   .header-cta .phone { display: none; }
+}
+
+/* ── SEO landing pages (no hero) ── */
+body.page-sub main {
+  padding-top: var(--header-h);
 }

@@ -52,28 +52,62 @@
     "sameAs":["https://70nyc.com/"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SiteNavigationElement",
+        "name": "首页",
+        "url": "https://70nyc.com/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "服务",
+        "url": "https://70nyc.com/services/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "项目流程",
+        "url": "https://70nyc.com/process/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "关于我们",
+        "url": "https://70nyc.com/about/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "FAQ",
+        "url": "https://70nyc.com/faq/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "联系我们",
+        "url": "https://70nyc.com/contact/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header" id="header">
-    <a class="logo" href="#home"><span>70</span>NYC<small>纽约数字营销专家</small></a>
+    <a class="logo" href="/"><span>70</span>NYC<small>纽约数字营销专家</small></a>
     <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="#home" class="active">首页</a>
-      <a href="#services">网站建设</a>
-      <a href="#seo">SEO优化</a>
-      <a href="#ads">谷歌广告</a>
-      <a href="#ai">AI智能营销</a>
-      <a href="#social">社交媒体</a>
-      <a href="#process">项目流程</a>
-      <a href="#about">关于我们</a>
-      <a href="#contact">联系我们</a>
+      <a href="/" data-nav="home" class="active">首页</a>
+      <a href="/services/" data-nav="services">服务</a>
+      <a href="/process/" data-nav="process">流程</a>
+      <a href="/about/" data-nav="about">关于我们</a>
+      <a href="/faq/" data-nav="faq">FAQ</a>
+      <a href="/contact/" data-nav="contact">联系我们</a>
     </nav>
     <div class="header-cta">
-      <a class="lang-switch" href="en.html" hreflang="en">EN</a>
+      <a class="lang-switch" href="/en.html" hreflang="en">EN</a>
       <a class="phone" href="tel:3863161848">386-316-1848</a>
-      <a class="btn btn-gold" href="#contact">免费咨询</a>
+      <a class="btn btn-gold" href="/contact/">免费咨询</a>
     </div>
   </header>
 
@@ -891,20 +925,20 @@
       </div>
       <nav class="footer-col" aria-label="关于我们">
         <b>关于我们</b>
-        <a href="#about">了解我们</a>
-        <a href="#about">我们的团队</a>
-        <a href="#contact">联系我们</a>
-        <a href="#faq">常见问题</a>
+        <a href="/about/">了解我们</a>
+        <a href="/about/">我们的团队</a>
+        <a href="/contact/">联系我们</a>
+        <a href="/faq/">常见问题</a>
       </nav>
       <nav class="footer-col" aria-label="我们的服务">
         <b>关于我们的服务</b>
-        <a href="#web">网页设计与网站开发</a>
-        <a href="#app">手机应用开发与设计</a>
-        <a href="#ads">专业广告推广服务</a>
-        <a href="#seo">SEO 优化</a>
-        <a href="#industries">餐馆网站设计</a>
-        <a href="#process">项目流程</a>
-        <a href="sitemap.xml">网站地图</a>
+        <a href="/services/#web">网页设计与网站开发</a>
+        <a href="/services/#app">手机应用开发与设计</a>
+        <a href="/services/#ads">专业广告推广服务</a>
+        <a href="/services/#seo">SEO 优化</a>
+        <a href="/services/#social">社交媒体管理</a>
+        <a href="/process/">项目流程</a>
+        <a href="/sitemap.xml">网站地图</a>
       </nav>
     </div>
     <p class="footer-seo">
