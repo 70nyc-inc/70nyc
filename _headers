@@ -10,9 +10,6 @@
 /favicon.svg
   Cache-Control: public, max-age=86400
 
-/*.mov
-  Cache-Control: public, max-age=604800
-
 /*.png
   Cache-Control: public, max-age=604800
 

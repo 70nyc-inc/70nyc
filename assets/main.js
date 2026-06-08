@@ -75,6 +75,16 @@
     });
   }
 
+  document.querySelectorAll('.lang-switch').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var href = link.getAttribute('href') || '';
+      var goingEn = /\/en(\/|\.html)/.test(href) || href === 'en.html';
+      try {
+        localStorage.setItem('70nyc-lang', goingEn ? 'en' : 'zh');
+      } catch (e) {}
+    });
+  });
+
   const sections = document.querySelectorAll('section[id], main > section');
   const navLinks = document.querySelectorAll('.nav a');
 
