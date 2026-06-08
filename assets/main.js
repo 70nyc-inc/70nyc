@@ -186,6 +186,16 @@
   initDandelionEmbers(document.querySelector('.services-bg'));
   initDandelionEmbers(document.querySelector('.faq-bg'));
 
+  if (window.location.search.indexOf('success=1') !== -1) {
+    var formSuccess = document.getElementById('formSuccess');
+    if (formSuccess) {
+      formSuccess.hidden = false;
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+      }
+    }
+  }
+
   var revealEls = document.querySelectorAll('.testimonial-card.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
