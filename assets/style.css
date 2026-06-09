@@ -3705,6 +3705,42 @@ img, video { display: block; max-width: 100%; }
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
+  .site-header.on-light .logo,
+  .site-header.on-light .nav a,
+  .site-header.on-light .phone {
+    color: var(--white);
+  }
+
+  .site-header.on-light .logo small {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .site-header.on-light .nav a:hover,
+  .site-header.on-light .nav a.active {
+    color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .site-header.on-light .lang-switch {
+    border-color: rgba(255, 255, 255, 0.28);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .site-header.on-light .lang-switch:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.45);
+    color: var(--white);
+  }
+
+  .site-header.on-light .menu-toggle span {
+    background: var(--white);
+  }
+
+  .site-header.on-light.scrolled {
+    background: rgba(10, 10, 10, 0.82);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
   .nav {
     display: none;
     position: fixed;
