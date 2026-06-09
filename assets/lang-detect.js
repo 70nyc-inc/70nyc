@@ -14,7 +14,10 @@
   }
 
   function toEnglishPath(path) {
-    if (path === '/') return '/en/';
+    if (path === '/' || path === '/en') return '/en/';
+    if (isEnglishPath(path)) {
+      return path === '/en' ? '/en/' : path;
+    }
     return '/en' + path;
   }
 
@@ -22,6 +25,10 @@
     if (path === '/en') return '/';
     if (path.indexOf('/en/') === 0) return path.slice(3) || '/';
     return '/';
+  }
+
+  function samePath(a, b) {
+    return normalizePath(a) === normalizePath(b);
   }
 
   function prefersEnglish() {
@@ -64,7 +71,7 @@
     target = toChinesePath(path);
   }
 
-  if (target && target !== path) {
+  if (target && !samePath(target, path)) {
     window.location.replace(target + window.location.search + window.location.hash);
   }
 })();
