@@ -260,6 +260,9 @@ img, video { display: block; max-width: 100%; }
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .hero-overlay {

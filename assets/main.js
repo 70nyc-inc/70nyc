@@ -15,10 +15,22 @@
     document.documentElement.classList.add('perf-lite');
   }
 
+  function heroVideoSrc() {
+    var dpr = window.devicePixelRatio || 1;
+    if (dpr >= 1.5 || window.innerWidth <= 1024) {
+      return '/assets/hero-nyc-1080.mp4';
+    }
+    return '/assets/hero-nyc.mp4';
+  }
+
   if (video && hero) {
     video.muted = true;
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
+
+    if (!skipHeroVideo) {
+      video.src = heroVideoSrc();
+    }
 
     function enableStaticHero() {
       hero.classList.add('hero--static');
