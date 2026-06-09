@@ -7,27 +7,27 @@
   <meta name="description" content="70NYC is a New York web design and development agency serving Manhattan, Flushing, Brooklyn, and Long Island. Web design, mobile apps, restaurant websites, SEO, and Google Ads." />
   <meta name="keywords" content="NYC web design, New York web design, Manhattan web design, Flushing web design, Brooklyn web design, Long Island web design, website development, mobile app development, restaurant website, SEO, Google Ads" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="canonical" href="https://70nyc.com/en.html" />
+  <link rel="canonical" href="https://70nyc.com/en/" />
   <link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/" />
-  <link rel="alternate" hreflang="en" href="https://70nyc.com/en.html" />
+  <link rel="alternate" hreflang="en" href="https://70nyc.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://70nyc.com/" />
   <meta property="og:title" content="70NYC | NYC Web Design &amp; Development" />
   <meta property="og:description" content="New York web design and digital marketing for local businesses — web development, mobile apps, SEO, and Google Ads." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://70nyc.com/en.html" />
+  <meta property="og:url" content="https://70nyc.com/en/" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="zh_CN" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="/assets/style.css" />
   <script src="/assets/lang-detect.js"></script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"70NYC",
-    "url":"https://70nyc.com/en.html",
+    "url":"https://70nyc.com/en/",
     "telephone":"+1-386-316-1848",
     "areaServed":[
       {"@type":"City","name":"New York"},
@@ -50,14 +50,14 @@
         {"@type":"Offer","itemOffered":{"@type":"Service","name":"SEO & Google Ads"}}
       ]
     },
-    "sameAs":["https://70nyc.com/","https://70nyc.com/en.html"]
+    "sameAs":["https://70nyc.com/","https://70nyc.com/en/"]
   }
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {"@type": "SiteNavigationElement", "name": "Home", "url": "https://70nyc.com/en.html"},
+      {"@type": "SiteNavigationElement", "name": "Home", "url": "https://70nyc.com/en/"},
       {"@type": "SiteNavigationElement", "name": "Services", "url": "https://70nyc.com/en/services/"},
       {"@type": "SiteNavigationElement", "name": "Process", "url": "https://70nyc.com/en/process/"},
       {"@type": "SiteNavigationElement", "name": "About", "url": "https://70nyc.com/en/about/"},
@@ -69,12 +69,12 @@
 </head>
 <body>
   <header class="site-header" id="header">
-    <a class="logo" href="/en.html"><span>70</span>NYC<small>NYC Digital Marketing</small></a>
+    <a class="logo" href="/en/"><span>70</span>NYC<small>NYC Digital Marketing</small></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="/en.html" data-nav="home" class="active">Home</a>
+      <a href="/en/" data-nav="home" class="active">Home</a>
       <a href="/en/services/" data-nav="services">Services</a>
       <a href="/en/process/" data-nav="process">Process</a>
       <a href="/en/about/" data-nav="about">About</a>
@@ -879,16 +879,21 @@
         <h2>Get a Free Consultation Today</h2>
         <p>Let us build a custom digital marketing plan to win more customers.</p>
         <a class="phone-large" href="tel:3863161848">386-316-1848</a>
+        <article class="cta-wechat-card industry-card">
+          <div class="industry-card-shine"></div>
+          <img src="assets/wechat-qr.png" alt="70NYC WeChat QR code" width="168" height="168" />
+          <p class="cta-wechat-id">WeChat ID: <strong>i70nyc</strong></p>
+        </article>
       </div>
       <p class="lead-form-success" id="formSuccess" role="status" hidden>Thank you! We've received your inquiry and will be in touch soon.</p>
       <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="9b59acbd-6695-47a6-8bca-9a3a61bace8c" />
         <input type="hidden" name="subject" value="70NYC Website Inquiry (English)" />
-        <input type="hidden" name="redirect" value="https://70nyc.com/en.html?success=1#contact" />
+        <input type="hidden" name="redirect" value="https://70nyc.com/en/?success=1#contact" />
         <input type="checkbox" name="botcheck" class="lead-form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="text" name="name" placeholder="Your name" aria-label="Name" required />
         <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone" required />
-        <input type="text" name="need" placeholder="Your needs" aria-label="Needs" />
+        <textarea name="need" class="lead-form-need" placeholder="Your needs" aria-label="Needs" rows="3"></textarea>
         <button class="btn btn-primary" type="submit">Submit →</button>
       </form>
     </section>

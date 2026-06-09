@@ -10,16 +10,16 @@
   }
 
   function isEnglishPath(path) {
-    return path === '/en.html' || path.indexOf('/en/') === 0;
+    return path === '/en' || path.indexOf('/en/') === 0;
   }
 
   function toEnglishPath(path) {
-    if (path === '/') return '/en.html';
+    if (path === '/') return '/en/';
     return '/en' + path;
   }
 
   function toChinesePath(path) {
-    if (path === '/en.html') return '/';
+    if (path === '/en') return '/';
     if (path.indexOf('/en/') === 0) return path.slice(3) || '/';
     return '/';
   }

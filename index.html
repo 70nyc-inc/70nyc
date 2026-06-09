@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://70nyc.com/" />
   <link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/" />
-  <link rel="alternate" hreflang="en" href="https://70nyc.com/en.html" />
+  <link rel="alternate" hreflang="en" href="https://70nyc.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://70nyc.com/" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -106,7 +106,7 @@
       <a href="/contact/" data-nav="contact">联系我们</a>
     </nav>
     <div class="header-cta">
-      <a class="lang-switch" href="/en.html" hreflang="en">EN</a>
+      <a class="lang-switch" href="/en/" hreflang="en">EN</a>
       <a class="phone" href="tel:3863161848">386-316-1848</a>
       <a class="btn btn-gold" href="/contact/">免费咨询</a>
     </div>
@@ -903,6 +903,11 @@
         <h2>立即获得免费咨询</h2>
         <p>让我们帮您制定专属数字营销方案，赢得更多客户！</p>
         <a class="phone-large" href="tel:3863161848">386-316-1848</a>
+        <article class="cta-wechat-card industry-card">
+          <div class="industry-card-shine"></div>
+          <img src="assets/wechat-qr.png" alt="70NYC 微信二维码" width="168" height="168" />
+          <p class="cta-wechat-id">WeChat ID: <strong>i70nyc</strong></p>
+        </article>
       </div>
       <p class="lead-form-success" id="formSuccess" role="status" hidden>感谢您的咨询！我们已收到信息，会尽快与您联系。</p>
       <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
@@ -912,7 +917,7 @@
         <input type="checkbox" name="botcheck" class="lead-form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="text" name="name" placeholder="您的姓名" aria-label="姓名" required />
         <input type="tel" name="phone" placeholder="联系电话" aria-label="电话" required />
-        <input type="text" name="need" placeholder="您的需求" aria-label="需求" />
+        <textarea name="need" class="lead-form-need" placeholder="您的需求" aria-label="需求" rows="3"></textarea>
         <button class="btn btn-primary" type="submit">立即提交 →</button>
       </form>
     </section>

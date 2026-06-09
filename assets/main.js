@@ -48,12 +48,15 @@
     }
   }
 
+  const pageSeoHero = document.querySelector('.page-seo-hero');
+
   function updateHeader() {
-    const heroBottom = hero ? hero.offsetHeight : 0;
+    const topSection = hero || pageSeoHero;
+    const sectionBottom = topSection ? topSection.offsetHeight : 0;
     const scrollY = window.scrollY;
 
     header.classList.toggle('scrolled', scrollY > 40);
-    header.classList.toggle('on-light', scrollY > heroBottom - header.offsetHeight);
+    header.classList.toggle('on-light', topSection && scrollY > sectionBottom - header.offsetHeight);
   }
 
   window.addEventListener('scroll', updateHeader, { passive: true });
@@ -78,7 +81,7 @@
   document.querySelectorAll('.lang-switch').forEach(function (link) {
     link.addEventListener('click', function () {
       var href = link.getAttribute('href') || '';
-      var goingEn = /\/en(\/|\.html)/.test(href) || href === 'en.html';
+      var goingEn = /\/en(\/|$)/.test(href);
       try {
         localStorage.setItem('70nyc-lang', goingEn ? 'en' : 'zh');
       } catch (e) {}
