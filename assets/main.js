@@ -78,14 +78,25 @@
     });
   }
 
+  function saveLangFromSwitch(link) {
+    var href = link.getAttribute('href') || '';
+    var paramMatch = href.match(/[?&]lang=(zh|en)(?:&|$)/);
+    try {
+      if (paramMatch) {
+        localStorage.setItem('70nyc-lang', paramMatch[1]);
+        return;
+      }
+      localStorage.setItem('70nyc-lang', /\/en(\/|$)/.test(href) ? 'en' : 'zh');
+    } catch (e) {}
+  }
+
   document.querySelectorAll('.lang-switch').forEach(function (link) {
-    link.addEventListener('click', function () {
-      var href = link.getAttribute('href') || '';
-      var goingEn = /\/en(\/|$)/.test(href);
-      try {
-        localStorage.setItem('70nyc-lang', goingEn ? 'en' : 'zh');
-      } catch (e) {}
+    link.addEventListener('mousedown', function () {
+      saveLangFromSwitch(link);
     });
+    link.addEventListener('touchstart', function () {
+      saveLangFromSwitch(link);
+    }, { passive: true });
   });
 
   const sections = document.querySelectorAll('section[id], main > section');

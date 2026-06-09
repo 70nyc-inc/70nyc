@@ -31,6 +31,21 @@
     return normalizePath(a) === normalizePath(b);
   }
 
+  function applyLangParam() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var langParam = params.get('lang');
+      if (langParam !== 'zh' && langParam !== 'en') return;
+      localStorage.setItem(KEY, langParam);
+      params.delete('lang');
+      var qs = params.toString();
+      var clean = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+      if (window.history.replaceState) {
+        window.history.replaceState(null, '', clean);
+      }
+    } catch (e) {}
+  }
+
   function prefersEnglish() {
     var saved = null;
     try {
@@ -59,6 +74,8 @@
     if (hasEn && !hasZh) return true;
     return false;
   }
+
+  applyLangParam();
 
   var path = normalizePath(window.location.pathname);
   var onEnglish = isEnglishPath(path);

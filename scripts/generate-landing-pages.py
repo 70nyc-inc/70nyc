@@ -432,10 +432,12 @@ def nav_html(nav_items, active: str, lang: str, slug: str) -> str:
         cls = ' class="active"' if key == active else ""
         data = f' data-nav="{key}"' if key != active or True else ""
         links.append(f'      <a href="{href}"{data}{cls}>{label}</a>')
+    zh_path = "/" if slug == "home" else f"/{slug}/"
+    en_path = "/en/" if slug == "home" else f"/en/{slug}/"
     lang_switch = (
-        '<a class="lang-switch" href="/en/" hreflang="en">EN</a>'
+        f'<a class="lang-switch" href="{en_path}?lang=en" hreflang="en">EN</a>'
         if lang == "zh"
-        else '<a class="lang-switch" href="/" hreflang="zh-CN">中文</a>'
+        else f'<a class="lang-switch" href="{zh_path}?lang=zh" hreflang="zh-CN">中文</a>'
     )
     consult_href = "/contact/" if lang == "zh" else "/en/contact/"
     consult_label = "免费咨询" if lang == "zh" else "Free Consult"
@@ -627,7 +629,7 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/style.css" />
-  <script src="/assets/lang-detect.js?v=2"></script>
+  <script src="/assets/lang-detect.js?v=3"></script>
 {extra_schema}
 </head>
 <body class="page-sub">
@@ -642,7 +644,7 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
 
 {footer_html(lang)}
 
-  <script src="/assets/main.js"></script>
+  <script src="/assets/main.js?v=2"></script>
 </body>
 </html>
 """
