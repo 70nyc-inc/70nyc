@@ -629,7 +629,7 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/style.css" />
-  <script src="/assets/lang-detect.js?v=3"></script>
+  <script src="/assets/lang-detect.js?v=4"></script>
 {extra_schema}
 </head>
 <body class="page-sub">

@@ -1,6 +1,11 @@
 (function () {
   var KEY = '70nyc-lang';
 
+  function isCrawler() {
+    var ua = navigator.userAgent || '';
+    return /bot|crawl|spider|slurp|mediapartners|googlebot|bingbot|yandex|baiduspider|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|applebot|semrushbot|ahrefsbot|mj12bot|dotbot|petalbot|bytespider/i.test(ua);
+  }
+
   function normalizePath(pathname) {
     var path = pathname.replace(/\/index\.html$/, '');
     if (path.length > 1 && path.endsWith('/')) {
@@ -74,6 +79,8 @@
     if (hasEn && !hasZh) return true;
     return false;
   }
+
+  if (isCrawler()) return;
 
   applyLangParam();
 
