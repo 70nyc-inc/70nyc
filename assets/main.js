@@ -17,7 +17,7 @@
 
   function heroVideoSrc() {
     if (window.innerWidth <= 768) {
-      return '/assets/hero-nyc-mobile.mp4';
+      return '/assets/mobile.mp4';
     }
     if ((window.devicePixelRatio || 1) >= 1.5) {
       return '/assets/hero-nyc-1080.mp4';
