@@ -474,7 +474,6 @@ def footer_html(lang: str) -> str:
         <a href="/about/">我们的团队</a>
         <a href="/contact/">联系我们</a>
         <a href="/faq/">常见问题</a>
-        <a href="https://blog.70nyc.com/">博客</a>
       </nav>
       <nav class="footer-col" aria-label="我们的服务">
         <b>关于我们的服务</b>
@@ -510,7 +509,6 @@ def footer_html(lang: str) -> str:
         <a href="/en/about/">Our Team</a>
         <a href="/en/contact/">Contact</a>
         <a href="/en/faq/">FAQ</a>
-        <a href="https://blog.70nyc.com/">Blog</a>
       </nav>
       <nav class="footer-col" aria-label="Services">
         <b>Our Services</b>
