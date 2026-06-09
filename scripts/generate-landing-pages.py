@@ -310,8 +310,7 @@ HERO_DECO = {
 def seo_intro_html(lang: str, slug: str, seo: dict, breadcrumb: str) -> str:
     home_href = "/" if lang == "zh" else "/en/"
     home_label = "首页" if lang == "zh" else "Home"
-    contact_href = "/contact/" if lang == "zh" else "/en/contact/"
-    hero_cta_href = "#contact" if slug == "contact" else contact_href
+    contact_href = "#contact" if slug == "contact" else ("/contact/" if lang == "zh" else "/en/contact/")
     cta_label = "预约免费咨询" if lang == "zh" else "Book Free Consult"
     tags = "".join(f"<span>{t}</span>" for t in seo["tags"])
     stats = "".join(
@@ -335,7 +334,7 @@ def seo_intro_html(lang: str, slug: str, seo: dict, breadcrumb: str) -> str:
           <h1>{seo['h1']}</h1>
           <p class="page-seo-lead">{seo['lead']}</p>
           <div class="page-seo-hero-actions">
-            <a class="btn btn-primary" href="{hero_cta_href}">{cta_label} →</a>
+            <a class="btn btn-primary" href="{contact_href}">{cta_label} →</a>
           </div>
         </div>
         <div class="page-seo-stats" aria-label="{'关键数据' if lang == 'zh' else 'Key figures'}">{stats}</div>
@@ -440,7 +439,7 @@ def nav_html(nav_items, active: str, lang: str, slug: str) -> str:
         if lang == "zh"
         else f'<a class="lang-switch" href="{zh_path}?lang=zh" hreflang="zh-CN">中文</a>'
     )
-    consult_href = "/contact/" if lang == "zh" else "/en/contact/"
+    consult_href = "#contact" if slug == "contact" else ("/contact/" if lang == "zh" else "/en/contact/")
     consult_label = "免费咨询" if lang == "zh" else "Free Consult"
     logo_small = "纽约数字营销专家" if lang == "zh" else "NYC Digital Marketing"
     home_href = "/" if lang == "zh" else "/en/"
