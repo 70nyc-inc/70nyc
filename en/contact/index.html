@@ -17,6 +17,9 @@
   <meta property="og:description" content="Get a free consultation for NYC web design, SEO, and Google Ads. Call 386-316-1848 — serving Manhattan, Flushing, Brooklyn, and Long Island." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://70nyc.com/en/contact/" />
+  <meta property="og:image" content="https://70nyc.com/assets/nyc-hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://70nyc.com/assets/nyc-hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
@@ -94,8 +97,9 @@
       <p class="lead-form-success" id="formSuccess" role="status" hidden>Thank you! We've received your inquiry and will be in touch soon.</p>
       <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="9b59acbd-6695-47a6-8bca-9a3a61bace8c" />
-        <input type="hidden" name="subject" value="70NYC Website Inquiry (English)" />
-        <input type="hidden" name="redirect" value="https://70nyc.com/en/contact/?success=1" />
+        <input type="hidden" name="subject" value="70NYC Website Inquiry (EN)" />
+        <input type="hidden" name="from_name" value="70NYC Website Form" />
+        <input type="hidden" name="redirect" value="https://70nyc.com/en/contact/?success=1#contact" />
         <input type="checkbox" name="botcheck" class="lead-form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="text" name="name" placeholder="Your name" aria-label="Name" required />
         <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone" required />
@@ -175,6 +179,7 @@
         <a href="/en/about/">Our Team</a>
         <a href="/en/contact/">Contact</a>
         <a href="/en/faq/">FAQ</a>
+        <a href="https://blog.70nyc.com/">Blog</a>
       </nav>
       <nav class="footer-col" aria-label="Services">
         <b>Our Services</b>
@@ -195,6 +200,6 @@
     </div>
   </footer>
 
-  <script src="/assets/main.js?v=7"></script>
+  <script src="/assets/main.js?v=8"></script>
 </body>
 </html>

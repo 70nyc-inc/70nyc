@@ -92,7 +92,7 @@ PAGES = [
             "breadcrumb": "免费咨询",
             "hreflang_en": "https://70nyc.com/en/contact/",
             "form_subject": "70NYC 网站咨询（中文）",
-            "form_redirect": "https://70nyc.com/contact/?success=1",
+            "form_redirect": "https://70nyc.com/contact/?success=1#contact",
         },
         "en": {
             "title": "Contact 70NYC | Free NYC Web Design Consultation",
@@ -101,7 +101,7 @@ PAGES = [
             "breadcrumb": "Contact Us",
             "hreflang_zh": "https://70nyc.com/contact/",
             "form_subject": "70NYC Website Inquiry (English)",
-            "form_redirect": "https://70nyc.com/en/contact/?success=1",
+            "form_redirect": "https://70nyc.com/en/contact/?success=1#contact",
         },
     },
 ]
@@ -416,12 +416,12 @@ def patch_section(body: str, lang: str, slug: str) -> str:
         if lang == "zh":
             body = body.replace(
                 'value="https://70nyc.com/?success=1#contact"',
-                'value="https://70nyc.com/contact/?success=1"',
+                'value="https://70nyc.com/contact/?success=1#contact"',
             )
         else:
             body = body.replace(
                 'value="https://70nyc.com/en/?success=1#contact"',
-                'value="https://70nyc.com/en/contact/?success=1"',
+                'value="https://70nyc.com/en/contact/?success=1#contact"',
             )
     return body
 
@@ -474,6 +474,7 @@ def footer_html(lang: str) -> str:
         <a href="/about/">我们的团队</a>
         <a href="/contact/">联系我们</a>
         <a href="/faq/">常见问题</a>
+        <a href="https://blog.70nyc.com/">博客</a>
       </nav>
       <nav class="footer-col" aria-label="我们的服务">
         <b>关于我们的服务</b>
@@ -501,7 +502,7 @@ def footer_html(lang: str) -> str:
     <div class="footer-main">
       <div class="footer-brand">
         <div class="logo"><span>70</span>NYC<small>NYC Digital Marketing</small></div>
-        <p>New York web design and development agency — web design, mobile apps, restaurant websites, graphic design, advertising, and SEO for local businesses.</p>
+        <p>NYC web design and development team — web design, mobile apps, graphic design, restaurant websites, advertising, and SEO for local businesses.</p>
       </div>
       <nav class="footer-col" aria-label="About">
         <b>About</b>
@@ -509,6 +510,7 @@ def footer_html(lang: str) -> str:
         <a href="/en/about/">Our Team</a>
         <a href="/en/contact/">Contact</a>
         <a href="/en/faq/">FAQ</a>
+        <a href="https://blog.70nyc.com/">Blog</a>
       </nav>
       <nav class="footer-col" aria-label="Services">
         <b>Our Services</b>
@@ -569,7 +571,7 @@ def faq_schema_html_en() -> str:
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "What do I need before starting a project?", "acceptedAnswer": {"@type": "Answer", "text": "Usually just a business overview, reference websites, existing logo/images, and core features you need. We prepare a requirements doc after the first call and help fill any gaps — no need to have everything ready upfront."}},
+      {"@type": "Question", "name": "What do I need before we begin?", "acceptedAnswer": {"@type": "Answer", "text": "Usually just a business overview, reference websites, existing logo/images, and core features you need. We prepare a requirements doc after the first call and help fill any gaps — no need to have everything ready upfront."}},
       {"@type": "Question", "name": "How long does a website project take?", "acceptedAnswer": {"@type": "Answer", "text": "A standard business site is typically 2–4 weeks: week 1 discovery and design, weeks 2–3 development, week 4 testing and launch. Projects with e-commerce, booking, or multilingual features get a detailed timeline during planning."}},
       {"@type": "Question", "name": "How is pricing calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Based on page count, feature complexity, and whether SEO/ads/social packages are included. We provide an itemized quote after requirements are confirmed — transparent pricing locked before signing."}},
       {"@type": "Question", "name": "Can I change things after design approval?", "acceptedAnswer": {"@type": "Answer", "text": "Reasonable revisions are supported during design approval; major structural changes are completed before development. Minor copy and image swaps during build are fine; out-of-scope features are quoted before work begins."}},
@@ -625,10 +627,13 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
   <meta property="og:description" content="{meta['description']}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{canonical}" />
+  <meta property="og:image" content="https://70nyc.com/assets/nyc-hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://70nyc.com/assets/nyc-hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,900;1,9..40,400&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="stylesheet" href="/assets/style.css?v=4" />
   <script src="/assets/lang-detect.js?v=4"></script>
 {extra_schema}
 </head>
@@ -644,7 +649,7 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
 
 {footer_html(lang)}
 
-  <script src="/assets/main.js?v=2"></script>
+  <script src="/assets/main.js?v=8"></script>
 </body>
 </html>
 """

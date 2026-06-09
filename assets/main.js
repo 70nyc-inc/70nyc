@@ -311,8 +311,12 @@
     var formSuccess = document.getElementById('formSuccess');
     if (formSuccess) {
       formSuccess.hidden = false;
+      var scrollTarget = document.getElementById('contact') || formSuccess;
+      requestAnimationFrame(function () {
+        scrollToTarget(scrollTarget, reducedMotion ? 'auto' : 'smooth');
+      });
       if (window.history && window.history.replaceState) {
-        window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+        window.history.replaceState(null, '', window.location.pathname + '#contact');
       }
     }
   }
