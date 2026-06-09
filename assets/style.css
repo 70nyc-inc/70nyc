@@ -265,6 +265,10 @@ img, video { display: block; max-width: 100%; }
   backface-visibility: hidden;
 }
 
+.hero.hero--mobile-video .hero-video {
+  object-position: center 42%;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;

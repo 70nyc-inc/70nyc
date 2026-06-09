@@ -16,8 +16,10 @@
   }
 
   function heroVideoSrc() {
-    var dpr = window.devicePixelRatio || 1;
-    if (dpr >= 1.5 || window.innerWidth <= 1024) {
+    if (window.innerWidth <= 768) {
+      return '/assets/hero-nyc-mobile.mp4';
+    }
+    if ((window.devicePixelRatio || 1) >= 1.5) {
       return '/assets/hero-nyc-1080.mp4';
     }
     return '/assets/hero-nyc.mp4';
@@ -29,7 +31,11 @@
     video.setAttribute('webkit-playsinline', '');
 
     if (!skipHeroVideo) {
-      video.src = heroVideoSrc();
+      var chosenSrc = heroVideoSrc();
+      video.src = chosenSrc;
+      if (chosenSrc.indexOf('mobile') !== -1) {
+        hero.classList.add('hero--mobile-video');
+      }
     }
 
     function enableStaticHero() {
