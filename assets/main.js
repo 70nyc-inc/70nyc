@@ -9,6 +9,7 @@
   var isMobilePerf = window.matchMedia('(max-width: 768px)').matches;
   var saveData = !!(navigator.connection && navigator.connection.saveData);
   var perfLite = isMobilePerf || saveData || reducedMotion;
+  var skipHeroVideo = saveData || reducedMotion;
 
   if (perfLite) {
     document.documentElement.classList.add('perf-lite');
@@ -19,7 +20,7 @@
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
 
-    if (perfLite) {
+    function enableStaticHero() {
       hero.classList.add('hero--static');
       video.removeAttribute('autoplay');
       video.preload = 'none';
@@ -29,16 +30,27 @@
         video.removeAttribute('src');
         video.load();
       }
-    } else {
-      function playHeroVideo() {
-        var p = video.play();
-        if (p && p.catch) {
-          p.catch(function () {
-            setTimeout(playHeroVideo, 300);
-          });
-        }
-      }
+    }
 
+    var playAttempts = 0;
+
+    function playHeroVideo() {
+      var p = video.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          playAttempts += 1;
+          if (playAttempts < 4) {
+            setTimeout(playHeroVideo, 300);
+            return;
+          }
+          enableStaticHero();
+        });
+      }
+    }
+
+    if (skipHeroVideo) {
+      enableStaticHero();
+    } else {
       if (video.readyState >= 2) {
         playHeroVideo();
       } else {
