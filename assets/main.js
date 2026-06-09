@@ -92,6 +92,46 @@
   window.addEventListener('scroll', updateHeader, { passive: true });
   updateHeader();
 
+  function getHeaderOffset() {
+    return (header ? header.offsetHeight : 76) + 32;
+  }
+
+  function scrollToTarget(el, behavior) {
+    if (!el) return;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: behavior || 'smooth' });
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var hash = link.getAttribute('href');
+    if (!hash || hash.length < 2) return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+    e.preventDefault();
+    scrollToTarget(target, reducedMotion ? 'auto' : 'smooth');
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', hash);
+    }
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      if (menuToggle) {
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+
+  if (window.location.hash) {
+    var hashTarget = document.querySelector(window.location.hash);
+    if (hashTarget) {
+      requestAnimationFrame(function () {
+        scrollToTarget(hashTarget, 'auto');
+      });
+    }
+  }
+
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function () {
       const open = nav.classList.toggle('open');

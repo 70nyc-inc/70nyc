@@ -23,7 +23,10 @@
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 32px);
+}
 
 body {
   margin: 0;
@@ -3471,10 +3474,6 @@ img, video { display: block; max-width: 100%; }
 }
 
 /* ── CTA Band ── */
-#contact {
-  scroll-margin-top: calc(var(--header-h) + 20px);
-}
-
 .cta-band {
   margin: 0;
   padding: 80px clamp(20px, 5vw, 80px);
