@@ -58,6 +58,48 @@
     <priority>0.88</priority>
   </url>
   <url>
+    <loc>https://70nyc.com/services/google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/google-ads/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/google-ads/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/services/google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/google-ads/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/google-ads/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/services/social-media/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/social-media/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/social-media/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/services/social-media/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/social-media/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/social-media/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/services/mobile-app/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/mobile-app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/mobile-app/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/services/mobile-app/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/services/mobile-app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/services/mobile-app/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
     <loc>https://70nyc.com/process/</loc>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/process/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/process/" />
