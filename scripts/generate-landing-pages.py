@@ -483,7 +483,7 @@ def footer_html(lang: str) -> str:
         <a href="/services/#seo">SEO 优化</a>
         <a href="/services/#social">社交媒体管理</a>
         <a href="/process/">项目流程</a>
-        <a href="/sitemap.xml">网站地图</a>
+        <a href="/sitemap/">网站地图</a>
       </nav>
     </div>
     <p class="footer-seo">
@@ -518,7 +518,7 @@ def footer_html(lang: str) -> str:
         <a href="/en/services/#seo">SEO</a>
         <a href="/en/services/#social">Social Media</a>
         <a href="/en/process/">Process</a>
-        <a href="/sitemap.xml">Sitemap</a>
+        <a href="/en/sitemap/">Sitemap</a>
       </nav>
     </div>
     <p class="footer-seo">

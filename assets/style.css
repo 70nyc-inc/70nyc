@@ -4667,3 +4667,56 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
     opacity: 0.6;
   }
 }
+
+/* ── HTML Sitemap Page ── */
+.html-sitemap {
+  padding: 56px clamp(20px, 5vw, 80px) 88px;
+  background: var(--bg);
+}
+
+.html-sitemap-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.html-sitemap h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.html-sitemap h2:not(:first-child) {
+  margin-top: 40px;
+}
+
+.html-sitemap ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.html-sitemap li a {
+  display: block;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.html-sitemap li a:hover {
+  color: #8a6d1a;
+  border-color: rgba(201, 162, 39, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.page-seo-lead a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
