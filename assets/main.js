@@ -115,11 +115,7 @@
       window.history.replaceState(null, '', hash);
     }
     if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      if (menuToggle) {
-        menuToggle.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
+      closeMobileNav();
     }
   });
 
@@ -132,6 +128,91 @@
     }
   }
 
+  function closeMobileNav() {
+    if (!nav) return;
+    nav.classList.remove('open');
+    if (menuToggle) {
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    var dropdown = nav.querySelector('.nav-item--dropdown');
+    if (dropdown) {
+      dropdown.classList.remove('is-open');
+      var toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function initServicesDropdown() {
+    if (!nav) return;
+    var servicesLink = nav.querySelector('a[data-nav="services"]');
+    if (!servicesLink || servicesLink.closest('.nav-item--dropdown')) return;
+
+    var isEn = /^\/en(\/|$)/.test(window.location.pathname);
+    var prefix = isEn ? '/en' : '';
+    var items = isEn
+      ? [
+          { href: prefix + '/services/web-design/', label: 'Web Design & Development' },
+          { href: prefix + '/services/seo/', label: 'SEO' },
+          { href: prefix + '/services/google-ads/', label: 'Digital Advertising' },
+          { href: prefix + '/services/social-media/', label: 'Social Media' },
+          { href: prefix + '/services/mobile-app/', label: 'Mobile App Development' }
+        ]
+      : [
+          { href: '/services/web-design/', label: '网页设计与网站开发' },
+          { href: '/services/seo/', label: 'SEO 优化' },
+          { href: '/services/google-ads/', label: '专业广告推广' },
+          { href: '/services/social-media/', label: '社交媒体管理' },
+          { href: '/services/mobile-app/', label: '手机应用开发' }
+        ];
+    var allLabel = isEn ? 'All Services' : '查看全部服务';
+    var toggleLabel = isEn ? 'Show service menu' : '展开服务菜单';
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'nav-item nav-item--dropdown';
+
+    var row = document.createElement('div');
+    row.className = 'nav-item-row';
+
+    servicesLink.parentNode.insertBefore(wrapper, servicesLink);
+    row.appendChild(servicesLink);
+
+    var toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'nav-dropdown-toggle';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', 'nav-services-menu');
+    toggle.setAttribute('aria-label', toggleLabel);
+    toggle.innerHTML = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    row.appendChild(toggle);
+    wrapper.appendChild(row);
+
+    var dropdown = document.createElement('div');
+    dropdown.className = 'nav-dropdown';
+    dropdown.id = 'nav-services-menu';
+    items.forEach(function (item) {
+      var link = document.createElement('a');
+      link.href = item.href;
+      link.textContent = item.label;
+      dropdown.appendChild(link);
+    });
+    var allLink = document.createElement('a');
+    allLink.href = prefix + '/services/';
+    allLink.className = 'nav-dropdown-all';
+    allLink.textContent = allLabel;
+    dropdown.appendChild(allLink);
+    wrapper.appendChild(dropdown);
+
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var open = wrapper.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  initServicesDropdown();
+
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function () {
       const open = nav.classList.toggle('open');
@@ -139,12 +220,8 @@
       menuToggle.setAttribute('aria-expanded', String(open));
     });
 
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        nav.classList.remove('open');
-        menuToggle.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closeMobileNav();
     });
   }
 
@@ -170,7 +247,6 @@
   });
 
   const sections = document.querySelectorAll('section[id], main > section');
-  const navLinks = document.querySelectorAll('.nav a');
 
   function normalizePath(pathname) {
     var path = pathname.replace(/\/index\.html$/, '');
@@ -180,7 +256,14 @@
     return path || '/';
   }
 
+  function isServicesPath(path) {
+    return path === '/services' || path.indexOf('/services/') === 0 ||
+      path === '/en/services' || path.indexOf('/en/services/') === 0;
+  }
+
   function highlightNav() {
+    var navLinks = document.querySelectorAll('.nav a');
+
     if (document.body.classList.contains('page-sub')) {
       var currentPath = normalizePath(window.location.pathname);
       navLinks.forEach(function (link) {
@@ -192,7 +275,8 @@
         } catch (e) {
           return;
         }
-        link.classList.toggle('active', linkPath === currentPath);
+        var isServicesNav = link.getAttribute('data-nav') === 'services' && isServicesPath(currentPath);
+        link.classList.toggle('active', linkPath === currentPath || isServicesNav);
       });
       return;
     }
