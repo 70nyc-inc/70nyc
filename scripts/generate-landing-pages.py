@@ -7,6 +7,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+GTAG_SNIPPET = (Path(__file__).resolve().parent / "gtag-snippet.html").read_text(encoding="utf-8")
+
 PAGES = [
     {
         "slug": "services",
@@ -613,7 +615,7 @@ def build_page(lang: str, page: dict, meta: dict, section_html: str) -> str:
     return f"""<!doctype html>
 <html lang="{html_lang}">
 <head>
-  <meta charset="utf-8" />
+{GTAG_SNIPPET}  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{meta['title']}</title>
   <meta name="description" content="{meta['description']}" />

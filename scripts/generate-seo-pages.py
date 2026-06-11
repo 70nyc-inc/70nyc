@@ -33,6 +33,8 @@ SITE = {
     "og_image": f"{DOMAIN}/assets/nyc-hero.png",
 }
 
+GTAG_SNIPPET = (Path(__file__).resolve().parent / "gtag-snippet.html").read_text(encoding="utf-8")
+
 NAV_ZH = [
     ("home", "/", "首页"),
     ("services", "/services/", "服务"),
@@ -532,7 +534,7 @@ def head_html(lang: str, meta: dict, canonical_path: str, extra_schema: str = ""
     return f"""<!doctype html>
 <html lang="{html_lang}">
 <head>
-  <meta charset="utf-8" />
+{GTAG_SNIPPET}  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{meta['title']}</title>
   <meta name="description" content="{meta['description']}" />{kw_line}
