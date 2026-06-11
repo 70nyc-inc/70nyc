@@ -482,6 +482,8 @@ def footer_html(lang: str) -> str:
         <a href="/services/google-ads/">专业广告推广服务</a>
         <a href="/services/seo/">SEO 优化</a>
         <a href="/services/social-media/">社交媒体管理</a>
+        <a href="/areas/">服务区域</a>
+        <a href="/nationwide/">全美远程</a>
         <a href="/process/">项目流程</a>
         <a href="/sitemap/">网站地图</a>
       </nav>
@@ -517,6 +519,8 @@ def footer_html(lang: str) -> str:
         <a href="/en/services/google-ads/">Digital Advertising</a>
         <a href="/en/services/seo/">SEO</a>
         <a href="/en/services/social-media/">Social Media</a>
+        <a href="/en/areas/">Service Areas</a>
+        <a href="/en/nationwide/">Nationwide Remote</a>
         <a href="/en/process/">Process</a>
         <a href="/en/sitemap/">Sitemap</a>
       </nav>

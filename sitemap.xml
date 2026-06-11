@@ -169,4 +169,130 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://70nyc.com/nationwide/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/nationwide/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/nationwide/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/nationwide/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/nationwide/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/nationwide/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/manhattan/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/manhattan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/manhattan/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/manhattan/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/manhattan/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/manhattan/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/flushing/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/flushing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/flushing/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/flushing/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/flushing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/flushing/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/brooklyn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/brooklyn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/brooklyn/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/brooklyn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/brooklyn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/brooklyn/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/long-island/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/long-island/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/long-island/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/long-island/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/long-island/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/long-island/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/bronx/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/bronx/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/bronx/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/bronx/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/bronx/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/bronx/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/areas/staten-island/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/staten-island/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/staten-island/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/areas/staten-island/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/areas/staten-island/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/areas/staten-island/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/blog/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/blog/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
 </urlset>
