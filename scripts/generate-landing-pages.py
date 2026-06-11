@@ -477,10 +477,10 @@ def footer_html(lang: str) -> str:
       </nav>
       <nav class="footer-col" aria-label="我们的服务">
         <b>关于我们的服务</b>
-        <a href="/services/#web">网页设计与网站开发</a>
+        <a href="/services/web-design/">网页设计与网站开发</a>
         <a href="/services/#app">手机应用开发与设计</a>
         <a href="/services/#ads">专业广告推广服务</a>
-        <a href="/services/#seo">SEO 优化</a>
+        <a href="/services/seo/">SEO 优化</a>
         <a href="/services/#social">社交媒体管理</a>
         <a href="/process/">项目流程</a>
         <a href="/sitemap/">网站地图</a>
@@ -512,10 +512,10 @@ def footer_html(lang: str) -> str:
       </nav>
       <nav class="footer-col" aria-label="Services">
         <b>Our Services</b>
-        <a href="/en/services/#web">Web Design &amp; Development</a>
+        <a href="/en/services/web-design/">Web Design &amp; Development</a>
         <a href="/en/services/#app">Mobile App Development</a>
         <a href="/en/services/#ads">Digital Advertising</a>
-        <a href="/en/services/#seo">SEO</a>
+        <a href="/en/services/seo/">SEO</a>
         <a href="/en/services/#social">Social Media</a>
         <a href="/en/process/">Process</a>
         <a href="/en/sitemap/">Sitemap</a>
