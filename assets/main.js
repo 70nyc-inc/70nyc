@@ -166,6 +166,7 @@
           { href: '/services/mobile-app/', label: '手机应用开发' }
         ];
     var allLabel = isEn ? 'All Services' : '查看全部服务';
+    var isMobileNav = window.matchMedia('(max-width: 1100px)').matches;
     var toggleLabel = isEn ? 'Show service menu' : '展开服务菜单';
 
     var wrapper = document.createElement('div');
@@ -177,14 +178,23 @@
     servicesLink.parentNode.insertBefore(wrapper, servicesLink);
     row.appendChild(servicesLink);
 
-    var toggle = document.createElement('button');
-    toggle.type = 'button';
-    toggle.className = 'nav-dropdown-toggle';
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-controls', 'nav-services-menu');
-    toggle.setAttribute('aria-label', toggleLabel);
-    toggle.innerHTML = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    row.appendChild(toggle);
+    if (!isMobileNav) {
+      var toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'nav-dropdown-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-controls', 'nav-services-menu');
+      toggle.setAttribute('aria-label', toggleLabel);
+      toggle.innerHTML = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      row.appendChild(toggle);
+
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var open = wrapper.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
     wrapper.appendChild(row);
 
     var dropdown = document.createElement('div');
@@ -202,13 +212,6 @@
     allLink.textContent = allLabel;
     dropdown.appendChild(allLink);
     wrapper.appendChild(dropdown);
-
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var open = wrapper.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
   }
 
   initServicesDropdown();
