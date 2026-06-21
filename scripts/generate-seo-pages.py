@@ -387,19 +387,428 @@ AREAS = [
 ]
 
 # Append posts here, then run: python3 scripts/generate-seo-pages.py blog
+# Each post: unique slug, zh + en, optional keywords, intro, sections[{h2, paragraphs}], paragraphs.
 BLOG_POSTS: list[dict[str, Any]] = [
-    # Example:
-    # {
-    #     "slug": "nyc-restaurant-website-tips",
-    #     "date": "2026-06-08",
-    #     "zh": {
-    #         "title": "纽约餐馆网站必做的 5 件事｜70NYC",
-    #         "description": "...",
-    #         "h1": "纽约餐馆网站必做的 5 件事",
-    #         "paragraphs": ["段落1", "段落2"],
-    #     },
-    #     "en": { ... },
-    # },
+    {
+        "slug": "flushing-restaurant-google-maps-seo-2026",
+        "date": "2026-06-15",
+        "zh": {
+            "title": "法拉盛餐馆 Google 地图排名指南：2026 本地 SEO 实操｜70NYC",
+            "description": "法拉盛餐馆如何在 Google 地图与本地搜索获得更高曝光？GBP 设置、中英关键词、评价策略与网站配合——皇后区华人餐饮本地 SEO 完整指南。",
+            "keywords": "法拉盛SEO, 法拉盛餐馆Google地图, 法拉盛本地搜索, Google Business Profile, 皇后区餐馆SEO, 法拉盛网站设计, 华人餐馆营销, 法拉盛Google排名",
+            "h1": "法拉盛餐馆怎么做 Google 地图排名？",
+            "intro": "在法拉盛做餐饮，客人往往先在 Google 搜「法拉盛 川菜」「Flushing dim sum near me」，或在地图里找「附近的餐馆」。本地 SEO 不是可有可无的营销选项——它直接决定午餐高峰有没有新客走进门。本文按 2026 年 Google 本地搜索规则，拆解法拉盛餐馆从 Google Business Profile（GBP）到网站、评价的可执行步骤。",
+            "sections": [
+                {
+                    "h2": "为什么法拉盛餐馆必须优先做 Google 地图 SEO",
+                    "paragraphs": [
+                        "法拉盛（Flushing）是全美华人密度最高的商业区之一：Main Street、罗斯福大道、39th Avenue 周边餐馆林立，竞争不靠「有没有网站」，而靠「在地图第几位、评价够不够、照片吸不吸引人」。",
+                        "Google 本地包（Local Pack）通常只展示 3 家餐馆。排名靠前意味着手机用户点「导航」或「电话」的概率成倍上升。对早茶、火锅、烧烤、奶茶、私厨等品类，<strong>法拉盛 SEO</strong> 的核心战场就是 Google 地图 + 本地自然结果，而不是泛泛的「纽约网站设计」大词。",
+                        "华人客人常用中文搜索，非华人或第二代客人常用英文——同一店铺需要中英双语信息一致，否则 Google 难以判断该展示哪个版本，曝光会被稀释。",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile：法拉盛餐馆必查 12 项",
+                    "paragraphs": [
+                        "GBP 是免费且权重最高的本地信号。新建或认领后，请逐项核对：",
+                    ],
+                    "list": [
+                        "商家名称：与招牌一致，勿堆砌关键词（如「最好火锅 法拉盛 法拉盛 法拉盛」会被处罚）",
+                        "主类别：选最贴近的 Primary category（Restaurant、Chinese restaurant 等）",
+                        "地址与服务范围：实体店填准确地址；仅外卖/私厨需如实设置服务区域",
+                        "营业时间：含节假日、春节等特殊时段；错误营业时间会导致差评与跳出",
+                        "电话：与网站、Yelp、Instagram 一致，利于 Google 信任同一实体",
+                        "网站链接：指向移动端加载快的页面，最好含菜单或订位入口",
+                        "菜单：上传 PDF 或使用 GBP 菜单功能；中文菜名 + 英文翻译",
+                        "属性：是否 Halal、素食、外带、堂食、无障碍等",
+                        "照片：门面、招牌、热门菜、环境、团队——至少 15 张高质量图",
+                        "产品/服务：特色菜、套餐、午餐特价",
+                        "问答（Q&A）：自己先写「是否可订位」「是否可刷卡」等常见问题",
+                        "帖子（Posts）：每周更新促销、新菜、营业时间变更",
+                    ],
+                },
+                {
+                    "h2": "法拉盛本地关键词：中文、英文与「附近搜索」",
+                    "paragraphs": [
+                        "关键词研究不必复杂，从真实客人怎么搜开始：",
+                        "中文示例：法拉盛 餐馆、法拉盛 川菜、法拉盛 早茶、皇后区 火锅、法拉盛 外卖、法拉盛 包厢。英文示例：Flushing Chinese restaurant、best dim sum Flushing NY、Flushing hot pot、restaurants near Main St Flushing。",
+                        "把这些词自然写进 GBP 简介、网站标题与 H1/H2、菜单页 meta description——避免同一段文字复制粘贴到十个页面。若你正在规划新站，可参考我们的 <a href=\"/areas/flushing/\">法拉盛网站设计</a> 与 <a href=\"/services/seo/\">纽约 SEO 优化</a> 服务，从建站阶段就把本地关键词结构做好。",
+                        "「Near me」类搜索依赖设备定位，无法靠页面硬塞关键词解决；Google 看的是<strong>距离、相关性、知名度</strong>。知名度主要来自评价数量/质量、点击率和品牌搜索（客人直接搜店名）。",
+                    ],
+                },
+                {
+                    "h2": "评价与照片：本地排名真正的杠杆",
+                    "paragraphs": [
+                        "在法拉盛，一条带图的中文五星评价，往往比十篇博客更能拉动地图排名。建议：",
+                    ],
+                    "list": [
+                        "用餐后 24 小时内礼貌邀请满意客人留 Google 评价（可放桌卡 QR）",
+                        "每条评价都认真回复，中英文皆可，展示老板/经理真实在场",
+                        "勿买假评、勿批量刷评——Google 2024–2026 持续打击，可能导致 GBP 暂停",
+                        "定期更新菜品照片；搜索结果显示有图商家点击率明显更高",
+                        "把 Yelp、小红书上的口碑同步引导至 Google（合法合规前提下）",
+                    ],
+                },
+                {
+                    "h2": "网站如何配合 Google 地图（而不重复造轮子）",
+                    "paragraphs": [
+                        "GBP 负责「在地图里被找到」，网站负责「被找到之后说服客人下单或到店」。理想组合：",
+                    ],
+                    "list": [
+                        "网站加载速度 &lt; 3 秒（手机），菜单一页可读，电话一键拨打",
+                        "独立菜单页或在线订位/外卖链接，与 GBP 菜单信息一致",
+                        "嵌入 Google 地图与同款 NAP（Name/Address/Phone）",
+                        "本地落地页：例如强调「法拉盛 Main St」「皇后区外卖范围」",
+                        "Schema 本地商家结构化数据，帮助 Google 关联网站与 GBP",
+                    ],
+                },
+                {
+                    "h2": "法拉盛餐馆 SEO 常见错误",
+                    "paragraphs": [
+                        "我们服务皇后区餐饮客户时，最常见的问题包括：GBP 与网站电话不一致；用旧 HostGator 博客子域名导致 Google 索引混乱；只投 Google Ads 不做自然本地 SEO（广告停投流量即断）；菜单只有图片无文字，Google 无法读懂菜品关键词。",
+                        "另一个误区是只优化「纽约网站设计」这类全国大词——对法拉盛餐馆来说，<strong>「法拉盛 + 品类」</strong> 的转化远高于泛词。先把本地做透，再考虑曼哈顿或全纽约品牌扩张。",
+                    ],
+                },
+                {
+                    "h2": "下一步：需要专业协助时",
+                    "paragraphs": [
+                        "70NYC 团队常驻纽约，熟悉法拉盛、白石镇、贝赛等周边社区，提供 <a href=\"/services/web-design/\">网站设计</a>、<a href=\"/services/seo/\">本地 SEO</a>、Google Ads 与社交媒体一体化方案。可先免费沟通：现有 GBP 截图、网站链接、主要竞品——我们会在 24 小时内给出可执行的优先改进清单。",
+                    ],
+                },
+            ],
+            "footer_seo": "法拉盛SEO · 法拉盛餐馆Google地图 · 皇后区本地搜索 · 法拉盛网站设计 · 华人餐馆营销",
+        },
+        "en": {
+            "title": "Flushing Restaurant Google Maps Ranking Guide: 2026 Local SEO | 70NYC",
+            "description": "How Flushing restaurants rank on Google Maps and local search — GBP setup, bilingual keywords, reviews, and website tips for Queens Chinese dining.",
+            "keywords": "Flushing SEO, Flushing restaurant Google Maps, Flushing local search, Google Business Profile, Queens restaurant SEO, Flushing web design, Chinese restaurant marketing",
+            "h1": "How Flushing Restaurants Rank on Google Maps",
+            "intro": "In Flushing, diners often search Google for \"Flushing Sichuan food,\" \"dim sum near me,\" or browse the map for nearby restaurants. Local SEO is not optional — it decides whether new customers walk in during lunch rush. This guide covers actionable steps for Flushing restaurants in 2026, from Google Business Profile (GBP) to reviews and your website.",
+            "sections": [
+                {
+                    "h2": "Why Flushing restaurants must prioritize Google Maps SEO",
+                    "paragraphs": [
+                        "Flushing is one of the densest Chinese commercial corridors in the U.S. — Main Street, Roosevelt Avenue, and 39th Avenue are packed with restaurants. Competition is won by map position, review quality, and photos — not by having any website at all.",
+                        "Google's Local Pack usually shows only three restaurants. Top placement dramatically increases taps on Directions and Call. For dim sum, hot pot, BBQ, bubble tea, and private kitchens, <strong>Flushing SEO</strong> lives in Google Maps and local organic results — not broad \"NYC web design\" keywords.",
+                        "Chinese-speaking guests search in Chinese; English speakers and second-generation customers search in English. Your business needs consistent bilingual listings, or Google may split or dilute your visibility.",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile: 12 must-check items for Flushing restaurants",
+                    "paragraphs": ["GBP is free and the strongest local signal. After claiming your listing, verify:"],
+                    "list": [
+                        "Business name matches signage — no keyword stuffing",
+                        "Primary category fits (Restaurant, Chinese restaurant, etc.)",
+                        "Address and service area accurate for dine-in vs delivery-only",
+                        "Hours including holidays and Lunar New Year",
+                        "Phone matches website, Yelp, and social profiles",
+                        "Website links to a fast mobile page with menu or reservations",
+                        "Menu uploaded with Chinese names + English translations",
+                        "Attributes: dine-in, takeout, halal, vegetarian, accessibility",
+                        "Photos: storefront, dishes, interior, team — 15+ quality images",
+                        "Products/services: specials and lunch deals",
+                        "Q&A: answer reservation, parking, and payment questions proactively",
+                        "Weekly Posts for promos, new dishes, hour changes",
+                    ],
+                },
+                {
+                    "h2": "Flushing local keywords: Chinese, English, and \"near me\"",
+                    "paragraphs": [
+                        "Start with how real customers search:",
+                        "Chinese examples: 法拉盛 餐馆, 法拉盛 川菜, 法拉盛 早茶, 皇后区 火锅. English: Flushing Chinese restaurant, best dim sum Flushing NY, Flushing hot pot, restaurants near Main St Flushing.",
+                        "Use these naturally in GBP descriptions, page titles, and menu meta text — never duplicate the same block across ten pages. Planning a new site? See our <a href=\"/en/areas/flushing/\">Flushing web design</a> and <a href=\"/en/services/seo/\">NYC SEO</a> services to build local keyword structure from day one.",
+                        "\"Near me\" queries rely on device location — Google ranks by <strong>distance, relevance, and prominence</strong>. Prominence comes from reviews, engagement, and branded searches.",
+                    ],
+                },
+                {
+                    "h2": "Reviews and photos: the real ranking levers",
+                    "paragraphs": ["In Flushing, one photo review in Chinese often moves the needle more than ten generic blog posts. Best practices:"],
+                    "list": [
+                        "Invite happy guests within 24 hours (table QR cards work well)",
+                        "Reply to every review in Chinese or English — show ownership",
+                        "Never buy fake reviews — Google penalties can suspend GBP",
+                        "Refresh dish photos regularly; listings with photos earn more clicks",
+                        "Guide satisfied guests from Yelp or social to Google (compliantly)",
+                    ],
+                },
+                {
+                    "h2": "How your website supports Google Maps",
+                    "paragraphs": ["GBP gets you found; your website converts. Ideal setup:"],
+                    "list": [
+                        "Mobile load under 3 seconds; readable menu; click-to-call",
+                        "Menu or ordering page consistent with GBP menu data",
+                        "Embedded map and matching NAP (name, address, phone)",
+                        "Local landing copy mentioning Flushing Main St or delivery zone",
+                        "LocalBusiness schema linking site and GBP",
+                    ],
+                },
+                {
+                    "h2": "Common Flushing restaurant SEO mistakes",
+                    "paragraphs": [
+                        "We often see: phone mismatches between GBP and website; legacy blog subdomains confusing Google; ads-only strategy with no organic local SEO; image-only menus with no indexable text.",
+                        "Another mistake is targeting only broad keywords like \"NYC web design.\" For Flushing restaurants, <strong>Flushing + cuisine type</strong> converts far better. Dominate local first, then expand brand reach.",
+                    ],
+                },
+                {
+                    "h2": "Need hands-on help?",
+                    "paragraphs": [
+                        "70NYC serves Flushing, Whitestone, Bayside, and greater Queens with <a href=\"/en/services/web-design/\">web design</a>, <a href=\"/en/services/seo/\">local SEO</a>, Google Ads, and social media. Share your GBP link and website for a free priority checklist within 24 hours.",
+                    ],
+                },
+            ],
+            "footer_seo": "Flushing SEO · Flushing restaurant Google Maps · Queens local search · Flushing web design",
+        },
+    },
+    {
+        "slug": "nyc-chinese-business-website-seo-mistakes-2026",
+        "date": "2026-06-16",
+        "zh": {
+            "title": "纽约华人企业网站 SEO 七大误区｜2026 避坑指南｜70NYC",
+            "description": "纽约华人网站设计做完却搜不到？剖析双语不一致、旧域名、关键词堆砌、缺本地页等 7 大 SEO 误区，附可立即执行的修复清单。",
+            "keywords": "纽约华人网站设计, 华人企业SEO, 纽约网站SEO, 华人网站制作, 法拉盛网站设计, 曼哈顿网站公司, 纽约网站设计错误",
+            "h1": "纽约华人企业网站 SEO 七大误区",
+            "intro": "很多法拉盛、曼哈顿、布鲁克林的华人老板已经花了钱做网站，却在 Google 搜「纽约华人网站设计」或自己的服务关键词时找不到自己。问题往往不在「没做 SEO」，而在几个可修复的结构性错误。以下是我们 13 年服务纽约华人企业时最常遇到的 7 个误区。",
+            "sections": [
+                {
+                    "h2": "误区 1：中英文信息不一致（NAP 混乱）",
+                    "paragraphs": [
+                        "网站写 917 号码，Google 地图是 386，Yelp 又是第三个——Google 无法确认是同一商家，本地排名直接受损。华人企业常有一个中文站、一个英文 Facebook 页，地址缩写还不一致（Flushing vs 法拉盛）。",
+                        "修复：全平台统一 Name / Address / Phone，网站 footer 与 <a href=\"/contact/\">联系页</a> 必须与 Google Business Profile 完全一致。",
+                    ],
+                },
+                {
+                    "h2": "误区 2：只优化「纽约网站设计」大词",
+                    "paragraphs": [
+                        "大词竞争极端激烈，新站很难短期进首页。华人装修公司、餐馆、律所应优先「法拉盛 装修 网站」「曼哈顿 中餐馆 订位」等<strong>区域 + 行业</strong>长尾。",
+                        "修复：为每个主力服务区域建独立落地页——参考我们的 <a href=\"/areas/\">纽约服务区域</a> 结构，而不是把所有关键词堆在首页 footer。",
+                    ],
+                },
+                {
+                    "h2": "误区 3：网站迁移后没有 301 重定向",
+                    "paragraphs": [
+                        "从 WordPress、Wix 或旧 HostGator 换到新站，若旧 URL 全部 404，Google 索引里仍是旧链接，权重断档。这在 2025–2026 年 GSC 里表现为大量「已抓取未索引」和旧「麒麟纽约创意」页面。",
+                        "修复：旧路径 301 到新服务页或 <a href=\"/blog/\">博客</a>；在 Search Console 提交新 sitemap。",
+                    ],
+                },
+                {
+                    "h2": "误区 4：菜单/案例只有图片，没有文字",
+                    "paragraphs": [
+                        "餐馆网站整页 JPG 菜单、装修公司只有施工前后对比图——Google 无法提取「Kitchen remodeling Flushing」等关键词，图片 SEO 几乎为零。",
+                        "修复：每道招牌菜、每个服务项配文字说明 + alt 属性；案例页写清地点、面积、工期。",
+                    ],
+                },
+                {
+                    "h2": "误区 5：blog 子域名与主站分裂",
+                    "paragraphs": [
+                        "blog.70nyc.com 在 HostGator，主站在 Cloudflare——Google 视为两个站点，博客权重传不到主域。",
+                        "修复：统一到 <code>70nyc.com/blog/</code>，子域名 301 到主站博客；每篇聚焦一个长尾词，勿复制 area 页原文。",
+                    ],
+                },
+                {
+                    "h2": "误区 6：忽视 Google 地图与评价",
+                    "paragraphs": [
+                        "网站 SEO 做得再细，GBP 未认领、零评价，本地包仍进不去。华人服务行业（美容、餐饮、装修）极度依赖地图前三。",
+                        "修复：认领 GBP、每周发 Post、系统收集 Google 评价；详见 <a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">法拉盛餐馆 Google 地图指南</a>。",
+                    ],
+                },
+                {
+                    "h2": "误区 7：只做网站，不做内链与更新",
+                    "paragraphs": [
+                        "上线后三年不改一个字，首页从不链向服务子页或博客——Google 认为站点不活跃。",
+                        "修复：首页 → 服务页 → area 页 → 博客互链；每季度更新案例或一篇洞察。需要审计？<a href=\"/services/seo/\">纽约 SEO 优化</a> 服务含免费初诊清单。",
+                    ],
+                },
+            ],
+            "footer_seo": "纽约华人网站设计 · 华人企业SEO · 纽约网站SEO · 法拉盛网站设计 · 曼哈顿网站公司",
+        },
+        "en": {
+            "title": "7 NYC Chinese Business Website SEO Mistakes to Avoid in 2026 | 70NYC",
+            "description": "Why your NYC Chinese business website doesn't rank — bilingual NAP issues, migration 404s, keyword stuffing, missing local pages, and fixes.",
+            "keywords": "NYC Chinese web design, Chinese business SEO, NYC website SEO, Flushing web design, Manhattan website company",
+            "h1": "7 Website SEO Mistakes NYC Chinese Businesses Make",
+            "intro": "Many Flushing, Manhattan, and Brooklyn owners invested in a website but still don't show up on Google. The issue is usually structural — and fixable. Here are seven mistakes we see most often after 13 years serving Chinese-owned businesses in New York.",
+            "sections": [
+                {
+                    "h2": "Mistake 1: Inconsistent bilingual NAP data",
+                    "paragraphs": [
+                        "Different phone numbers on your site, Google Maps, and Yelp confuse Google about whether you're one business. Mixed Chinese/English address formats make it worse.",
+                        "Fix: Unify name, address, and phone everywhere — especially your <a href=\"/en/contact/\">contact page</a> and Google Business Profile.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 2: Targeting only broad keywords",
+                    "paragraphs": [
+                        "\"NYC web design\" is extremely competitive. Contractors, restaurants, and law firms should prioritize <strong>neighborhood + service</strong> long-tail terms first.",
+                        "Fix: Build dedicated area landing pages — see our <a href=\"/en/areas/\">service areas</a> structure instead of keyword-stuffing the homepage footer.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 3: No 301 redirects after migration",
+                    "paragraphs": [
+                        "Switching from WordPress or HostGator without redirects leaves 404s and splits index equity — a common 2025–2026 Search Console pattern.",
+                        "Fix: 301 old URLs to new service or <a href=\"/en/blog/\">blog</a> pages; resubmit sitemap.xml.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 4: Image-only menus and portfolios",
+                    "paragraphs": [
+                        "JPEG menus and before/after galleries with no text give Google nothing to index for \"kitchen remodeling Flushing\" or similar queries.",
+                        "Fix: Add descriptive copy and alt text for every service and dish.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 5: Split blog subdomain",
+                    "paragraphs": [
+                        "Hosting blog.70nyc.com separately from your main domain treats content as two sites — blog authority won't pass to your primary domain.",
+                        "Fix: Consolidate on <code>70nyc.com/blog/</code> with 301 redirects from the old subdomain.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 6: Ignoring Google Maps and reviews",
+                    "paragraphs": [
+                        "Perfect on-page SEO still won't crack the Local Pack with an unclaimed GBP and zero reviews.",
+                        "Fix: Claim GBP, post weekly, collect reviews — see our <a href=\"/en/blog/flushing-restaurant-google-maps-seo-2026/\">Flushing Google Maps guide</a>.",
+                    ],
+                },
+                {
+                    "h2": "Mistake 7: Launch and forget",
+                    "paragraphs": [
+                        "Sites unchanged for years with no internal links to services or blog posts signal inactivity to Google.",
+                        "Fix: Interlink home → services → areas → blog; update quarterly. Need an audit? See <a href=\"/en/services/seo/\">NYC SEO services</a>.",
+                    ],
+                },
+            ],
+            "footer_seo": "NYC Chinese web design · Chinese business SEO · Flushing web design · Manhattan website company",
+        },
+    },
+    {
+        "slug": "flushing-web-design-guide-2026",
+        "date": "2026-06-17",
+        "zh": {
+            "title": "法拉盛网站设计怎么选？2026 华人企业建站指南｜70NYC",
+            "description": "法拉盛网站设计、网站制作如何选团队？对比模板站 vs 定制站、中英双语、移动端、SEO 基础、本地案例与报价透明度——皇后区华人企业实用指南。",
+            "keywords": "法拉盛网站设计, 法拉盛网站制作, 法拉盛网站公司, 皇后区网站设计, 法拉盛网页设计, 纽约华人网站设计, Flushing web design",
+            "h1": "法拉盛网站设计怎么选？",
+            "intro": "在法拉盛找「网站设计」或「网站制作」，搜索结果从 $299 模板到 $15,000 定制都有。皇后区华人企业——餐馆、美容、装修、教育、诊所——真正需要的不是最便宜的，而是<strong>能在 Google 被找到、能带咨询、能代表品牌</strong>的网站。本文帮你用 10 分钟做决策。",
+            "sections": [
+                {
+                    "h2": "法拉盛企业建站前先问 4 个问题",
+                    "paragraphs": [
+                        "① 客人 mainly 从 Google 地图、微信还是朋友介绍来？② 需不需要中英双语？③ 要不要在线订位、外卖、表单报价？④ 谁负责日后改菜单/价格？",
+                        "答案决定你是要展示型官网、餐馆系统，还是带 SEO 结构的营销站——不是越贵越好，而是<strong>匹配获客渠道</strong>。",
+                    ],
+                },
+                {
+                    "h2": "模板站 vs 定制站：法拉盛老板该怎么选",
+                    "paragraphs": [
+                        "模板站（Wix、Squarespace、低价 WordPress 主题）上线快、前期便宜，但往往 PageSpeed 一般、SEO 结构弱、难做本地化 landing page。",
+                        "定制站适合：竞争激烈的品类（装修、律所、医美）、需要品牌差异化、或要对接 Google Ads 转化追踪。70NYC 标准交付 2–4 周，含移动端、基础 <a href=\"/services/seo/\">SEO 设置</a> 与培训。",
+                    ],
+                    "list": [
+                        "选模板：预算紧、短期活动页、已有很强口碑转介绍",
+                        "选定制：依赖 Google 获客、多服务线、要中英双语专业形象",
+                        "不论哪种：必须移动端优先——法拉盛客人多在地铁上搜",
+                    ],
+                },
+                {
+                    "h2": "优质法拉盛网站设计的 6 个必检项",
+                    "paragraphs": ["签约前打开对方提供的案例站，用手机检查："],
+                    "list": [
+                        "3 秒内可交互（Core Web Vitals 合格）",
+                        "电话一键拨打、微信/表单清晰可见",
+                        "中文无乱码、英文不机翻——体现专业度",
+                        "有独立服务页或区域页（利于「法拉盛 + 行业」排名）",
+                        "Google Analytics / Search Console 可访问",
+                        "合同写明源码/域名归属与你方所有",
+                    ],
+                },
+                {
+                    "h2": "网站与 Google 地图、广告如何配合",
+                    "paragraphs": [
+                        "法拉盛网站设计不应孤立存在。GBP 里的网站链接应指向转化最好的页面；Google Ads 落地页需与 organic 站信息一致，避免 Quality Score 低。",
+                        "我们常见高效组合：定制站 + 本地 SEO + 地图优化（参见 <a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">餐馆地图 SEO 文</a>）+ 小规模 Search 广告测关键词。",
+                    ],
+                },
+                {
+                    "h2": "报价参考：法拉盛网站制作一般花在哪里",
+                    "paragraphs": [
+                        "展示型华人企业官网：通常含策略、UI、开发、上线测试——根据页数与是否双语浮动。餐馆含菜单/订位功能更高。",
+                        "警惕「一次性 $299 全包」：往往不含 SEO、不含维护、域名不在你名下。问清<strong>年费、修改次数、是否含 SSL</strong>。",
+                    ],
+                },
+                {
+                    "h2": "为什么法拉盛客户找 70NYC",
+                    "paragraphs": [
+                        "我们团队在皇后区有多年项目经验，可面谈（Main St / 罗斯福大道周边），熟悉华人审美与转化习惯——不是把国内模板直接翻译。",
+                        "查看 <a href=\"/areas/flushing/\">法拉盛服务页</a> 与 <a href=\"/services/web-design/\">网站设计服务</a>，或致电 386-316-1848 获取免费方案与周期估算。",
+                    ],
+                },
+            ],
+            "footer_seo": "法拉盛网站设计 · 法拉盛网站制作 · 法拉盛网站公司 · 皇后区网站设计 · 纽约华人网站设计",
+        },
+        "en": {
+            "title": "How to Choose Flushing Web Design in 2026 | NYC Chinese Business Guide | 70NYC",
+            "description": "Flushing web design guide — template vs custom, bilingual sites, mobile speed, SEO basics, pricing transparency for Queens Chinese businesses.",
+            "keywords": "Flushing web design, Flushing website development, Queens web design, Flushing web design company, NYC Chinese web design",
+            "h1": "How to Choose Flushing Web Design",
+            "intro": "Searching for web design in Flushing returns everything from $299 templates to $15,000 custom builds. Queens Chinese businesses — restaurants, salons, contractors, schools, clinics — need a site that ranks on Google, generates inquiries, and represents your brand. This guide helps you decide in ten minutes.",
+            "sections": [
+                {
+                    "h2": "Four questions before you hire",
+                    "paragraphs": [
+                        "Where do customers find you — Google Maps, WeChat, or referrals? Do you need bilingual content? Online booking or quotes? Who updates menus and prices later?",
+                        "Answers determine whether you need a brochure site, restaurant platform, or SEO-ready marketing site — not simply the lowest price.",
+                    ],
+                },
+                {
+                    "h2": "Template vs custom for Flushing businesses",
+                    "paragraphs": [
+                        "Templates launch fast and cost less upfront but often score poorly on speed and local SEO structure.",
+                        "Custom builds fit competitive categories (contractors, law, med spa), brand differentiation, and Google Ads tracking. 70NYC typically delivers in 2–4 weeks with mobile-first design and baseline <a href=\"/en/services/seo/\">SEO setup</a>.",
+                    ],
+                    "list": [
+                        "Choose template: tight budget, short campaigns, strong referral flow",
+                        "Choose custom: Google-driven leads, multiple services, bilingual brand image",
+                        "Either way: mobile-first — most Flushing searches happen on phones",
+                    ],
+                },
+                {
+                    "h2": "Six must-check items in any proposal",
+                    "paragraphs": ["Review case studies on your phone before signing:"],
+                    "list": [
+                        "Interactive within ~3 seconds (solid Core Web Vitals)",
+                        "Click-to-call, WeChat, or forms above the fold",
+                        "Natural Chinese and English — not machine-translated",
+                        "Dedicated service or area pages for local rankings",
+                        "Access to Analytics and Search Console",
+                        "Contract states you own domain and deliverables",
+                    ],
+                },
+                {
+                    "h2": "Align website, Maps, and ads",
+                    "paragraphs": [
+                        "Your GBP website link should point to your best converting page. Ad landing pages must match organic site NAP data.",
+                        "Effective Flushing stacks: custom site + local SEO + Maps optimization + small Search campaigns to test keywords.",
+                    ],
+                },
+                {
+                    "h2": "What Flushing web design typically costs",
+                    "paragraphs": [
+                        "Brochure sites vary by page count and bilingual scope; restaurant menus and booking add complexity.",
+                        "Beware $299 all-in offers that exclude SEO, maintenance, and domain ownership — clarify annual fees and revision limits.",
+                    ],
+                },
+                {
+                    "h2": "Why Flushing clients work with 70NYC",
+                    "paragraphs": [
+                        "We've built projects across Queens with in-person meetings near Main St and Roosevelt Ave — design that fits Chinese-owned businesses, not translated generic templates.",
+                        "See our <a href=\"/en/areas/flushing/\">Flushing service page</a> and <a href=\"/en/services/web-design/\">web design services</a>, or call 386-316-1848 for a free scope estimate.",
+                    ],
+                },
+            ],
+            "footer_seo": "Flushing web design · Flushing website development · Queens web design · NYC Chinese web design",
+        },
+    },
 ]
 
 
@@ -418,10 +827,12 @@ def nav_html(lang: str, active: str = "", page_path: str = "/") -> str:
     p = prefix(lang)
     home = "/" if lang == "zh" else "/en/"
     bare = page_path.removeprefix("/en")
+    en_href = "/en/" if bare in ("", "/") else f"/en{bare}"
+    zh_href = "/" if bare in ("", "/") else bare
     lang_switch = (
-        f'<a class="lang-switch" href="/en{bare}?lang=en" hreflang="en">EN</a>'
+        f'<a class="lang-switch" href="{en_href}" hreflang="en">EN</a>'
         if lang == "zh"
-        else f'<a class="lang-switch" href="{bare}?lang=zh" hreflang="zh-CN">中文</a>'
+        else f'<a class="lang-switch" href="{zh_href}" hreflang="zh-CN">中文</a>'
     )
     consult = f"{p}/contact/"
     consult_label = "免费咨询" if lang == "zh" else "Free Consult"
@@ -483,6 +894,7 @@ def footer_html(lang: str, footer_seo: str) -> str:
         <a href="{p}/areas/">{areas_label}</a>
         <a href="{p}/nationwide/">{nationwide_label}</a>
         <a href="{p}/process/">{"项目流程" if lang == "zh" else "Our Process"}</a>
+        <a href="{p}/blog/">{"博客" if lang == "zh" else "Blog"}</a>
         <a href="{p}/sitemap/">{sitemap_label}</a>
       </nav>
     </div>
@@ -546,7 +958,7 @@ def head_html(lang: str, meta: dict, canonical_path: str, extra_schema: str = ""
   <meta property="og:locale" content="{"zh_CN" if lang == "zh" else "en_US"}" />
   <meta property="og:title" content="{meta['title']}" />
   <meta property="og:description" content="{meta['description']}" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="{meta.get("og_type", "website")}" />
   <meta property="og:url" content="{canonical}" />
   <meta property="og:image" content="{SITE['og_image']}" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -878,6 +1290,50 @@ def generate_areas() -> list[str]:
     return urls
 
 
+def blog_posting_schema(lang: str, post: dict, meta: dict, path: str) -> str:
+    canonical = f"{DOMAIN}{path}"
+    headline = meta["h1"].replace('"', '\\"')
+    desc = meta["description"].replace('"', '\\"')
+    return f"""  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{headline}",
+    "description": "{desc}",
+    "datePublished": "{post['date']}",
+    "dateModified": "{post['date']}",
+    "inLanguage": "{"zh-CN" if lang == "zh" else "en-US"}",
+    "mainEntityOfPage": {{"@type": "WebPage", "@id": "{canonical}"}},
+    "author": {{"@type": "Organization", "name": "70NYC", "url": "{DOMAIN}/"}},
+    "publisher": {{
+      "@type": "Organization",
+      "name": "70NYC",
+      "logo": {{"@type": "ImageObject", "url": "{SITE['og_image']}"}}
+    }},
+    "image": "{SITE['og_image']}"
+  }}
+  </script>
+"""
+
+
+def blog_body_html(lang: str, meta: dict, p: str) -> str:
+    blocks: list[str] = []
+    if meta.get("intro"):
+        blocks.append(f'          <p class="page-seo-article-lead">{meta["intro"]}</p>')
+    for section in meta.get("sections", []):
+        blocks.append(f'          <h2>{section["h2"]}</h2>')
+        for para in section.get("paragraphs", []):
+            blocks.append(f"          <p>{para}</p>")
+        if section.get("list"):
+            items = "".join(f"\n            <li>{item}</li>" for item in section["list"])
+            blocks.append(f"          <ul class=\"page-seo-article-list\">{items}\n          </ul>")
+    for para in meta.get("paragraphs", []):
+        blocks.append(f"          <p>{para}</p>")
+    cta = "联系我们" if lang == "zh" else "Contact Us"
+    blocks.append(f'          <p><a class="btn btn-primary" href="{p}/contact/">{cta} →</a></p>')
+    return "\n".join(blocks) + "\n"
+
+
 def blog_article_html(lang: str, post: dict, meta: dict) -> str:
     p = prefix(lang)
     path = f"{p}/blog/{post['slug']}/"
@@ -885,12 +1341,14 @@ def blog_article_html(lang: str, post: dict, meta: dict) -> str:
         ("博客" if lang == "zh" else "Blog", f"{p}/blog/"),
         (meta["h1"], None),
     ]
-    paragraphs = "".join(f"          <p>{para}</p>\n" for para in meta.get("paragraphs", []))
+    meta.setdefault("title", meta["h1"] + "｜70NYC")
+    meta["og_type"] = "article"
     schema = breadcrumb_schema(lang, [
         ("首页" if lang == "zh" else "Home", f"{DOMAIN}/" if lang == "zh" else f"{DOMAIN}/en/"),
         ("博客" if lang == "zh" else "Blog", f"{DOMAIN}{p}/blog/"),
         (meta["h1"], f"{DOMAIN}{path}"),
     ])
+    schema += "\n" + blog_posting_schema(lang, post, meta, path)
     hero_meta = {
         "eyebrow": post["date"],
         "h1": meta["h1"],
@@ -898,19 +1356,23 @@ def blog_article_html(lang: str, post: dict, meta: dict) -> str:
         "tags": [],
         "stats": [],
     }
+    body = blog_body_html(lang, meta, p)
     main = (
         hero_html(lang, hero_meta, crumbs, theme_idx=3, show_actions=False)
         + f"""    <section class="page-seo-supplement">
       <div class="page-seo-supplement-inner">
-        <div class="page-seo-article-body" style="max-width:720px">
-{paragraphs}          <p><a class="btn btn-primary" href="{p}/contact/">{"联系我们" if lang == "zh" else "Contact Us"} →</a></p>
-        </div>
+        <article class="page-seo-article-body">
+{body}        </article>
       </div>
     </section>
 """
         + related_html(
             lang,
-            [(f"{p}/blog/", "返回博客" if lang == "zh" else "Back to Blog", ""), (f"{p}/services/", "服务" if lang == "zh" else "Services", "")],
+            [
+                (f"{p}/areas/flushing/", "法拉盛服务" if lang == "zh" else "Flushing Services", ""),
+                (f"{p}/services/seo/", "SEO 优化" if lang == "zh" else "SEO Services", ""),
+                (f"{p}/blog/", "返回博客" if lang == "zh" else "Back to Blog", ""),
+            ],
         )
     )
     footer = meta.get("footer_seo", "70NYC Blog")

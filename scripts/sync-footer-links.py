@@ -14,6 +14,10 @@ EN_BLOCK = """        <a href="/en/areas/">Service Areas</a>
 """
 
 
+ZH_BLOG = '        <a href="/blog/">博客</a>\n'
+EN_BLOG = '        <a href="/en/blog/">Blog</a>\n'
+
+
 def patch(text: str) -> tuple[str, bool]:
     changed = False
     if 'href="/areas/"' not in text:
@@ -34,6 +38,18 @@ def patch(text: str) -> tuple[str, bool]:
                     f'        <a href="/en/services/social-media/">Social Media</a>\n' + EN_BLOCK + f'        <a href="/en/process/">{proc}</a>',
                     1,
                 )
+                changed = True
+                break
+    if 'href="/blog/"' not in text and 'aria-label="我们的服务"' in text:
+        old = '        <a href="/sitemap/">网站地图</a>'
+        if old in text:
+            text = text.replace(old, ZH_BLOG + old, 1)
+            changed = True
+    if 'href="/en/blog/"' not in text and 'aria-label="Services"' in text:
+        for label in ("Sitemap",):
+            old = f'        <a href="/en/sitemap/">{label}</a>'
+            if old in text:
+                text = text.replace(old, EN_BLOG + old, 1)
                 changed = True
                 break
     return text, changed

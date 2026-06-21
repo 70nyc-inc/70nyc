@@ -437,9 +437,9 @@ def nav_html(nav_items, active: str, lang: str, slug: str) -> str:
     zh_path = "/" if slug == "home" else f"/{slug}/"
     en_path = "/en/" if slug == "home" else f"/en/{slug}/"
     lang_switch = (
-        f'<a class="lang-switch" href="{en_path}?lang=en" hreflang="en">EN</a>'
+        f'<a class="lang-switch" href="{en_path}" hreflang="en">EN</a>'
         if lang == "zh"
-        else f'<a class="lang-switch" href="{zh_path}?lang=zh" hreflang="zh-CN">中文</a>'
+        else f'<a class="lang-switch" href="{zh_path}" hreflang="zh-CN">中文</a>'
     )
     consult_href = "#contact" if slug == "contact" else ("/contact/" if lang == "zh" else "/en/contact/")
     consult_label = "免费咨询" if lang == "zh" else "Free Consult"
