@@ -1,3 +1,48 @@
+# Language / path fixes
 /en.html /en/ 301
 /en/en /en/ 301
 /en/en/ /en/ 301
+
+# Old WordPress service pages → new structure
+/web-design /services/web-design/ 301
+/web-design/ /services/web-design/ 301
+/graphic-design /services/ 301
+/graphic-design/ /services/ 301
+/restaurant-design /services/web-design/ 301
+/restaurant-design/ /services/web-design/ 301
+/new-york-hibachi-home-design /services/web-design/ 301
+/new-york-hibachi-home-design/ /services/web-design/ 301
+
+# WordPress defaults / junk
+/sample-page-2 / 301
+/sample-page-2/ / 301
+/sitemap_index.xml /sitemap.xml 301
+
+# Old blog posts with clear local/service targets (before wildcards)
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E9%95%BF%E5%B2%9B%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1 /areas/long-island/ 301
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E9%95%BF%E5%B2%9B%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1/ /areas/long-island/ 301
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%88%B6%E4%BD%9C /services/web-design/ 301
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1%E5%88%B6%E4%BD%9C/ /services/web-design/ 301
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E6%B3%95%E6%8B%89%E7%9B%9B /areas/flushing/ 301
+/2022/03/09/%E7%BA%BD%E7%BA%A6%E6%B3%95%E6%8B%89%E7%9B%9B/ /areas/flushing/ 301
+
+# Old category archives → matching area pages
+/category/new_york_web_design/%E7%BA%BD%E7%BA%A6%E5%94%90%E4%BA%BA%E8%A1%97%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1 /areas/manhattan/ 301
+/category/new_york_web_design/%E7%BA%BD%E7%BA%A6%E5%94%90%E4%BA%BA%E8%A1%97%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1/ /areas/manhattan/ 301
+/category/new_york_web_design/%E7%BA%BD%E7%BA%A6%E5%B8%83%E9%B2%81%E5%85%8B%E6%9E%97%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1 /areas/brooklyn/ 301
+/category/new_york_web_design/%E7%BA%BD%E7%BA%A6%E5%B8%83%E9%B2%81%E5%85%8B%E6%9E%97%E7%BD%91%E7%AB%99%E8%AE%BE%E8%AE%A1/ /areas/brooklyn/ 301
+/category/new_york_web_design /blog/ 301
+/category/new_york_web_design/ /blog/ 301
+
+# WordPress RSS feeds
+/*/feed /blog/ 301
+/*/feed/ /blog/ 301
+/feed /blog/ 301
+/feed/ /blog/ 301
+
+# Remaining old WordPress paths (catch-all, keep after specific rules)
+/2022/* /blog/ 301
+/2024/* /blog/ 301
+/category/* /blog/ 301
+/tag/* /blog/ 301
+/author/* /about/ 301
