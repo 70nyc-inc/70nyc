@@ -20,6 +20,7 @@ New blog post: append to BLOG_POSTS, then run:
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 from typing import Any
 
@@ -235,9 +236,15 @@ AREAS = [
     {
         "slug": "brooklyn",
         "area_served": "Brooklyn",
+        "related_blog": {
+            "slug": "brooklyn-contractor-local-seo-2026",
+            "zh": {"title": "布鲁克林本地 SEO 指南", "span": "装修·地图·获客"},
+            "en": {"title": "Brooklyn Local SEO Guide", "span": "Contractors · Maps"},
+        },
         "zh": {
             "title": "布鲁克林网站设计｜Brooklyn 网站开发与 SEO｜70NYC",
             "description": "70NYC 为布鲁克林华人企业提供网站设计、SEO、Google Ads——日落公园、本森贺、班森贺等社区，餐馆、装修、美容、零售。",
+            "keywords": "布鲁克林网站设计, 布鲁克林SEO, 日落公园网站, Brooklyn web design, 布鲁克林Google Ads, 布鲁克林华人网站, 本森贺网站制作",
             "breadcrumb": "布鲁克林",
             "eyebrow": "Brooklyn · 布鲁克林",
             "h1": "布鲁克林网站设计<br><span>连接多元社区与线上客流</span>",
@@ -251,10 +258,33 @@ AREAS = [
             ],
             "highlights": ["社区餐馆", "装修承包商", "汽车美容", "华人超市", "课后班", "双语网站"],
             "footer_seo": "布鲁克林网站设计 · Brooklyn web design · 日落公园网站 · 布鲁克林SEO · Brooklyn Google Ads",
+            "faq": [
+                {
+                    "q": "布鲁克林网站设计项目一般多久能上线？",
+                    "a": "标准企业官网通常 2–4 周：需求与设计确认、开发、测试上线。含多语言、预约系统或大量案例页的装修/餐饮站，会在报价阶段给出分区排期。日落公园、本森贺客户可约布鲁克林面谈加速确认。",
+                },
+                {
+                    "q": "日落公园、本森贺的餐馆适合先做网站还是 Google 地图？",
+                    "a": "两者都要，但顺序建议：先认领并完善 Google Business Profile（地图），同时上线移动端友好的网站与菜单页。地图带来「附近」流量，网站负责转化与品牌信任。详见我们的 <a href=\"/blog/brooklyn-contractor-local-seo-2026/\">布鲁克林本地 SEO 指南</a>。",
+                },
+                {
+                    "q": "布鲁克林网站设计和曼哈顿模板有什么不同？",
+                    "a": "布鲁克林社区更依赖「Brooklyn + 社区名 + 行业」长尾词（如 Sunset Park contractor、本森贺 装修），而不是曼哈顿式的品牌大词。我们会按服务半径写落地页，案例图标注具体社区，而不是套用曼哈顿天际线模板。",
+                },
+                {
+                    "q": "只做中文网站能服务布鲁克林华人客户吗？",
+                    "a": "可以，但建议至少核心页面（首页、联系、服务）提供英文版本或英文摘要。布鲁克林很多年轻客户与房东、供应商用英文沟通，双语站点有助于 Google 覆盖更多搜索，也减少「只中文」带来的信任门槛。",
+                },
+                {
+                    "q": "70NYC 在布鲁克林可以面谈吗？",
+                    "a": "可以。我们在布鲁克林、皇后区及曼哈顿均可预约见面；也可视频/微信远程协作。首次咨询免费，会根据您的社区与行业给出网站 + SEO + 广告的组合建议。",
+                },
+            ],
         },
         "en": {
             "title": "Brooklyn Web Design | NYC Website & SEO | 70NYC",
             "description": "Web design, SEO, and Google Ads for Chinese businesses in Brooklyn — Sunset Park, Bensonhurst, restaurants, contractors, beauty, retail.",
+            "keywords": "Brooklyn web design, Brooklyn SEO, Sunset Park website, Brooklyn Google Ads, Chinese business Brooklyn, Bensonhurst web design",
             "breadcrumb": "Brooklyn",
             "eyebrow": "Brooklyn NYC",
             "h1": "Brooklyn Web Design<br><span>Reach Neighborhood Customers Online</span>",
@@ -268,6 +298,28 @@ AREAS = [
             ],
             "highlights": ["Neighborhood restaurants", "Contractors", "Auto services", "Markets", "Tutoring", "Bilingual sites"],
             "footer_seo": "Brooklyn web design · Sunset Park website · Brooklyn SEO · Brooklyn Google Ads · NYC Chinese business",
+            "faq": [
+                {
+                    "q": "How long does a Brooklyn web design project take?",
+                    "a": "Standard business sites typically launch in 2–4 weeks: discovery, design sign-off, build, and QA. Contractor or restaurant sites with bilingual menus or booking may take longer — we provide a phased timeline at proposal. Sunset Park and Bensonhurst clients can meet locally to speed approvals.",
+                },
+                {
+                    "q": "For Sunset Park restaurants, start with a website or Google Maps?",
+                    "a": "Both — but prioritize claiming and optimizing Google Business Profile while launching a mobile-friendly site with menu pages. Maps drives near-me traffic; your site converts trust into calls. See our <a href=\"/en/blog/brooklyn-contractor-local-seo-2026/\">Brooklyn local SEO guide</a>.",
+                },
+                {
+                    "q": "How is Brooklyn web design different from Manhattan templates?",
+                    "a": "Brooklyn wins on neighborhood long-tail keywords (Sunset Park contractor, Bensonhurst renovation) rather than skyline-brand terms. We build area-specific landing copy and label portfolio photos by community — not recycled Manhattan layouts.",
+                },
+                {
+                    "q": "Can a Chinese-only site work for Brooklyn customers?",
+                    "a": "Yes for some audiences, but we recommend English summaries on core pages (home, services, contact). Many Brooklyn customers, landlords, and vendors search in English — bilingual sites expand reach and improve Google coverage.",
+                },
+                {
+                    "q": "Can we meet in Brooklyn with 70NYC?",
+                    "a": "Yes — we schedule meetings in Brooklyn, Queens, and Manhattan, or work remotely via video/WeChat. First consultation is free; we recommend a web + SEO + ads stack based on your neighborhood and industry.",
+                },
+            ],
         },
     },
     {
@@ -809,6 +861,124 @@ BLOG_POSTS: list[dict[str, Any]] = [
             "footer_seo": "Flushing web design · Flushing website development · Queens web design · NYC Chinese web design",
         },
     },
+    {
+        "slug": "brooklyn-contractor-local-seo-2026",
+        "date": "2026-06-18",
+        "zh": {
+            "title": "布鲁克林华人装修/承包商 Google 地图 SEO 指南｜70NYC",
+            "description": "日落公园、本森贺装修公司与承包商如何在 Google 地图和本地搜索获客？GBP、案例页、评价与布鲁克林网站设计配合——2026 实操指南。",
+            "keywords": "布鲁克林SEO, 布鲁克林网站设计, 日落公园装修, Brooklyn contractor SEO, 布鲁克林Google地图, 本森贺网站, 华人装修公司SEO",
+            "h1": "布鲁克林装修与承包商怎么做本地 SEO？",
+            "intro": "布鲁克林华人装修、水电、厨房改造、屋顶工程大量集中在日落公园（Sunset Park）、本森贺（Bensonhurst）、班森贺（Bay Ridge）等社区。客人搜「Brooklyn kitchen remodel」「布鲁克林 装修公司 附近」时，Google 本地包只显示 3 家——不进前三，电话就少了。本文针对<strong>布鲁克林承包商与装修队</strong>，不是通用纽约大词。",
+            "sections": [
+                {
+                    "h2": "布鲁克林装修客户怎么搜 Google",
+                    "paragraphs": [
+                        "中文：布鲁克林 装修、日落公园 厨房改造、本森贺 水电工、布鲁克林 屋顶、班森贺 装修公司。英文：Brooklyn contractor near me、Sunset Park kitchen renovation、Bensonhurst plumber、Brooklyn home remodeling。",
+                        "这些词比「纽约网站设计」更接近成交。网站 title、H1 和 GBP 简介应分别覆盖<strong>Brooklyn + 社区 + 服务</strong>，而不是只写公司中文名。",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile：承包商必做项",
+                    "paragraphs": ["装修类 GBP 比餐馆更依赖信任信号："],
+                    "list": [
+                        "Primary category 选 General contractor / Kitchen remodeler 等最贴近项",
+                        "服务区域如实填写布鲁克林各社区，勿虚假扩展到曼哈顿",
+                        "上传执照、保险、Before/After 案例图（带简短文字说明）",
+                        "服务列表写清：厨房、浴室、屋顶、地下室、商业装修",
+                        "每周 Post 更新完工案例或季节性促销（春季装修旺季）",
+                        "电话、网站与 <a href=\"/areas/brooklyn/\">布鲁克林服务页</a> 完全一致",
+                    ],
+                },
+                {
+                    "h2": "案例页：布鲁克林 SEO 的核心资产",
+                    "paragraphs": [
+                        "一页 PDF 作品集不够——Google 需要可索引文字。每个案例建议独立段落：「Sunset Park 厨房改造 · 3 周完工 · 橱柜+台面+电气」，附 3–5 张图与 alt 描述。",
+                        "这比堆「布鲁克林网站设计」关键词更有效。我们建站时会按社区建案例筛选或标签，方便客人找「本区做过类似项目」的承包商。",
+                    ],
+                },
+                {
+                    "h2": "评价：装修行业排名加速器",
+                    "paragraphs": [
+                        "布鲁克林华人装修很多靠口碑，但 Google 只认公开评价。完工后 48 小时内邀请客户留评，附上项目类型（厨房/浴室）。",
+                        "回复每条评价（中英皆可），展示售后负责。切勿刷评——Google 对 contractor 类别审核更严。",
+                    ],
+                },
+                {
+                    "h2": "网站 + 地图 + 广告的常见组合",
+                    "paragraphs": [
+                        "打底：移动端网站 + 案例页 + GBP 优化 + 本地 SEO。旺季：Google Ads 投「Brooklyn kitchen remodel」等词，落地页与 organic 站同一电话。",
+                        "若预算有限，优先<strong>网站速度 + 案例文字 + GBP</strong>，再考虑广告。需要 <a href=\"/services/web-design/\">布鲁克林网站设计</a> 或 <a href=\"/services/seo/\">SEO 代运营</a> 可预约免费咨询。",
+                    ],
+                },
+                {
+                    "h2": "与法拉盛、曼哈顿竞品的差异",
+                    "paragraphs": [
+                        "布鲁克林客人更在意「有没有做过我们社区」「能不能说粤语/普通话」「报价是否透明」。网站应突出服务半径、社区案例和表单报价——而不是曼哈顿式的品牌大片。",
+                        "延伸阅读：<a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">法拉盛餐馆地图 SEO</a>（餐饮逻辑类似，可对照 GBP 做法）。",
+                    ],
+                },
+            ],
+            "footer_seo": "布鲁克林SEO · 布鲁克林网站设计 · 日落公园装修 · Brooklyn contractor SEO · 本森贺网站",
+        },
+        "en": {
+            "title": "Brooklyn Contractor Google Maps & Local SEO Guide 2026 | 70NYC",
+            "description": "How Brooklyn Chinese contractors rank on Google Maps — Sunset Park, Bensonhurst remodeling SEO, GBP, portfolio pages, and reviews.",
+            "keywords": "Brooklyn SEO, Brooklyn web design, Sunset Park contractor, Brooklyn Google Maps, Bensonhurst remodeling SEO, Chinese contractor Brooklyn",
+            "h1": "Local SEO for Brooklyn Contractors & Remodelers",
+            "intro": "Chinese-owned remodeling, plumbing, kitchen, and roofing crews cluster in Sunset Park, Bensonhurst, and Bay Ridge. When customers search \"Brooklyn kitchen remodel near me,\" Google shows only three map results. This guide focuses on <strong>Brooklyn contractors</strong> — not generic NYC keywords.",
+            "sections": [
+                {
+                    "h2": "How Brooklyn customers search",
+                    "paragraphs": [
+                        "Chinese: 布鲁克林 装修, 日落公园 厨房改造, 本森贺 水电. English: Brooklyn contractor near me, Sunset Park kitchen renovation, Bensonhurst plumber.",
+                        "These terms convert better than \"NYC web design.\" Titles, H1s, and GBP descriptions should target <strong>Brooklyn + neighborhood + service</strong>.",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile for contractors",
+                    "paragraphs": ["Trust signals matter more than for restaurants:"],
+                    "list": [
+                        "Pick accurate primary categories (General contractor, Kitchen remodeler)",
+                        "Set honest service areas — don't fake Manhattan coverage",
+                        "Upload license, insurance, and before/after photos with captions",
+                        "List services: kitchen, bath, roof, basement, commercial",
+                        "Weekly Posts for completed jobs or seasonal promos",
+                        "Match phone and website with your <a href=\"/en/areas/brooklyn/\">Brooklyn service page</a>",
+                    ],
+                },
+                {
+                    "h2": "Portfolio pages as SEO assets",
+                    "paragraphs": [
+                        "A PDF portfolio isn't enough — Google needs indexable text. Each project: \"Sunset Park kitchen remodel · 3 weeks · cabinets + counters + electrical\" with alt text on photos.",
+                        "We build neighborhood-tagged case studies so prospects find contractors who've worked nearby.",
+                    ],
+                },
+                {
+                    "h2": "Reviews accelerate rankings",
+                    "paragraphs": [
+                        "Brooklyn remodeling runs on referrals, but Google ranks on public reviews. Ask within 48 hours of completion; mention project type in replies.",
+                        "Never buy reviews — contractor categories face strict Google enforcement.",
+                    ],
+                },
+                {
+                    "h2": "Website + Maps + Ads stack",
+                    "paragraphs": [
+                        "Baseline: mobile site + case studies + GBP + local SEO. Peak season: Google Ads on \"Brooklyn kitchen remodel\" with matching landing pages.",
+                        "Budget tight? Prioritize site speed, written case studies, and GBP before ads. See <a href=\"/en/services/web-design/\">Brooklyn web design</a> and <a href=\"/en/services/seo/\">SEO services</a>.",
+                    ],
+                },
+                {
+                    "h2": "Brooklyn vs Manhattan positioning",
+                    "paragraphs": [
+                        "Brooklyn clients care about neighborhood proof, bilingual communication, and transparent quotes — not Manhattan-style brand films.",
+                        "Related: <a href=\"/en/blog/flushing-restaurant-google-maps-seo-2026/\">Flushing restaurant Maps SEO</a> (similar GBP playbook).",
+                    ],
+                },
+            ],
+            "footer_seo": "Brooklyn SEO · Brooklyn web design · Sunset Park contractor · Bensonhurst remodeling",
+        },
+    },
 ]
 
 
@@ -1100,6 +1270,52 @@ def supplement_html(lang: str, meta: dict) -> str:
 """
 
 
+def area_faq_html(lang: str, faqs: list[dict], area_name: str) -> str:
+    items = []
+    for i, item in enumerate(faqs):
+        open_attr = " open" if i == 0 else ""
+        items.append(
+            f"""          <details class="faq-item"{open_attr}>
+            <summary>{item["q"]}</summary>
+            <p>{item["a"]}</p>
+          </details>"""
+        )
+    title = "常见问题" if lang == "zh" else "FAQ"
+    h2 = f"{area_name}网站设计常见问题" if lang == "zh" else f"{area_name} Web Design FAQ"
+    return f"""    <section class="page-seo-supplement page-seo-area-faq" aria-label="{title}">
+      <div class="page-seo-supplement-inner">
+        <div class="page-seo-supplement-head">
+          <span class="label">FAQ</span>
+          <h2>{h2}</h2>
+        </div>
+        <div class="faq-list">
+{chr(10).join(items)}
+        </div>
+      </div>
+    </section>
+"""
+
+
+def faq_page_schema(faqs: list[dict]) -> str:
+    entities = []
+    for item in faqs:
+        q = item["q"].replace('"', '\\"')
+        a = re.sub(r"<[^>]+>", "", item["a"]).replace('"', '\\"')
+        entities.append(
+            f'      {{"@type": "Question", "name": "{q}", "acceptedAnswer": {{"@type": "Answer", "text": "{a}"}}}}'
+        )
+    return f"""  <script type="application/ld+json">
+  {{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+{",".join(entities)}
+    ]
+  }}
+  </script>
+"""
+
+
 def related_html(lang: str, related: list[tuple[str, str, str]], title: str | None = None) -> str:
     cards = []
     for href, b, span in related:
@@ -1181,11 +1397,17 @@ def generate_nationwide() -> list[str]:
 
 def area_related(lang: str, current_slug: str) -> list[tuple[str, str, str]]:
     p = prefix(lang)
+    area = next(a for a in AREAS if a["slug"] == current_slug)
     others = [a for a in AREAS if a["slug"] != current_slug][:2]
-    related = [
+    related = []
+    rb = area.get("related_blog")
+    if rb:
+        m = rb[lang]
+        related.append((f"{p}/blog/{rb['slug']}/", m["title"], m["span"]))
+    related.extend(
         (f"{p}/areas/{a['slug']}/", a[lang]["breadcrumb"], a[lang]["eyebrow"].split("·")[0].strip())
         for a in others
-    ]
+    )
     related.append((f"{p}/nationwide/", "全美远程" if lang == "zh" else "Nationwide", "Remote US-wide"))
     related.append((f"{p}/contact/", "免费咨询" if lang == "zh" else "Contact", "24h" if lang == "en" else "24h 内回复"))
     return related
@@ -1261,11 +1483,14 @@ def generate_areas() -> list[str]:
                 meta["description"],
                 area["area_served"],
             )
+            if meta.get("faq"):
+                schema += "\n" + faq_page_schema(meta["faq"])
             meta_full = {
                 **meta,
                 "label": f"70NYC {meta['breadcrumb']}",
                 "section_h2": "本地服务说明" if lang == "zh" else "Local Service Overview",
                 "highlights_title": "常见行业" if lang == "zh" else "Common Industries",
+                "keywords": meta.get("keywords", ""),
                 "cta_primary": ("获取本区方案", f"{p}/contact/") if lang == "zh" else ("Get Area Proposal", f"{p}/contact/"),
                 "cta_ghost": ("全美远程", f"{p}/nationwide/") if lang == "zh" else ("Nationwide Remote", f"{p}/nationwide/"),
                 "stats": [
@@ -1275,11 +1500,13 @@ def generate_areas() -> list[str]:
                     ("中英", "双语" if lang == "zh" else "Bilingual"),
                 ],
             }
+            faq_block = area_faq_html(lang, meta["faq"], meta["breadcrumb"]) + "\n" if meta.get("faq") else ""
             main = (
                 hero_html(lang, meta_full, crumbs, theme_idx=idx)
                 + "\n"
                 + supplement_html(lang, meta_full)
                 + "\n"
+                + faq_block
                 + service_grid_html(lang)
                 + "\n"
                 + related_html(lang, area_related(lang, area["slug"]))

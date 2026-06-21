@@ -337,4 +337,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
+  <url>
+    <loc>https://70nyc.com/blog/brooklyn-contractor-local-seo-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/blog/brooklyn-contractor-local-seo-2026/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/blog/brooklyn-contractor-local-seo-2026/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/blog/brooklyn-contractor-local-seo-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/blog/brooklyn-contractor-local-seo-2026/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/blog/brooklyn-contractor-local-seo-2026/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
 </urlset>

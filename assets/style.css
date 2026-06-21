@@ -5022,7 +5022,27 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
   text-decoration: underline;
 }
 
+.page-seo-area-faq .faq-list {
+  max-width: 720px;
+}
+
+.page-seo-area-faq .faq-item summary {
+  cursor: pointer;
+}
+
+.page-seo-area-faq .faq-item p a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .page-seo-article-body code {
+  font-size: 0.92em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: rgba(201, 162, 39, 0.12);
+}
+
   font-size: 0.92em;
   padding: 0.1em 0.35em;
   border-radius: 4px;
