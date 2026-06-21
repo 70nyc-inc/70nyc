@@ -160,9 +160,15 @@ AREAS = [
     {
         "slug": "manhattan",
         "area_served": "Manhattan",
+        "related_blog": {
+            "slug": "manhattan-law-firm-local-seo-2026",
+            "zh": {"title": "曼哈顿律所本地 SEO", "span": "律所·诊所·专业服务"},
+            "en": {"title": "Manhattan Law Firm Local SEO", "span": "Legal · Professional"},
+        },
         "zh": {
             "title": "曼哈顿网站设计｜纽约 Manhattan 网页开发与 SEO｜70NYC",
             "description": "70NYC 为曼哈顿华人企业提供网站设计、SEO、Google Ads 与社媒运营——律所、餐馆、美容、金融等，可预约曼哈顿面谈。",
+            "keywords": "曼哈顿网站设计, 曼哈顿SEO, Manhattan web design, 纽约中城网站, 曼哈顿Google Ads, 华人律所网站, 曼哈顿网站制作",
             "breadcrumb": "曼哈顿",
             "eyebrow": "Manhattan · 曼哈顿",
             "h1": "曼哈顿网站设计<br><span>专业形象匹配纽约核心商圈</span>",
@@ -176,10 +182,33 @@ AREAS = [
             ],
             "highlights": ["律所形象站", "诊所预约站", "精品餐饮", "高端沙龙", "地产经纪", "中英双语"],
             "footer_seo": "曼哈顿网站设计 · Manhattan web design · 曼哈顿SEO · 曼哈顿Google Ads · 纽约中城网站开发",
+            "faq": [
+                {
+                    "q": "曼哈顿律所或诊所网站需要英文为主还是中英双语？",
+                    "a": "视客户群而定：服务主流美国客户以英文为主、中文摘要；华人社区律所/诊所建议核心页中英双语。Google 会分别索引两种语言信号，利于「Manhattan Chinese lawyer」「曼哈顿 律师」等搜索。详见 <a href=\"/blog/manhattan-law-firm-local-seo-2026/\">曼哈顿专业服务本地 SEO 指南</a>。",
+                },
+                {
+                    "q": "曼哈顿网站设计和法拉盛、布鲁克林有什么不同？",
+                    "a": "曼哈顿更强调品牌质感、加载速度、清晰的服务边界与合规信息（如律所 disclaimer、医疗隐私说明）。关键词侧重 Midtown/Downtown/Chinatown + 行业，而非社区街道名。",
+                },
+                {
+                    "q": "在曼哈顿做 Google Ads 还是 SEO 先做？",
+                    "a": "竞争高的词（如 personal injury、med spa）往往 Ads 更快见效；SEO 与专业内容页是长期资产。我们建议官网 + 本地 SEO 打底，再对高意向词小规模测试 Ads。",
+                },
+                {
+                    "q": "可以在曼哈顿面谈吗？",
+                    "a": "可以。我们可在中城、下城或唐人街附近约见，也支持视频评审设计稿。首次咨询免费。",
+                },
+                {
+                    "q": "曼哈顿企业网站一般多久交付？",
+                    "a": "标准专业形象站 2–4 周；含多 practice area、团队介绍、案例库或预约系统的律所/诊所站可能 4–6 周，报价阶段会给出里程碑。",
+                },
+            ],
         },
         "en": {
             "title": "Manhattan Web Design | NYC Website Development & SEO | 70NYC",
             "description": "Web design, SEO, Google Ads, and social for Chinese-owned businesses in Manhattan — law, restaurants, beauty, finance. In-person meetings available.",
+            "keywords": "Manhattan web design, Manhattan SEO, NYC Midtown website, Manhattan Google Ads, Chinese law firm website, Manhattan website development",
             "breadcrumb": "Manhattan",
             "eyebrow": "Manhattan NYC",
             "h1": "Manhattan Web Design<br><span>Built for NYC's Core Markets</span>",
@@ -193,6 +222,28 @@ AREAS = [
             ],
             "highlights": ["Law firm sites", "Clinic booking", "Fine dining", "Premium salons", "Real estate", "Bilingual EN/中文"],
             "footer_seo": "Manhattan web design · NYC website development · Manhattan SEO · Manhattan Google Ads · Midtown web design",
+            "faq": [
+                {
+                    "q": "Should Manhattan law firm sites be English-only or bilingual?",
+                    "a": "Depends on clientele: English-primary with Chinese summaries for US-facing firms; core bilingual pages for Chinatown/community practices. Google indexes both for \"Manhattan Chinese lawyer\" and related terms. See our <a href=\"/en/blog/manhattan-law-firm-local-seo-2026/\">Manhattan professional services SEO guide</a>.",
+                },
+                {
+                    "q": "How is Manhattan web design different from Flushing or Brooklyn?",
+                    "a": "Manhattan emphasizes brand polish, speed, clear service boundaries, and compliance (legal disclaimers, healthcare privacy). Keywords focus on Midtown/Downtown/Chinatown + practice area — not neighborhood street names.",
+                },
+                {
+                    "q": "Google Ads or SEO first in Manhattan?",
+                    "a": "High-competition terms (personal injury, med spa) often need Ads for immediate visibility; SEO and content are long-term assets. We recommend website + local SEO baseline, then test Ads on high-intent keywords.",
+                },
+                {
+                    "q": "Can we meet in Manhattan?",
+                    "a": "Yes — Midtown, Downtown, or Chinatown meetings, or video design reviews. First consultation is free.",
+                },
+                {
+                    "q": "How long does a Manhattan business website take?",
+                    "a": "Standard professional sites: 2–4 weeks. Law/clinic sites with multiple practice areas, team pages, or booking: 4–6 weeks with milestones at proposal.",
+                },
+            ],
         },
     },
     {
@@ -325,9 +376,15 @@ AREAS = [
     {
         "slug": "long-island",
         "area_served": "Long Island",
+        "related_blog": {
+            "slug": "long-island-chinese-business-local-seo-2026",
+            "zh": {"title": "长岛本地 SEO 指南", "span": "装修·Great Neck"},
+            "en": {"title": "Long Island Local SEO Guide", "span": "Contractors · Nassau"},
+        },
         "zh": {
             "title": "长岛网站设计｜Long Island 网站开发与 SEO｜70NYC",
             "description": "70NYC 服务长岛华人企业网站设计、SEO、Google Ads——Great Neck、曼哈西特、Plainview 等，装修、美容、餐饮、专业服务。",
+            "keywords": "长岛网站设计, 长岛SEO, Long Island web design, Great Neck网站, 长岛Google Ads, 长岛华人网站, 曼哈西特网站制作",
             "breadcrumb": "长岛",
             "eyebrow": "Long Island · 长岛",
             "h1": "长岛网站设计<br><span>郊区华人企业的专业线上门面</span>",
@@ -341,10 +398,33 @@ AREAS = [
             ],
             "highlights": ["装修公司", "美容牙科", "专业服务", "景观园艺", "家庭餐馆", "服务范围说明"],
             "footer_seo": "长岛网站设计 · Long Island web design · 长岛SEO · Great Neck网站 · Long Island Google Ads",
+            "faq": [
+                {
+                    "q": "长岛网站为什么要写明服务范围？",
+                    "a": "长岛客户常开车 15–30 分钟到店，Google 也会按距离排序。网站与 GBP 应清晰列出服务城镇（Great Neck、Manhasset、Plainview 等）与半径，减少无效咨询。详见 <a href=\"/blog/long-island-chinese-business-local-seo-2026/\">长岛华人企业本地 SEO 指南</a>。",
+                },
+                {
+                    "q": "长岛装修/美容类客户怎么搜 Google？",
+                    "a": "英文：Long Island kitchen remodel、Great Neck contractor、Nassau County dentist。中文：长岛 装修、Great Neck 美容、长岛 华人 律所。落地页应「城镇 + 服务」组合，而不是只写 Long Island。",
+                },
+                {
+                    "q": "长岛企业需要 Google 地图吗？",
+                    "a": "需要。即使有实体店面或上门服务区，GBP 仍是本地包核心。上传案例图、服务列表，并收集带项目类型的评价。",
+                },
+                {
+                    "q": "可以在长岛见面吗？",
+                    "a": "可以预约 North Shore、Nassau 一带见面，或远程协作。我们理解长岛季节性（如装修春季旺季）并可在方案里排期。",
+                },
+                {
+                    "q": "长岛网站设计预算和曼哈顿差多少？",
+                    "a": "页面复杂度决定价格，而非地理位置。案例型装修站通常比单页展示站高；报价会列明页数、双语、SEO 与维护选项，签约前透明锁定。",
+                },
+            ],
         },
         "en": {
             "title": "Long Island Web Design | NYC Suburbs SEO & Ads | 70NYC",
             "description": "Web design, SEO, and Google Ads for Chinese businesses on Long Island — Great Neck, Manhasset, Plainview, contractors, beauty, professional services.",
+            "keywords": "Long Island web design, Long Island SEO, Great Neck website, Nassau web design, Long Island Google Ads, Chinese business Long Island",
             "breadcrumb": "Long Island",
             "eyebrow": "Long Island NY",
             "h1": "Long Island Web Design<br><span>Professional Sites for Suburban Clients</span>",
@@ -358,6 +438,28 @@ AREAS = [
             ],
             "highlights": ["Contractors", "Beauty & dental", "Professional firms", "Landscaping", "Family restaurants", "Service area pages"],
             "footer_seo": "Long Island web design · Great Neck website · Long Island SEO · Nassau Suffolk web development · LI Google Ads",
+            "faq": [
+                {
+                    "q": "Why must Long Island websites show service areas?",
+                    "a": "Clients often drive 15–30 minutes; Google ranks partly by distance. Sites and GBP should list towns served (Great Neck, Manhasset, Plainview) to filter unqualified leads. See our <a href=\"/en/blog/long-island-chinese-business-local-seo-2026/\">Long Island local SEO guide</a>.",
+                },
+                {
+                    "q": "How do Long Island customers search on Google?",
+                    "a": "English: Long Island kitchen remodel, Great Neck contractor, Nassau County dentist. Chinese: 长岛 装修, Great Neck 美容. Landing pages need town + service — not generic \"Long Island\" alone.",
+                },
+                {
+                    "q": "Do Long Island businesses need Google Maps?",
+                    "a": "Yes. Whether storefront or service-area business, GBP drives the local pack. Upload project photos, service lists, and reviews mentioning job type.",
+                },
+                {
+                    "q": "Can we meet on Long Island?",
+                    "a": "Yes — North Shore and Nassau meetups, or remote collaboration. We plan around seasonal peaks like spring remodeling.",
+                },
+                {
+                    "q": "How does Long Island web design pricing compare to Manhattan?",
+                    "a": "Scope drives price, not geography. Portfolio contractor sites cost more than single-page brochures — proposals list pages, bilingual scope, SEO, and maintenance before sign-off.",
+                },
+            ],
         },
     },
     {
@@ -977,6 +1079,234 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 },
             ],
             "footer_seo": "Brooklyn SEO · Brooklyn web design · Sunset Park contractor · Bensonhurst remodeling",
+        },
+    },
+    {
+        "slug": "manhattan-law-firm-local-seo-2026",
+        "date": "2026-06-19",
+        "zh": {
+            "title": "曼哈顿律所与专业服务本地 SEO 指南｜华人企业｜70NYC",
+            "description": "曼哈顿律所、诊所、金融顾问如何在 Google 获得更高曝光？Midtown/Downtown 关键词、GBP、专业网站结构与评价策略——2026 实操。",
+            "keywords": "曼哈顿SEO, 曼哈顿网站设计, 华人律所网站, Manhattan law firm SEO, 曼哈顿Google地图, 纽约中城网站, 曼哈顿诊所SEO",
+            "h1": "曼哈顿律所与专业服务怎么做本地 SEO？",
+            "intro": "曼哈顿华人律所、移民律师、诊所、医美、金融顾问面临的是<strong>高信任、高竞争</strong>搜索环境。客人搜「Manhattan immigration lawyer」「曼哈顿 离婚 律师」「Midtown med spa」时，不会点看起来不专业的网站。本文针对曼哈顿专业服务，与法拉盛餐馆、布鲁克林装修指南<strong>内容完全不同</strong>。",
+            "sections": [
+                {
+                    "h2": "曼哈顿专业服务客户的搜索习惯",
+                    "paragraphs": [
+                        "英文搜索常带 neighborhood + specialty：Midtown employment lawyer、Downtown Chinese restaurant、Chinatown accountant。中文：曼哈顿 律师、中城 诊所、纽约 华人 会计。",
+                        "与布鲁克林不同，曼哈顿更少「near me 街道名」，更多「行业权威 + 区域名」。网站应为每个 practice area 建独立落地页，而不是一个「关于我们」概括全部。",
+                    ],
+                },
+                {
+                    "h2": "律所/诊所网站的 SEO 结构",
+                    "paragraphs": ["Google 需要看懂您做什么、服务谁："],
+                    "list": [
+                        "首页：清晰 value proposition + 电话 + 预约 CTA",
+                        "Practice area 页：移民、家庭法、人身伤害等各自 title/H1 含 Manhattan",
+                        "团队页：律师/医生资质、语言、教育背景（E-E-A-T 信号）",
+                        "FAQ 页：程序、费用区间、首次咨询流程",
+                        "联系页：NAP 与 Google Business Profile 完全一致",
+                        "合规：律所 disclaimer、医疗 HIPAA 提示（不替代法律意见，但展示专业度）",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile 对曼哈顿专业服务的价值",
+                    "paragraphs": [
+                        "律所、诊所、医美仍有地图包展示。类别选 Lawyer / Law firm / Medical clinic 等精确项；服务列表写清 practice areas；上传办公室外观与团队照片（需客户授权）。",
+                        "评价内容若提到具体服务（「移民案件办得很顺」），比空泛五星更有帮助。严禁虚假评价。",
+                    ],
+                },
+                {
+                    "h2": "中英双语如何布局",
+                    "paragraphs": [
+                        "常见结构：英文 URL 为主路径，中文核心页 mirror 或独立 /zh/  section；hreflang 与 canonical 要正确，避免 duplicate。",
+                        "华人客户读中文、法院与合作伙伴可能查英文——双语不是翻译同一页，而是<strong>同一实体的两种受众入口</strong>。我们建站时见 <a href=\"/areas/manhattan/\">曼哈顿网站设计</a> 服务说明。",
+                    ],
+                },
+                {
+                    "h2": "曼哈顿 SEO vs Google Ads",
+                    "paragraphs": [
+                        "人身伤害、医美等 CPC 极高，Ads 可快速测试转化，但需专业落地页与 call tracking。SEO 靠内容深度与评价缓慢积累。",
+                        "建议：网站 + 本地 SEO + 精选 practice area 内容；Ads 预算交给有 bar compliance 经验的团队（我们提供 <a href=\"/services/google-ads/\">Google Ads 代运营</a>）。",
+                    ],
+                },
+                {
+                    "h2": "常见错误",
+                    "paragraphs": [
+                        "用 Wix 模板堆砌「纽约最好律师」；practice area 全挤在一页；中文页是英文机翻；电话与 GBP 不一致；没有移动端快速预约。",
+                        "修复优先级：NAP 统一 → 拆分 practice area 页 → 收集真实 Google 评价 → 再扩内容营销。",
+                    ],
+                },
+            ],
+            "footer_seo": "曼哈顿SEO · 曼哈顿网站设计 · 华人律所网站 · Manhattan law firm SEO · 曼哈顿诊所SEO",
+        },
+        "en": {
+            "title": "Manhattan Law Firm & Professional Services Local SEO 2026 | 70NYC",
+            "description": "SEO for Manhattan law firms, clinics, and advisors — practice area pages, GBP, bilingual structure, reviews, and Ads vs organic strategy.",
+            "keywords": "Manhattan SEO, Manhattan web design, law firm website NYC, Manhattan law firm SEO, Chinese lawyer Manhattan, Midtown professional services SEO",
+            "h1": "Local SEO for Manhattan Law Firms & Professional Services",
+            "intro": "Manhattan Chinese law firms, immigration attorneys, clinics, med spas, and financial advisors compete in a <strong>high-trust, high-CPC</strong> search market. This guide is unique to Manhattan professionals — not Flushing restaurants or Brooklyn contractors.",
+            "sections": [
+                {
+                    "h2": "How Manhattan clients search",
+                    "paragraphs": [
+                        "English: Midtown employment lawyer, Downtown immigration attorney, Chinatown accountant. Chinese: 曼哈顿 律师, 中城 诊所.",
+                        "Manhattan searches emphasize specialty + district more than block-level \"near me.\" Build separate landing pages per practice area — not one generic About page.",
+                    ],
+                },
+                {
+                    "h2": "SEO site structure for firms and clinics",
+                    "paragraphs": ["Help Google understand what you do:"],
+                    "list": [
+                        "Homepage: clear value prop, phone, booking CTA",
+                        "Practice area pages: immigration, family law, PI — each with Manhattan in title/H1",
+                        "Team pages: credentials, languages, education (E-E-A-T)",
+                        "FAQ: process, fee ranges, consultation flow",
+                        "Contact: NAP matches Google Business Profile exactly",
+                        "Compliance: legal disclaimers, healthcare privacy notices",
+                    ],
+                },
+                {
+                    "h2": "Google Business Profile for professionals",
+                    "paragraphs": [
+                        "Choose precise categories (Law firm, Lawyer, Medical clinic). List services by practice area; add office and team photos with permission.",
+                        "Reviews mentioning specific outcomes help more than generic five stars. Never buy reviews.",
+                    ],
+                },
+                {
+                    "h2": "Bilingual layout",
+                    "paragraphs": [
+                        "Common pattern: English-primary URLs with mirrored or /zh/ Chinese core pages; correct hreflang and canonicals.",
+                        "Clients may read Chinese while partners search English — two audience entry points, not machine-translated duplicates. See <a href=\"/en/areas/manhattan/\">Manhattan web design</a>.",
+                    ],
+                },
+                {
+                    "h2": "SEO vs Google Ads in Manhattan",
+                    "paragraphs": [
+                        "PI and med spa keywords have extreme CPC — Ads need compliant landing pages. SEO builds slowly through depth and reviews.",
+                        "Stack: website + local SEO + practice content; Ads with experienced compliance-aware management via our <a href=\"/en/services/google-ads/\">Google Ads services</a>.",
+                    ],
+                },
+                {
+                    "h2": "Common mistakes",
+                    "paragraphs": [
+                        "Template sites claiming \"best NYC lawyer\"; all practice areas on one page; Chinese pages as raw translations; NAP mismatches; no mobile booking.",
+                        "Fix order: unify NAP → split practice pages → collect real reviews → expand content.",
+                    ],
+                },
+            ],
+            "footer_seo": "Manhattan SEO · Manhattan web design · Law firm website NYC · Manhattan professional services SEO",
+        },
+    },
+    {
+        "slug": "long-island-chinese-business-local-seo-2026",
+        "date": "2026-06-20",
+        "zh": {
+            "title": "长岛华人企业本地 SEO 指南｜Great Neck·Nassau｜70NYC",
+            "description": "长岛华人装修、美容、律所如何在 Google 获客？城镇名关键词、服务半径、GBP 与案例页——Great Neck、Manhasset、Plainview 2026 实操。",
+            "keywords": "长岛SEO, 长岛网站设计, Great Neck SEO, Long Island web design, 长岛华人网站, Nassau SEO, 曼哈西特网站, 长岛Google地图",
+            "h1": "长岛华人企业怎么做本地 SEO？",
+            "intro": "长岛（Long Island）华人商业分布在 North Shore、Nassau、Suffolk——Great Neck、Manhasset、Plainview、Syosset 等。客户习惯<strong>开车 15–30 分钟</strong>，搜索常带城镇名：「Great Neck 装修」「Long Island kitchen remodel」。这与曼哈顿律所、法拉盛餐馆的 SEO 逻辑<strong>完全不同</strong>。",
+            "sections": [
+                {
+                    "h2": "长岛 vs 纽约市：SEO 关键差异",
+                    "paragraphs": [
+                        "长岛必须强调<strong>服务半径与城镇列表</strong>，而不是单一 neighborhood。网站应有 Service Area 段落或独立城镇落地页（慎用批量模板，每页需有真实案例差异）。",
+                        "GBP 类型可能是 storefront 或 service-area business——上门装修队应如实设置 coverage，避免 spam。",
+                    ],
+                },
+                {
+                    "h2": "高转化关键词示例",
+                    "paragraphs": [
+                        "装修：Long Island kitchen remodeling、Great Neck contractor、Nassau County bathroom renovation、长岛 厨房 改造。",
+                        "美容/牙科：Manhasset facial、Long Island Invisalign、Great Neck 美甲。专业服务：Long Island estate planning、Plainview 会计。",
+                        "每类业务选 3–5 个城镇 + 服务组合写进 title、H1 与 GBP，而非只优化「长岛网站设计」。",
+                    ],
+                },
+                {
+                    "h2": "案例页与服务范围页",
+                    "paragraphs": [
+                        "长岛高客单价行业（装修、景观、医美）靠案例说服。每个项目写清：城镇、Scope、周期，附 before/after 图与文字。",
+                        "单独「服务范围」页列出 Nassau/Suffolk 具体 town，并说明是否收费上门评估——减少远距离无效线索。参见 <a href=\"/areas/long-island/\">长岛网站设计</a> 服务页。",
+                    ],
+                },
+                {
+                    "h2": "Google 地图与评价策略",
+                    "paragraphs": [
+                        "完工后邀请客户在 Google 留评，提及项目类型与城镇（「Great Neck 厨房改造很满意」）。回复每条评价。",
+                        "照片定期更新：完工照、团队、车辆标识（如有）—— suburban 客户重视「像本地公司」的信号。",
+                    ],
+                },
+                {
+                    "h2": "网站速度与移动端",
+                    "paragraphs": [
+                        "长岛用户多在手机搜索路上或工地。Core Web Vitals 不合格会拖累排名与 Ads 质量分。",
+                        "一键电话、表单报价、WeChat 入口放在首屏；停车/预约说明写清楚（诊所、美容尤其重要）。",
+                    ],
+                },
+                {
+                    "h2": "与 70NYC 合作的长岛方案",
+                    "paragraphs": [
+                        "我们服务 Great Neck 至 Suffolk 华人企业，可长岛见面或远程。典型组合：定制案例站 + 城镇 SEO + GBP 优化 + 季节性 Google Ads。",
+                        "延伸阅读：<a href=\"/blog/brooklyn-contractor-local-seo-2026/\">布鲁克林承包商 SEO</a>（装修逻辑相近）；<a href=\"/services/seo/\">纽约 SEO 服务</a> 含免费初诊。",
+                    ],
+                },
+            ],
+            "footer_seo": "长岛SEO · 长岛网站设计 · Great Neck SEO · Long Island web design · 长岛华人网站",
+        },
+        "en": {
+            "title": "Long Island Chinese Business Local SEO Guide 2026 | Great Neck · Nassau | 70NYC",
+            "description": "Local SEO for Long Island Chinese businesses — town-level keywords, service radius, GBP, case studies for Great Neck, Manhasset, Plainview contractors and pros.",
+            "keywords": "Long Island SEO, Long Island web design, Great Neck SEO, Nassau County SEO, Chinese business Long Island, Long Island Google Maps",
+            "h1": "Local SEO for Long Island Chinese Businesses",
+            "intro": "Long Island Chinese businesses span Great Neck, Manhasset, Plainview, Syosset, and across Nassau and Suffolk. Customers drive 15–30 minutes and search with <strong>town names</strong> — distinct from Manhattan law firms or Flushing restaurants.",
+            "sections": [
+                {
+                    "h2": "How Long Island SEO differs from NYC",
+                    "paragraphs": [
+                        "Emphasize service radius and town lists — not a single neighborhood. Use service area sections or town pages with unique case proof, not empty templates.",
+                        "GBP may be storefront or service-area — set honest coverage for traveling contractors.",
+                    ],
+                },
+                {
+                    "h2": "High-intent keyword examples",
+                    "paragraphs": [
+                        "Remodeling: Long Island kitchen remodeling, Great Neck contractor, Nassau bathroom renovation.",
+                        "Beauty/dental: Manhasset facial, Long Island Invisalign. Professional: Great Neck estate planning.",
+                        "Pick 3–5 town + service pairs for titles, H1s, and GBP — not just \"Long Island web design.\"",
+                    ],
+                },
+                {
+                    "h2": "Case studies and service area pages",
+                    "paragraphs": [
+                        "High-ticket LI trades need proof: town, scope, timeline, before/after with captions.",
+                        "Dedicated service area pages list Nassau/Suffolk towns and consultation policies. See our <a href=\"/en/areas/long-island/\">Long Island web design</a> page.",
+                    ],
+                },
+                {
+                    "h2": "Maps and reviews",
+                    "paragraphs": [
+                        "Ask for reviews mentioning job type and town. Reply to all reviews.",
+                        "Refresh photos: completed jobs, team, vehicle branding — suburban clients trust local signals.",
+                    ],
+                },
+                {
+                    "h2": "Mobile speed matters",
+                    "paragraphs": [
+                        "Many LI searches happen on phones en route. Poor Core Web Vitals hurt organic and Ads quality scores.",
+                        "Click-to-call, quote forms, and WeChat above the fold; clarify parking/booking for clinics and salons.",
+                    ],
+                },
+                {
+                    "h2": "Working with 70NYC on Long Island",
+                    "paragraphs": [
+                        "We serve Great Neck through Suffolk with meetups or remote delivery. Typical stack: portfolio site + town SEO + GBP + seasonal Ads.",
+                        "Related: <a href=\"/en/blog/brooklyn-contractor-local-seo-2026/\">Brooklyn contractor SEO</a>; <a href=\"/en/services/seo/\">NYC SEO services</a> includes a free audit checklist.",
+                    ],
+                },
+            ],
+            "footer_seo": "Long Island SEO · Long Island web design · Great Neck SEO · Nassau Suffolk local search",
         },
     },
 ]
