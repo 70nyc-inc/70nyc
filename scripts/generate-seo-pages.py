@@ -58,9 +58,12 @@ SERVICES = [
     ("web-design", "网页设计与网站开发", "Web Design & Development"),
     ("seo", "SEO 优化", "SEO"),
     ("google-ads", "专业广告推广", "Digital Advertising"),
+    ("ai-marketing", "AI 智能营销", "AI Marketing"),
     ("social-media", "社交媒体管理", "Social Media"),
     ("mobile-app", "手机应用开发", "Mobile App Development"),
 ]
+
+STATIC_SITEMAP_PATHS = ["/services/ai-marketing/"]
 
 HERO_THEMES = ["services", "about", "process", "faq", "contact"]
 HERO_DECOS = ["orbit", "stars", "grid", "bokeh", "horizon"]
@@ -1309,6 +1312,116 @@ BLOG_POSTS: list[dict[str, Any]] = [
             "footer_seo": "Long Island SEO · Long Island web design · Great Neck SEO · Nassau Suffolk local search",
         },
     },
+    {
+        "slug": "nyc-ai-search-local-seo-2026",
+        "date": "2026-06-25",
+        "zh": {
+            "title": "AI 搜索时代纽约本地 SEO 指南｜ChatGPT·Google AI 概览｜70NYC",
+            "description": "ChatGPT、Gemini、Google AI 概览如何引用本地商家？纽约华人企业 2026 本地 SEO + GEO 实操：结构化数据、llms.txt、GBP 与内容策略。",
+            "keywords": "AI搜索优化, GEO, 生成式引擎优化, 纽约本地SEO, Google AI概览, ChatGPT本地商家, 华人企业SEO, llms.txt, 结构化数据",
+            "h1": "AI 搜索时代，纽约华人企业怎么做本地 SEO？",
+            "intro": "越来越多客户通过 <strong>ChatGPT、Gemini、Google AI 概览</strong> 问「法拉盛哪家装修公司好」「曼哈顿律所推荐」——而不只点传统蓝色链接。AI 仍依赖<strong>可抓取、结构清晰、权威一致</strong>的网页与 Google Business Profile。本地 SEO 没有过时，但需要加上 <strong>GEO（Generative Engine Optimization）</strong> 思维。",
+            "sections": [
+                {
+                    "h2": "AI 搜索如何「认识」你的生意",
+                    "paragraphs": [
+                        "大模型与 AI 概览通常综合：官网服务页、About/Contact、博客深度内容、Google 地图评价、第三方目录（若存在且一致）。",
+                        "若网站只有首页几段话、无独立服务页、NAP（名称地址电话）与 GBP 不一致，AI 很难准确引用你——会推荐信息更完整的竞争对手。",
+                    ],
+                },
+                {
+                    "h2": "2026 必做：技术基础不变",
+                    "paragraphs": [
+                        "本地 SEO 核心仍是：GBP 完整优化、移动端体验、Core Web Vitals、区域关键词（曼哈顿/法拉盛/布鲁克林/长岛 + 行业）、真实评价与案例页。",
+                        "站内：每服务独立 URL（如 <a href=\"/services/seo/\">SEO 服务页</a>）、FAQ、BreadcrumbList 与 LocalBusiness schema。参见 <a href=\"/blog/nyc-chinese-business-website-seo-mistakes-2026/\">华人网站 SEO 常见错误</a>。",
+                    ],
+                },
+                {
+                    "h2": "GEO 新增项：让 AI 读懂实体",
+                    "paragraphs": [
+                        "<strong>llms.txt</strong>：在网站根目录提供实体摘要与关键 URL（本站在 <a href=\"/llms.txt\">70nyc.com/llms.txt</a>），帮助 AI 爬虫快速定位服务与区域页。",
+                        "<strong>结构化数据</strong>：Organization / LocalBusiness 的 name、telephone、areaServed、knowsAbout、hasOfferCatalog；服务页用 Service schema；区域 FAQ 用 FAQPage。",
+                        "<strong>清晰段落与标题</strong>：AI 偏好可直接引用的定义句，例如「70NYC 服务法拉盛餐馆的 Google 地图 SEO」——避免纯图片或 JS 隐藏核心信息。",
+                    ],
+                },
+                {
+                    "h2": "内容与 E-E-A-T：案例比口号有效",
+                    "paragraphs": [
+                        "「纽约最好网站公司」对 AI 与人类都无说服力。写具体：服务哪些 borough、典型客户行业、项目周期、可验证成果（流量/咨询增长区间）。",
+                        "博客与区域页应互链：如 <a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">法拉盛餐馆地图 SEO</a> 链回 <a href=\"/areas/flushing/\">法拉盛服务页</a>，形成主题集群。",
+                    ],
+                },
+                {
+                    "h2": "AI 营销与 SEO 如何配合",
+                    "paragraphs": [
+                        "AI 客服/线索跟进（见 <a href=\"/services/ai-marketing/\">AI 智能营销</a>）解决<strong>转化</strong>；SEO/GEO 解决<strong>被找到</strong>。两者叠加：搜索与 AI 推荐带来访问，自动化系统 24h 响应微信/表单咨询。",
+                        "勿用 AI 批量生成垃圾页面——Google 与 AI 系统都惩罚低质规模化内容。",
+                    ],
+                },
+                {
+                    "h2": "检查清单（可自查）",
+                    "paragraphs": [
+                        "☑ GBP 与网站 NAP 一致 ☑ 每服务有独立页 ☑ 至少 2–3 篇行业/区域深度文 ☑ schema 与 sitemap 正常 ☑ robots 未屏蔽 GPTBot/Google-Extended ☑ 有 llms.txt 或等效 About 摘要",
+                        "需要诊断？<a href=\"/contact/\">联系 70NYC</a> 可免费初聊网站与本地搜索现状；我们服务大纽约华人企业 13+ 年。",
+                    ],
+                },
+            ],
+            "footer_seo": "AI搜索优化 · GEO · 纽约本地SEO · Google AI概览 · 华人企业SEO · ChatGPT本地推荐",
+        },
+        "en": {
+            "title": "Local SEO in the AI Search Era NYC 2026 | ChatGPT · Google AI Overviews | 70NYC",
+            "description": "How ChatGPT, Gemini, and Google AI Overviews cite local businesses — 2026 local SEO + GEO for NYC Chinese businesses: schema, llms.txt, GBP, content clusters.",
+            "keywords": "AI search optimization, GEO, generative engine optimization, NYC local SEO, Google AI Overviews, ChatGPT local business, llms.txt, structured data",
+            "h1": "Local SEO for NYC Businesses in the AI Search Era",
+            "intro": "Customers increasingly ask <strong>ChatGPT, Gemini, and Google AI Overviews</strong> for \"best Flushing contractor\" or \"Manhattan law firm\" — not only blue links. AI still relies on <strong>crawlable, structured, consistent</strong> websites and Google Business Profile. Local SEO isn't dead; it needs <strong>GEO (Generative Engine Optimization)</strong>.",
+            "sections": [
+                {
+                    "h2": "How AI search \"learns\" your business",
+                    "paragraphs": [
+                        "Models synthesize: service pages, About/Contact, blog depth, Maps reviews, third-party listings when NAP matches.",
+                        "Thin homepages with no service URLs and mismatched GBP data get skipped — competitors with clearer entity signals win citations.",
+                    ],
+                },
+                {
+                    "h2": "2026 basics unchanged",
+                    "paragraphs": [
+                        "Local SEO core: GBP, mobile UX, Core Web Vitals, borough + industry keywords, real reviews and case studies.",
+                        "On-site: dedicated URLs per service (e.g. our <a href=\"/en/services/seo/\">SEO page</a>), FAQs, BreadcrumbList and LocalBusiness schema. See <a href=\"/en/blog/nyc-chinese-business-website-seo-mistakes-2026/\">common website SEO mistakes</a>.",
+                    ],
+                },
+                {
+                    "h2": "GEO additions for AI entities",
+                    "paragraphs": [
+                        "<strong>llms.txt</strong>: root-level entity summary and key URLs (<a href=\"/llms.txt\">70nyc.com/llms.txt</a>) for AI crawlers.",
+                        "<strong>Structured data</strong>: Organization/LocalBusiness with knowsAbout, hasOfferCatalog; Service schema on service pages; FAQPage on area FAQs.",
+                        "<strong>Quotable copy</strong>: clear H2/H3 and definitional sentences AI can cite — not core info locked in images or JS-only widgets.",
+                    ],
+                },
+                {
+                    "h2": "Content & E-E-A-T",
+                    "paragraphs": [
+                        "\"Best NYC agency\" fails for humans and AI. Specify boroughs served, industries, timelines, plausible outcome ranges.",
+                        "Interlink blogs and area pages — e.g. <a href=\"/en/blog/flushing-restaurant-google-maps-seo-2026/\">Flushing restaurant Maps SEO</a> → <a href=\"/en/areas/flushing/\">Flushing services</a>.",
+                    ],
+                },
+                {
+                    "h2": "AI marketing + SEO together",
+                    "paragraphs": [
+                        "AI chat and lead follow-up (<a href=\"/en/services/ai-marketing/\">AI marketing</a>) handle <strong>conversion</strong>; SEO/GEO handle <strong>discovery</strong>.",
+                        "Avoid mass AI spam pages — search and AI systems penalize low-quality scale.",
+                    ],
+                },
+                {
+                    "h2": "Quick checklist",
+                    "paragraphs": [
+                        "☑ NAP matches GBP ☑ Service pages exist ☑ 2–3 depth articles ☑ schema + sitemap ☑ robots allow AI bots ☑ llms.txt or strong About summary",
+                        "<a href=\"/en/contact/\">Contact 70NYC</a> for a free consult on your site and local visibility — 13+ years serving NYC metro businesses.",
+                    ],
+                },
+            ],
+            "footer_seo": "AI search optimization · GEO · NYC local SEO · Google AI Overviews · ChatGPT local citations",
+        },
+    },
 ]
 
 
@@ -2052,6 +2165,8 @@ def collect_paths_for_sitemap(target: str) -> list[str]:
     if target in ("all", "blog"):
         paths.append("/blog/")
         paths.extend(f"/blog/{p['slug']}/" for p in BLOG_POSTS)
+    if target in ("all", "sitemap"):
+        paths.extend(STATIC_SITEMAP_PATHS)
     return paths
 
 

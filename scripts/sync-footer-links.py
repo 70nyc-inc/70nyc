@@ -18,8 +18,22 @@ ZH_BLOG = '        <a href="/blog/">博客</a>\n'
 EN_BLOG = '        <a href="/en/blog/">Blog</a>\n'
 
 
+ZH_AI = '        <a href="/services/ai-marketing/">AI 智能营销</a>\n'
+EN_AI = '        <a href="/en/services/ai-marketing/">AI Marketing</a>\n'
+
+
 def patch(text: str) -> tuple[str, bool]:
     changed = False
+    if 'href="/services/ai-marketing/"' not in text and 'href="/services/seo/">SEO 优化</a>' in text:
+        old = '        <a href="/services/seo/">SEO 优化</a>\n        <a href="/services/social-media/">社交媒体管理</a>'
+        if old in text:
+            text = text.replace(old, '        <a href="/services/seo/">SEO 优化</a>\n' + ZH_AI + '        <a href="/services/social-media/">社交媒体管理</a>', 1)
+            changed = True
+    if 'href="/en/services/ai-marketing/"' not in text and 'href="/en/services/seo/">SEO</a>' in text:
+        old = '        <a href="/en/services/seo/">SEO</a>\n        <a href="/en/services/social-media/">Social Media</a>'
+        if old in text:
+            text = text.replace(old, '        <a href="/en/services/seo/">SEO</a>\n' + EN_AI + '        <a href="/en/services/social-media/">Social Media</a>', 1)
+            changed = True
     if 'href="/areas/"' not in text:
         old = '        <a href="/services/social-media/">社交媒体管理</a>\n        <a href="/process/">项目流程</a>'
         if old in text:

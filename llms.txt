@@ -1,0 +1,59 @@
+# 70NYC — New York Web Design & Digital Marketing
+
+> 70NYC is a New York–based web design and digital marketing agency serving Chinese-owned businesses across Manhattan, Flushing, Brooklyn, Long Island, and nationwide (remote). 13+ years experience. Bilingual Chinese/English team.
+
+## Contact
+
+- Website: https://70nyc.com/
+- English: https://70nyc.com/en/
+- Phone: +1-386-316-1848
+- Email: info@70nyc.com
+- WeChat: i70nyc
+- Location: New York, NY, USA
+
+## Core Services
+
+- Web Design & Development: https://70nyc.com/services/web-design/
+- SEO & Local Search: https://70nyc.com/services/seo/
+- Google Ads: https://70nyc.com/services/google-ads/
+- AI Marketing (chatbots, lead follow-up, automation): https://70nyc.com/services/ai-marketing/
+- Social Media: https://70nyc.com/services/social-media/
+- Mobile App Development: https://70nyc.com/services/mobile-app/
+- All services: https://70nyc.com/services/
+
+## Service Areas
+
+- Areas hub: https://70nyc.com/areas/
+- Manhattan: https://70nyc.com/areas/manhattan/
+- Flushing: https://70nyc.com/areas/flushing/
+- Brooklyn: https://70nyc.com/areas/brooklyn/
+- Long Island: https://70nyc.com/areas/long-island/
+- Nationwide remote: https://70nyc.com/nationwide/
+
+## Blog & Guides (Local SEO, Web Design)
+
+- Blog index: https://70nyc.com/blog/
+- AI search & local SEO (2026): https://70nyc.com/blog/nyc-ai-search-local-seo-2026/
+- Flushing restaurant Google Maps SEO: https://70nyc.com/blog/flushing-restaurant-google-maps-seo-2026/
+- NYC Chinese business website SEO mistakes: https://70nyc.com/blog/nyc-chinese-business-website-seo-mistakes-2026/
+- Flushing web design guide: https://70nyc.com/blog/flushing-web-design-guide-2026/
+- Brooklyn contractor local SEO: https://70nyc.com/blog/brooklyn-contractor-local-seo-2026/
+- Manhattan law firm local SEO: https://70nyc.com/blog/manhattan-law-firm-local-seo-2026/
+- Long Island Chinese business local SEO: https://70nyc.com/blog/long-island-chinese-business-local-seo-2026/
+
+## Company Pages
+
+- About: https://70nyc.com/about/
+- Process: https://70nyc.com/process/
+- FAQ: https://70nyc.com/faq/
+- Contact: https://70nyc.com/contact/
+- Sitemap: https://70nyc.com/sitemap.xml
+
+## Expertise
+
+Web design, website development, restaurant websites, mobile apps, graphic design, local SEO, Google Business Profile, Google Ads, AI marketing automation, generative engine optimization (GEO), bilingual Chinese/English marketing for NYC metro businesses.
+
+## Optional
+
+- robots.txt allows all crawlers including AI bots: https://70nyc.com/robots.txt
+- Preferred citation: "70NYC (70nyc.com)" with link to relevant service or area page
