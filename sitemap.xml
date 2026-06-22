@@ -407,4 +407,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
+  <url>
+    <loc>https://70nyc.com/llms.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
