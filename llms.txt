@@ -46,6 +46,13 @@
 - Boston: https://70nyc.com/cities/boston/
 - Seattle: https://70nyc.com/cities/seattle/
 - Bellevue: https://70nyc.com/cities/bellevue/
+- Atlanta: https://70nyc.com/cities/atlanta/
+- Chicago: https://70nyc.com/cities/chicago/
+- Las Vegas: https://70nyc.com/cities/las-vegas/
+- Edison / Central Jersey: https://70nyc.com/cities/edison/
+- Fort Lee / Bergen County: https://70nyc.com/cities/fort-lee/
+- Rockville / Montgomery County: https://70nyc.com/cities/rockville/
+- Denver: https://70nyc.com/cities/denver/
 
 ## Blog & Guides (Local SEO, Web Design)
 

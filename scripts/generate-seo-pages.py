@@ -2325,23 +2325,23 @@ def generate_cities() -> list[str]:
         hub_path = f"{p}/cities/"
         if lang == "zh":
             hub = {
-                "title": "美国重点城市网站设计与SEO｜洛杉矶·休斯顿·迈阿密·波士顿·西雅图｜70NYC",
-                "description": "70NYC 为加州、德州、佛州、宾州、波士顿、西雅图等华人密集城市提供远程网站设计与本地 SEO。按城市查看社区与关键词策略。",
+                "title": "美国重点城市网站设计与SEO｜洛杉矶·休斯顿·亚特兰大·芝加哥·拉斯维加斯｜70NYC",
+                "description": "70NYC 为加州、德州、佛州、亚特兰大、芝加哥、拉斯维加斯、新泽西、波士顿、西雅图等华人密集城市提供远程网站设计与本地 SEO。按城市查看社区与关键词策略。",
                 "breadcrumb": "重点城市",
                 "eyebrow": "Priority Metros · 华人市场",
                 "h1": "华人密集城市<br><span>网站设计与本地 SEO</span>",
-                "lead": "优先覆盖洛杉矶、湾区、尔湾、休斯顿、达拉斯、迈阿密、奥兰多、费城、波士顿、西雅图、贝尔维尤等市场——比州页更细的社区与搜索策略。",
+                "lead": "优先覆盖洛杉矶、湾区、休斯顿、迈阿密、波士顿、西雅图，以及亚特兰大、芝加哥、拉斯维加斯、爱迪生、李堡、罗克维尔、丹佛等华人密集市场——比州页更细的社区与搜索策略。",
                 "section_h2": "选择您的城市",
                 "intro": "以下为重点华人市场城市页；各州总览见美国各州页面。",
             }
         else:
             hub = {
-                "title": "US City Web Design & SEO | LA · Houston · Miami · Boston · Seattle | 70NYC",
-                "description": "Remote web design and local SEO for Chinese-owned businesses in California, Texas, Florida, Pennsylvania, Boston, Seattle, and more priority metros.",
+                "title": "US City Web Design & SEO | LA · Houston · Miami · Boston · Seattle · Atlanta · Chicago | 70NYC",
+                "description": "Remote web design and local SEO for Chinese-owned businesses in California, Texas, Florida, Pennsylvania, Boston, Seattle, Atlanta, Chicago, Las Vegas, New Jersey, and more priority metros.",
                 "breadcrumb": "Key Cities",
                 "eyebrow": "Priority Metros · Chinese markets",
                 "h1": "Chinese Business Metros<br><span>Web Design & Local SEO</span>",
-                "lead": "Priority coverage for Los Angeles, Bay Area, Irvine, Houston, Dallas, Miami, Orlando, Philadelphia, Boston, Seattle, Bellevue — deeper neighborhood and keyword strategy than state pages.",
+                "lead": "Priority coverage for Los Angeles, Bay Area, Houston, Miami, Boston, Seattle — plus Atlanta, Chicago, Las Vegas, Edison, Fort Lee, Rockville, Denver, and more — deeper neighborhood and keyword strategy than state pages.",
                 "section_h2": "Choose your city",
                 "intro": "Priority Chinese-market city pages; see US States for statewide overviews.",
             }

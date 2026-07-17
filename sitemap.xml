@@ -1350,4 +1350,102 @@
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
+  <url>
+    <loc>https://70nyc.com/cities/atlanta/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/atlanta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/atlanta/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/atlanta/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/atlanta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/atlanta/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/chicago/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/chicago/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/chicago/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/chicago/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/chicago/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/chicago/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/las-vegas/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/las-vegas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/las-vegas/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/las-vegas/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/las-vegas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/las-vegas/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/edison/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/edison/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/edison/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/edison/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/edison/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/edison/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/fort-lee/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/fort-lee/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/fort-lee/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/fort-lee/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/fort-lee/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/fort-lee/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/rockville/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/rockville/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/rockville/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/rockville/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/rockville/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/rockville/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/cities/denver/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/denver/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/denver/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://70nyc.com/en/cities/denver/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://70nyc.com/cities/denver/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://70nyc.com/en/cities/denver/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
 </urlset>
