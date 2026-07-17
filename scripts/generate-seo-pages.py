@@ -37,7 +37,7 @@ DOMAIN = "https://70nyc.com"
 
 SITE = {
     "style_css": "v=7",
-    "main_js": "v=10",
+    "main_js": "v=11",
     "lang_detect_js": "v=4",
     "og_image": f"{DOMAIN}/assets/nyc-hero.png",
 }
@@ -1432,6 +1432,246 @@ BLOG_POSTS: list[dict[str, Any]] = [
             "footer_seo": "AI search optimization · GEO · NYC local SEO · Google AI Overviews · ChatGPT local citations",
         },
     },
+    {
+        "slug": "houston-chinese-restaurant-google-maps-seo-2026",
+        "date": "2026-07-01",
+        "zh": {
+            "title": "休斯顿华人餐馆 Google 地图 SEO 指南｜Bellaire·Sugar Land｜70NYC",
+            "description": "休斯顿 Bellaire、Sugar Land 华人餐馆如何做 Google 地图与本地 SEO？类别、评价、双语网站与关键词实操——2026 指南。",
+            "keywords": "休斯顿餐馆SEO, Bellaire Google地图, Sugar Land 华人餐馆, Houston Chinese restaurant SEO, 休斯顿本地SEO",
+            "h1": "休斯顿华人餐馆怎么做 Google 地图排名？",
+            "intro": "休斯顿华人餐饮沿 <strong>Bellaire / Chinatown</strong> 与 <strong>Sugar Land、Katy</strong> 延伸。客户常搜「Houston Chinese food near me」「Bellaire 火锅」「Sugar Land 早茶」——地图本地包（Local Pack）往往比普通蓝链更重要。本文给餐馆老板可执行的 GBP + 网站清单。延伸：<a href=\"/cities/houston/\">休斯顿服务页</a>。",
+            "sections": [
+                {
+                    "h2": "先统一 NAP 与 Google 商家资料",
+                    "paragraphs": [
+                        "店名、地址、电话必须与招牌、菜单、网站 footer、<a href=\"https://maps.app.goo.gl/PNCSi6B4DhkjRX717\">Google 地图</a>完全一致。Fort Bend 郊区店不要写错 Bellaire 旧址。",
+                        "类别选准：Restaurant / Chinese restaurant / Dim sum restaurant 等；属性勾选堂食、外卖、停车。每周上传菜品与店内照片。",
+                    ],
+                },
+                {
+                    "h2": "郊区关键词比只写 Houston 更有效",
+                    "paragraphs": [
+                        "标题与 H1 用「Sugar Land 中餐厅」「Bellaire 火锅」等组合，而不是堆砌「最好吃」。服务范围页可列 Katy、Pearland、Missouri City。",
+                        "网站至少有：菜单（可索引文字）、订位/电话、微信或表单、中英切换。参见 <a href=\"/services/web-design/\">网站设计</a> 与 <a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">法拉盛餐馆地图 SEO</a>（方法相通）。",
+                    ],
+                },
+                {
+                    "h2": "评价与回复是本地排名燃料",
+                    "paragraphs": [
+                        "结账后礼貌邀请 Google 评价；回复每条评论（含差评）。评价里自然出现菜品与区域名有助于相关性。",
+                        "新店或淡季可用小预算 <a href=\"/services/google-ads/\">Google Ads</a>「附近搜索」补量，同时养 SEO。",
+                    ],
+                },
+                {
+                    "h2": "与 70NYC 远程合作",
+                    "paragraphs": [
+                        "我们从纽约为休斯顿餐馆交付网站、GBP 优化与广告——微信 <strong>i70nyc</strong>，通常 24 小时内回复。免费初诊：<a href=\"/contact/?from=blog-houston-restaurant\">联系我们</a>。",
+                        "相关：<a href=\"/cities/dallas/\">达拉斯</a> · <a href=\"/states/texas/\">德州总览</a> · <a href=\"/services/seo/\">SEO 服务</a>。",
+                    ],
+                },
+            ],
+            "footer_seo": "休斯顿餐馆SEO · Bellaire Google地图 · Sugar Land华人餐馆 · Houston Chinese restaurant SEO",
+        },
+        "en": {
+            "title": "Houston Chinese Restaurant Google Maps SEO 2026 | Bellaire · Sugar Land | 70NYC",
+            "description": "Local SEO and Google Maps tips for Houston Chinese restaurants in Bellaire, Sugar Land, and Katy — GBP, bilingual sites, suburb keywords.",
+            "keywords": "Houston Chinese restaurant SEO, Bellaire Google Maps, Sugar Land Chinese food SEO, Houston local SEO",
+            "h1": "Google Maps SEO for Houston Chinese Restaurants",
+            "intro": "Houston Chinese dining clusters along <strong>Bellaire / Chinatown</strong> and <strong>Sugar Land, Katy</strong>. Searches like “Houston Chinese food near me” and suburb + cuisine pairs often win via the Local Pack. Checklist below — see our <a href=\"/en/cities/houston/\">Houston page</a>.",
+            "sections": [
+                {
+                    "h2": "Unify NAP and your Google Business Profile",
+                    "paragraphs": [
+                        "Name, address, and phone must match the storefront, menu, website footer, and Maps listing. Don’t leave an old Bellaire address on a Fort Bend location.",
+                        "Pick precise categories and attributes (dine-in, takeout, parking). Upload food and interior photos weekly.",
+                    ],
+                },
+                {
+                    "h2": "Suburb keywords beat “Houston” alone",
+                    "paragraphs": [
+                        "Use titles like “Sugar Land Chinese restaurant” or “Bellaire hot pot” — list Katy, Pearland, Missouri City on a service-area section.",
+                        "Site essentials: indexable menu text, click-to-call, WeChat/form, bilingual UX. Related: <a href=\"/en/blog/flushing-restaurant-google-maps-seo-2026/\">Flushing restaurant Maps SEO</a>.",
+                    ],
+                },
+                {
+                    "h2": "Reviews fuel local rank",
+                    "paragraphs": [
+                        "Ask for Google reviews after the meal; reply to every review. Dish and area mentions in reviews help relevance.",
+                        "New openings can use light <a href=\"/en/services/google-ads/\">Google Ads</a> while SEO compounds.",
+                    ],
+                },
+                {
+                    "h2": "Work with 70NYC remotely",
+                    "paragraphs": [
+                        "We deliver sites, GBP, and ads for Houston restaurants from NYC — WeChat <strong>i70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-houston-restaurant\">Free consult</a>.",
+                        "Also: <a href=\"/en/cities/dallas/\">Dallas</a> · <a href=\"/en/states/texas/\">Texas</a> · <a href=\"/en/services/seo/\">SEO</a>.",
+                    ],
+                },
+            ],
+            "footer_seo": "Houston Chinese restaurant SEO · Bellaire Google Maps · Sugar Land local SEO",
+        },
+    },
+    {
+        "slug": "irvine-orange-county-chinese-business-seo-2026",
+        "date": "2026-07-05",
+        "zh": {
+            "title": "尔湾橙县华人企业建站与本地 SEO｜Irvine·OC｜70NYC",
+            "description": "尔湾、塔斯廷、钻石吧华人企业如何建站与做本地 SEO？家庭客群关键词、双语站与 Google 地图——2026 实操。",
+            "keywords": "尔湾网站设计, 尔湾SEO, Irvine Chinese business SEO, 橙县华人网站, Orange County local SEO",
+            "h1": "尔湾 / 橙县华人企业怎么做网站与本地 SEO？",
+            "intro": "橙县华人家庭与新移民集中在 <strong>Irvine、Tustin、Diamond Bar</strong> 一带，搜索习惯是「Irvine 房产」「尔湾 补习」「OC 美甲」——城市名比笼统「California」更转化。配套页：<a href=\"/cities/irvine/\">尔湾服务页</a>、<a href=\"/cities/los-angeles/\">洛杉矶</a>。",
+            "sections": [
+                {
+                    "h2": "网站：中英双语 + 移动端优先",
+                    "paragraphs": [
+                        "家长与年轻客群多用手机。Core Web Vitals、清晰导航、一键电话与微信入口放首屏。英文为主时，核心服务页保留完整中文，避免机翻整站。",
+                        "服务页按业务拆分（买房、留学、医美），不要首页堆所有行业。详见 <a href=\"/services/web-design/\">网站设计</a>。",
+                    ],
+                },
+                {
+                    "h2": "本地 SEO：Irvine / OC 组合词",
+                    "paragraphs": [
+                        "Title、H1、GBP 使用 Irvine、Tustin、Costa Mesa 等真实服务城。多城业务写清半径，避免空壳城市页。",
+                        "Google Business Profile 与网站 NAP 一致；评价邀请流程化。方法见 <a href=\"/services/seo/\">SEO 服务</a>。",
+                    ],
+                },
+                {
+                    "h2": "广告与 SEO 如何分工",
+                    "paragraphs": [
+                        "高客单价（房产、医美）可用 <a href=\"/services/google-ads/\">Google Ads</a> 快速获客；SEO 与案例内容做长期资产。落地页必须与广告词一致。",
+                        "新店开业建议：双语站上线 → GBP 优化 → 小预算 Ads 测试 → 月度内容迭代。",
+                    ],
+                },
+                {
+                    "h2": "远程交付与联系",
+                    "paragraphs": [
+                        "70NYC 从纽约为尔湾 / 橙县客户远程交付——微信 <strong>i70nyc</strong>，24 小时内回复。<a href=\"/contact/?from=blog-irvine\">免费咨询</a>。",
+                        "相关：<a href=\"/states/california/\">加州</a> · <a href=\"/cities/san-francisco/\">湾区</a> · <a href=\"/nationwide/\">全美远程</a>。",
+                    ],
+                },
+            ],
+            "footer_seo": "尔湾网站设计 · 尔湾SEO · Irvine Chinese business · 橙县华人本地SEO",
+        },
+        "en": {
+            "title": "Irvine Orange County Chinese Business Web Design & SEO 2026 | 70NYC",
+            "description": "Web design and local SEO for Chinese-owned businesses in Irvine, Tustin, and Orange County — bilingual sites, suburb keywords, GBP.",
+            "keywords": "Irvine web design, Irvine SEO, Orange County Chinese business SEO, OC local SEO",
+            "h1": "Web Design & Local SEO for Irvine / Orange County Chinese Businesses",
+            "intro": "OC Chinese families cluster around <strong>Irvine, Tustin, Diamond Bar</strong> and search with city names — “Irvine realtor”, “OC tutoring”. See <a href=\"/en/cities/irvine/\">Irvine</a> and <a href=\"/en/cities/los-angeles/\">Los Angeles</a>.",
+            "sections": [
+                {
+                    "h2": "Bilingual sites, mobile first",
+                    "paragraphs": [
+                        "Parents and younger buyers are on phones. Prioritize Core Web Vitals, click-to-call, and WeChat above the fold. Keep real Chinese on core pages — not full-site machine translation.",
+                        "Split service URLs by offer. See <a href=\"/en/services/web-design/\">web design</a>.",
+                    ],
+                },
+                {
+                    "h2": "Local SEO: Irvine / OC keyword pairs",
+                    "paragraphs": [
+                        "Use real cities in titles, H1s, and GBP. Spell out radius for multi-city coverage — no empty city templates.",
+                        "Keep NAP aligned. Details: <a href=\"/en/services/seo/\">SEO services</a>.",
+                    ],
+                },
+                {
+                    "h2": "Ads vs SEO",
+                    "paragraphs": [
+                        "High-ticket verticals can use <a href=\"/en/services/google-ads/\">Google Ads</a> for speed; SEO and case content compound. Landing pages must match ad intent.",
+                        "Launch stack: bilingual site → GBP → light Ads tests → monthly content.",
+                    ],
+                },
+                {
+                    "h2": "Remote delivery",
+                    "paragraphs": [
+                        "70NYC delivers from NYC — WeChat <strong>i70nyc</strong>, reply within 24h. <a href=\"/en/contact/?from=blog-irvine\">Free consult</a>.",
+                        "Related: <a href=\"/en/states/california/\">California</a> · <a href=\"/en/cities/san-francisco/\">Bay Area</a> · <a href=\"/en/nationwide/\">Nationwide</a>.",
+                    ],
+                },
+            ],
+            "footer_seo": "Irvine web design · Irvine SEO · Orange County Chinese business local SEO",
+        },
+    },
+    {
+        "slug": "boston-quincy-chinese-business-local-seo-2026",
+        "date": "2026-07-10",
+        "zh": {
+            "title": "波士顿昆西华人企业本地 SEO｜Quincy·Malden｜70NYC",
+            "description": "波士顿、昆西、莫尔登华人餐馆与诊所如何做本地 SEO？社区关键词、双语站与 Google 地图——2026 指南。",
+            "keywords": "波士顿SEO, 昆西华人SEO, Quincy Chinese business SEO, Malden 本地SEO, 波士顿网站设计",
+            "h1": "波士顿 / 昆西华人企业怎么做本地 SEO？",
+            "intro": "大波士顿华人密度在 <strong>Quincy、Malden</strong> 与华埠一带。客户搜「Quincy 中餐」「Malden 牙医」「Boston Chinese clinic」——郊区名决定转化。服务页：<a href=\"/cities/boston/\">波士顿</a>。",
+            "sections": [
+                {
+                    "h2": "分清学生客群与家庭客群",
+                    "paragraphs": [
+                        "剑桥、波士顿市区偏学生与年轻专业人士；昆西、莫尔登偏家庭与长期居民。网站文案、案例与关键词应分开，不要一套模板打天下。",
+                        "诊所、补习、餐馆优先「城市 + 服务」落地页，并链到 Google 地图与预约方式。",
+                    ],
+                },
+                {
+                    "h2": "Google 地图与评价",
+                    "paragraphs": [
+                        "GBP 地址选真实门店；服务范围业务写清覆盖 Quincy / Malden / Brookline。邀请双语评价并及时回复。",
+                        "与法拉盛餐馆策略相通：见 <a href=\"/blog/flushing-restaurant-google-maps-seo-2026/\">法拉盛地图 SEO</a>；诊所可参考 <a href=\"/blog/manhattan-law-firm-local-seo-2026/\">专业服务本地 SEO</a>。",
+                    ],
+                },
+                {
+                    "h2": "网站必备模块",
+                    "paragraphs": [
+                        "中英切换、保险/预约说明（诊所）、菜单或价目（餐馆）、停车与地铁提示。速度差会同时拖累 SEO 与 Ads 质量分。",
+                        "可选 <a href=\"/services/ai-marketing/\">AI 营销</a> 做微信/表单自动首响，提高下班后转化。",
+                    ],
+                },
+                {
+                    "h2": "联系 70NYC",
+                    "paragraphs": [
+                        "远程服务波士顿大都会——微信 <strong>i70nyc</strong>，通常 24h 内回复。<a href=\"/contact/?from=blog-boston\">免费咨询</a>。",
+                        "相关：<a href=\"/states/massachusetts/\">马萨诸塞州</a> · <a href=\"/cities/philadelphia/\">费城</a> · <a href=\"/services/seo/\">SEO</a>。",
+                    ],
+                },
+            ],
+            "footer_seo": "波士顿SEO · 昆西华人SEO · Quincy Malden local SEO · 波士顿网站设计",
+        },
+        "en": {
+            "title": "Boston Quincy Chinese Business Local SEO Guide 2026 | Malden | 70NYC",
+            "description": "Local SEO for Chinese restaurants and clinics in Boston, Quincy, and Malden — community keywords, bilingual sites, Google Maps.",
+            "keywords": "Boston SEO, Quincy Chinese business SEO, Malden local SEO, Boston web design Chinese",
+            "h1": "Local SEO for Boston / Quincy Chinese Businesses",
+            "intro": "Greater Boston Chinese density sits in <strong>Quincy, Malden</strong>, and Chinatown. Searches use suburb names — see <a href=\"/en/cities/boston/\">Boston</a>.",
+            "sections": [
+                {
+                    "h2": "Student vs family audiences",
+                    "paragraphs": [
+                        "Cambridge/downtown skew younger; Quincy/Malden skew families. Split copy, cases, and keywords — one template fails both.",
+                        "Clinics, tutoring, and restaurants need city + service landing pages linked to Maps and booking.",
+                    ],
+                },
+                {
+                    "h2": "Google Maps and reviews",
+                    "paragraphs": [
+                        "Use the real storefront on GBP; set coverage for Quincy/Malden/Brookline honestly. Ask for bilingual reviews and reply fast.",
+                        "Related playbooks: <a href=\"/en/blog/flushing-restaurant-google-maps-seo-2026/\">Flushing Maps SEO</a> and <a href=\"/en/blog/manhattan-law-firm-local-seo-2026/\">professional local SEO</a>.",
+                    ],
+                },
+                {
+                    "h2": "Must-have website modules",
+                    "paragraphs": [
+                        "Language toggle, insurance/booking (clinics), menus (restaurants), parking/transit notes. Slow sites hurt SEO and Ads.",
+                        "Optional <a href=\"/en/services/ai-marketing/\">AI marketing</a> for after-hours WeChat/form response.",
+                    ],
+                },
+                {
+                    "h2": "Contact 70NYC",
+                    "paragraphs": [
+                        "Remote delivery for Greater Boston — WeChat <strong>i70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-boston\">Free consult</a>.",
+                        "Also: <a href=\"/en/states/massachusetts/\">Massachusetts</a> · <a href=\"/en/cities/philadelphia/\">Philadelphia</a> · <a href=\"/en/services/seo/\">SEO</a>.",
+                    ],
+                },
+            ],
+            "footer_seo": "Boston SEO · Quincy Chinese business SEO · Malden local SEO",
+        },
+    },
 ]
 
 
@@ -1925,6 +2165,7 @@ def state_meta(state: dict, lang: str) -> dict:
             f"人在{name}、客户在本地或全美——我们通过视频会议与微信远程交付网站、SEO 与广告。"
             f"重点城市包括 <strong>{city_str}</strong>。"
             f"常见行业：{industries}。"
+            f"微信 <strong>i70nyc</strong>，通常 24 小时内回复。"
             + (f" {note}" if note else "")
         )
         topics = [
@@ -1989,11 +2230,11 @@ def state_meta(state: dict, lang: str) -> dict:
                 "远程SEO",
                 "Google Ads",
             ],
-            "cta_primary": ("获取本州方案", f"{p}/contact/"),
+            "cta_primary": ("获取本州方案", f"{p}/contact/?from=state-{state['slug']}"),
             "cta_ghost": ("全美远程总览", f"{p}/nationwide/"),
             "stats": [
                 ("远程", "全州可服务"),
-                ("13+", "年经验"),
+                ("微信", "i70nyc"),
                 ("中英", "双语"),
                 ("24h", "内回复"),
             ],
@@ -2010,7 +2251,8 @@ def state_meta(state: dict, lang: str) -> dict:
     )
     lead = (
         f"Based in New York, we serve {name} clients remotely via video and WeChat. "
-        f"Key metros: <strong>{city_str}</strong>. Common industries: {industries}."
+        f"Key metros: <strong>{city_str}</strong>. Common industries: {industries}. "
+        f"WeChat <strong>i70nyc</strong> — typically within 24h."
         + (f" {note}" if note else "")
     )
     topics = [
@@ -2075,11 +2317,11 @@ def state_meta(state: dict, lang: str) -> dict:
             "Remote SEO",
             "Google Ads",
         ],
-        "cta_primary": ("Get State Proposal", f"{p}/contact/"),
+        "cta_primary": ("Get State Proposal", f"{p}/contact/?from=state-{state['slug']}"),
         "cta_ghost": ("Nationwide Overview", f"{p}/nationwide/"),
         "stats": [
             ("Remote", "Statewide"),
-            ("13+", "Years"),
+            ("WeChat", "i70nyc"),
             ("Bilingual", "EN / 中文"),
             ("24h", "Reply"),
         ],
@@ -2149,7 +2391,8 @@ def city_meta(city: dict, lang: str) -> dict:
             "lead": (
                 f"服务 <strong>{name}</strong>（{state_name}）华人餐馆、美容、房产、医疗与专业服务。"
                 f"重点区域：{hood_str}。{angle} "
-                f"远程交付标准与纽约本地一致——详见 <a href=\"{state_path}\">{state_name}服务页</a>。"
+                f"远程交付 · 微信 <strong>i70nyc</strong> · 通常 24 小时内回复——"
+                f"详见 <a href=\"{state_path}\">{state_name}服务页</a>。"
             ),
             "topics": [
                 (
@@ -2173,9 +2416,9 @@ def city_meta(city: dict, lang: str) -> dict:
                 f"{name}本地 SEO",
                 "中英双语网站",
                 "Google 地图 / GBP",
+                "微信 i70nyc",
+                "远程 · 24h 回复",
                 "Google Ads",
-                "AI 线索跟进",
-                "按月报告",
             ],
             "highlights_title": "常选组合",
             "label": f"70NYC · {name}",
@@ -2184,15 +2427,15 @@ def city_meta(city: dict, lang: str) -> dict:
             "faq": [
                 {
                     "q": f"{name}不在纽约，能做网站和 SEO 吗？",
-                    "a": f"可以。我们为{name}及周边（{hood_str}）华人企业提供远程交付，流程与报价逻辑与纽约客户一致。",
+                    "a": f"可以。我们为{name}及周边（{hood_str}）华人企业提供远程交付，流程与报价逻辑与纽约客户一致。微信 i70nyc，通常 24 小时内回复。",
                 },
                 {
                     "q": f"{name}本地 SEO 关键词怎么选？",
                     "a": f"优先「{name}/{hoods[0]} + 行业」高意向词，并保持 NAP 与 Google Business Profile 一致。{angle}",
                 },
                 {
-                    "q": "需要多久？",
-                    "a": "标准企业站通常数周分阶段上线；SEO 与广告按月优化。以需求评估为准。",
+                    "q": "怎么联系最快？",
+                    "a": "电话 386-316-1848，微信 i70nyc，或通过网站表单留言——我们通常 24 小时内回复。",
                 },
             ],
             "tags": [
@@ -2203,11 +2446,11 @@ def city_meta(city: dict, lang: str) -> dict:
                 "华人企业",
                 "远程SEO",
             ],
-            "cta_primary": ("获取本城方案", f"{p}/contact/"),
+            "cta_primary": ("免费咨询 · 微信 i70nyc", f"{p}/contact/?from=city-{city['slug']}"),
             "cta_ghost": (state_name, state_path),
             "stats": [
                 ("远程", "本城可服务"),
-                ("13+", "年经验"),
+                ("微信", "i70nyc"),
                 ("中英", "双语"),
                 ("24h", "内回复"),
             ],
@@ -2229,7 +2472,8 @@ def city_meta(city: dict, lang: str) -> dict:
         "lead": (
             f"Serving Chinese restaurants, salons, real estate, clinics, and professionals in "
             f"<strong>{name}</strong> ({city['state_en']}). Focus areas: {hood_str}. {angle} "
-            f"Same delivery bar as NYC — see our <a href=\"{state_path}\">{city['state_en']} page</a>."
+            f"Remote delivery · WeChat <strong>i70nyc</strong> · typically within 24h — "
+            f"see our <a href=\"{state_path}\">{city['state_en']} page</a>."
         ),
         "topics": [
             (
@@ -2253,9 +2497,9 @@ def city_meta(city: dict, lang: str) -> dict:
             f"{name} local SEO",
             "Bilingual websites",
             "Google Maps / GBP",
+            "WeChat i70nyc",
+            "Remote · 24h reply",
             "Google Ads",
-            "AI lead follow-up",
-            "Monthly reports",
         ],
         "highlights_title": "Popular stacks",
         "label": f"70NYC · {name}",
@@ -2264,15 +2508,15 @@ def city_meta(city: dict, lang: str) -> dict:
         "faq": [
             {
                 "q": f"Can you serve {name} remotely from NYC?",
-                "a": f"Yes. We deliver for {name} and nearby areas ({hood_str}) with the same checkpoints as local NYC projects.",
+                "a": f"Yes. We deliver for {name} and nearby areas ({hood_str}) with the same checkpoints as local NYC projects. WeChat i70nyc — typically within 24h.",
             },
             {
                 "q": f"How do you pick {name} SEO keywords?",
                 "a": f'Prioritize "{name}/{hoods[0]} + industry" intent and keep NAP aligned with GBP. {angle}',
             },
             {
-                "q": "Typical timeline?",
-                "a": "Business sites usually launch in weeks with phases; SEO/Ads continue monthly. Scope depends on your brief.",
+                "q": "Fastest way to reach you?",
+                "a": "Call 386-316-1848, WeChat i70nyc, or the website form — we typically reply within 24 hours.",
             },
         ],
         "tags": [
@@ -2283,11 +2527,11 @@ def city_meta(city: dict, lang: str) -> dict:
             "Chinese business",
             "Remote SEO",
         ],
-        "cta_primary": ("Get City Proposal", f"{p}/contact/"),
+        "cta_primary": ("Free Consult · WeChat i70nyc", f"{p}/contact/?from=city-{city['slug']}"),
         "cta_ghost": (city["state_en"], state_path),
         "stats": [
             ("Remote", "This metro"),
-            ("13+", "Years"),
+            ("WeChat", "i70nyc"),
             ("Bilingual", "EN / 中文"),
             ("24h", "Reply"),
         ],

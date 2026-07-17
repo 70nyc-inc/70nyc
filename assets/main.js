@@ -408,6 +408,26 @@
     }
   }
 
+  document.querySelectorAll('form.lead-form').forEach(function (form) {
+    function ensureHidden(name, value) {
+      var input = form.querySelector('input[name="' + name + '"]');
+      if (!input) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        form.appendChild(input);
+      }
+      if (value) input.value = value;
+      return input;
+    }
+    ensureHidden('page_url', window.location.href);
+    ensureHidden('page_path', window.location.pathname);
+    var params = new URLSearchParams(window.location.search);
+    var from = params.get('from') || params.get('ref') || '';
+    if (from) ensureHidden('lead_source', from);
+    else ensureHidden('lead_source', window.location.pathname);
+  });
+
   var revealEls = document.querySelectorAll('.testimonial-card.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     var revealObserver = new IntersectionObserver(function (entries) {
