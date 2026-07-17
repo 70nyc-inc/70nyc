@@ -1767,7 +1767,7 @@ def footer_html(lang: str, footer_seo: str) -> str:
       {"服务区域：" if lang == "zh" else "Areas served: "}{footer_seo}
     </p>
     <div class="footer-bottom">
-      <address>386-316-1848 · info@70nyc.com · New York, NY</address>
+      <address>386-316-1848 · sales70nyc@gmail.com · New York, NY</address>
     </div>
   </footer>"""
 

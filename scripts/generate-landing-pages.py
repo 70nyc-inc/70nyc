@@ -498,7 +498,7 @@ def footer_html(lang: str) -> str:
       长岛网站设计 · 长岛网站公司 · 长岛网站设计师
     </p>
     <div class="footer-bottom">
-      <address>386-316-1848 · info@70nyc.com · New York, NY</address>
+      <address>386-316-1848 · sales70nyc@gmail.com · New York, NY</address>
     </div>
   </footer>"""
     return """  <footer class="footer">
@@ -531,7 +531,7 @@ def footer_html(lang: str) -> str:
       Areas served: NYC web design · Manhattan web design · Flushing web design · Brooklyn web design · Long Island web design · New York website company
     </p>
     <div class="footer-bottom">
-      <address>386-316-1848 · info@70nyc.com · New York, NY</address>
+      <address>386-316-1848 · sales70nyc@gmail.com · New York, NY</address>
     </div>
   </footer>"""
 
