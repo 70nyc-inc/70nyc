@@ -31,6 +31,21 @@
 - Nationwide remote overview: https://70nyc.com/nationwide/
 - All 50 US states + Washington DC: https://70nyc.com/states/
 - Major states: California https://70nyc.com/states/california/ · Texas https://70nyc.com/states/texas/ · Florida https://70nyc.com/states/florida/ · New Jersey https://70nyc.com/states/new-jersey/ · Washington https://70nyc.com/states/washington/ · Georgia https://70nyc.com/states/georgia/ · Illinois https://70nyc.com/states/illinois/ · Pennsylvania https://70nyc.com/states/pennsylvania/ · Massachusetts https://70nyc.com/states/massachusetts/ · Washington DC https://70nyc.com/states/washington-dc/
+- Priority Chinese metros hub: https://70nyc.com/cities/
+- Los Angeles: https://70nyc.com/cities/los-angeles/
+- San Francisco Bay Area: https://70nyc.com/cities/san-francisco/
+- Irvine / Orange County: https://70nyc.com/cities/irvine/
+- San Diego: https://70nyc.com/cities/san-diego/
+- Houston: https://70nyc.com/cities/houston/
+- Dallas / Plano: https://70nyc.com/cities/dallas/
+- Austin: https://70nyc.com/cities/austin/
+- Miami: https://70nyc.com/cities/miami/
+- Orlando: https://70nyc.com/cities/orlando/
+- Tampa Bay: https://70nyc.com/cities/tampa/
+- Philadelphia: https://70nyc.com/cities/philadelphia/
+- Boston: https://70nyc.com/cities/boston/
+- Seattle: https://70nyc.com/cities/seattle/
+- Bellevue: https://70nyc.com/cities/bellevue/
 
 ## Blog & Guides (Local SEO, Web Design)
 
