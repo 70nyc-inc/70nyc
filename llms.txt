@@ -23,12 +23,14 @@
 
 ## Service Areas
 
-- Areas hub: https://70nyc.com/areas/
+- Areas hub (NYC metro): https://70nyc.com/areas/
 - Manhattan: https://70nyc.com/areas/manhattan/
 - Flushing: https://70nyc.com/areas/flushing/
 - Brooklyn: https://70nyc.com/areas/brooklyn/
 - Long Island: https://70nyc.com/areas/long-island/
-- Nationwide remote: https://70nyc.com/nationwide/
+- Nationwide remote overview: https://70nyc.com/nationwide/
+- All 50 US states + Washington DC: https://70nyc.com/states/
+- Major states: California https://70nyc.com/states/california/ · Texas https://70nyc.com/states/texas/ · Florida https://70nyc.com/states/florida/ · New Jersey https://70nyc.com/states/new-jersey/ · Washington https://70nyc.com/states/washington/ · Georgia https://70nyc.com/states/georgia/ · Illinois https://70nyc.com/states/illinois/ · Pennsylvania https://70nyc.com/states/pennsylvania/ · Massachusetts https://70nyc.com/states/massachusetts/ · Washington DC https://70nyc.com/states/washington-dc/
 
 ## Blog & Guides (Local SEO, Web Design)
 

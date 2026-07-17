@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-70NYC SEO page generator — nationwide, NYC area hubs, and blog.
+70NYC SEO page generator — nationwide, NYC area hubs, US states, and blog.
 
 Usage:
   python3 scripts/generate-seo-pages.py all          # everything + sitemap
   python3 scripts/generate-seo-pages.py nationwide   # /nationwide/ (zh + en)
   python3 scripts/generate-seo-pages.py areas        # /areas/ hub + 6 districts
+  python3 scripts/generate-seo-pages.py states       # /states/ hub + 51 state pages
   python3 scripts/generate-seo-pages.py blog         # /blog/ index (+ posts from BLOG_POSTS)
   python3 scripts/generate-seo-pages.py sitemap      # merge new URLs into sitemap.xml only
 
@@ -13,6 +14,7 @@ Edit content in this file:
   - NATIONWIDE, AREAS, BLOG_POSTS
   - SERVICES (footer / service grid links)
   - SITE (asset cache-bust versions)
+  - scripts/us_states_data.py for state metros
 
 New blog post: append to BLOG_POSTS, then run:
   python3 scripts/generate-seo-pages.py blog
@@ -21,10 +23,14 @@ from __future__ import annotations
 
 import argparse
 import re
+import sys
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from us_states_data import US_STATES  # noqa: E402
+
 DOMAIN = "https://70nyc.com"
 
 SITE = {
@@ -79,7 +85,7 @@ NATIONWIDE = {
         "h1": "不在纽约，<br><span>也能获得同样的专业交付</span>",
         "lead": "视频会议、微信 / WhatsApp 与项目管理工具——我们从纽约为加州、德州、佛州、华盛顿州等各地的华人餐馆、美容、装修、法律、医疗企业提供网站设计、SEO 与 Google Ads，流程透明、阶段可验收。",
         "cta_primary": ("获取远程方案", "/contact/"),
-        "cta_ghost": ("纽约服务区域", "/areas/"),
+        "cta_ghost": ("50州+特区落地页", "/states/"),
         "stats": [("全美", "远程协作"), ("13+", "年经验"), ("中英", "双语团队"), ("24h", "内回复")],
         "tags": ["全美网站设计", "远程网站开发", "华人企业SEO", "远程Google Ads", "纽约总部", "全美华人营销"],
         "label": "70NYC Nationwide",
@@ -88,14 +94,15 @@ NATIONWIDE = {
             ("沟通方式", "Kickoff 用 Zoom/腾讯会议；日常微信、邮件与 Notion/飞书看板同步进度。关键节点（设计稿、上线）视频验收，与纽约本地客户相同标准。"),
             ("交付内容", "响应式网站、CMS 后台、基础 SEO、上线培训文档。可选月度 SEO、Google Ads 代运营与社媒内容——按月报告，数据透明。"),
             ("适合谁", "分店在多地、总部在纽约；或人在外州/海外、目标客户在纽约/全美；需要中英双语网站与搜索覆盖的华人企业。"),
-            ("与纽约本地服务的关系", "大纽约六区可预约面谈；外地客户走远程流程。同一团队、同一报价逻辑，不因远程降低交付标准。"),
+            ("与纽约本地服务的关系", "大纽约六区可预约面谈；外地客户走远程流程。同一团队、同一报价逻辑，不因远程降低交付标准。按州查看：<a href=\"/states/\">美国各州远程服务页</a>。"),
         ],
         "highlights_title": "远程客户常选服务",
         "highlights": ["企业官网改版", "餐馆 / 外卖网站", "本地 SEO + Google Ads", "新店开业推广", "中英双语建站", "上线后运维"],
-        "footer_seo": "全美远程：网站设计 · SEO · Google Ads · 社交媒体 · 华人企业数字营销 · 纽约总部远程交付",
+        "footer_seo": "全美远程：网站设计 · SEO · Google Ads · 社交媒体 · 华人企业数字营销 · 纽约总部远程交付 · 50州+DC",
         "schema_name": "全美远程网站设计与数字营销",
         "schema_desc": "远程网站设计、SEO、Google Ads 与社媒运营，服务全美华人企业。",
         "related": [
+            ("/states/", "美国各州服务", "50州+华盛顿特区"),
             ("/areas/", "纽约服务区域", "曼哈顿·法拉盛等"),
             ("/services/web-design/", "网站设计", "定制建站"),
             ("/services/seo/", "SEO 优化", "自然流量"),
@@ -111,7 +118,7 @@ NATIONWIDE = {
         "h1": "Not in NYC?<br><span>Same Team, Same Standards.</span>",
         "lead": "Video calls, WeChat/WhatsApp, and shared project boards — we deliver websites, SEO, and Google Ads for restaurants, salons, contractors, and clinics across CA, TX, FL, WA, and beyond from our New York HQ.",
         "cta_primary": ("Get Remote Proposal", "/en/contact/"),
-        "cta_ghost": ("NYC Service Areas", "/en/areas/"),
+        "cta_ghost": ("All 50 States + DC", "/en/states/"),
         "stats": [("US-wide", "Remote OK"), ("13+", "Years"), ("Bilingual", "EN & 中文"), ("24h", "Reply")],
         "tags": ["Nationwide web design", "Remote development", "Chinese business SEO", "Remote Google Ads", "NYC HQ", "US Chinese marketing"],
         "label": "70NYC Nationwide",
@@ -120,14 +127,15 @@ NATIONWIDE = {
             ("Communication", "Kickoff on Zoom; day-to-day via WeChat, email, and shared boards. Design and launch reviews on video — same checkpoints as NYC clients."),
             ("Deliverables", "Responsive site, CMS, basic SEO, training docs. Optional monthly SEO, Google Ads, and social — transparent reporting."),
             ("Who It's For", "Multi-location brands, owners outside NY serving US customers, and businesses needing bilingual web + search coverage."),
-            ("NYC + Remote", "In-person meetings across six NYC areas; everywhere else uses the same remote playbook. One team, one quality bar."),
+            ("NYC + Remote", "In-person meetings across six NYC areas; everywhere else uses the same remote playbook. Browse <a href=\"/en/states/\">state-by-state remote pages</a>."),
         ],
         "highlights_title": "Popular Remote Services",
         "highlights": ["Corporate site redesign", "Restaurant websites", "Local SEO + Google Ads", "New location launch", "Bilingual websites", "Post-launch care"],
-        "footer_seo": "Nationwide remote: web design · SEO · Google Ads · social media · Chinese business marketing · delivered from NYC",
+        "footer_seo": "Nationwide remote: web design · SEO · Google Ads · social media · Chinese business marketing · 50 states + DC · delivered from NYC",
         "schema_name": "Nationwide Remote Web Design & Marketing",
         "schema_desc": "Remote web design, SEO, Google Ads, and social for Chinese-owned businesses across the US.",
         "related": [
+            ("/en/states/", "US States", "50 states + DC"),
             ("/en/areas/", "NYC Areas", "Manhattan · Flushing…"),
             ("/en/services/web-design/", "Web Design", "Custom builds"),
             ("/en/services/seo/", "SEO", "Organic growth"),
@@ -1506,6 +1514,7 @@ def footer_html(lang: str, footer_seo: str) -> str:
 {service_links}
         <a href="{p}/areas/">{areas_label}</a>
         <a href="{p}/nationwide/">{nationwide_label}</a>
+        <a href="{p}/states/">{"美国各州" if lang == "zh" else "US States"}</a>
         <a href="{p}/process/">{"项目流程" if lang == "zh" else "Our Process"}</a>
         <a href="{p}/blog/">{"博客" if lang == "zh" else "Blog"}</a>
         <a href="{p}/sitemap/">{sitemap_label}</a>
@@ -1852,8 +1861,369 @@ def area_related(lang: str, current_slug: str) -> list[tuple[str, str, str]]:
         for a in others
     )
     related.append((f"{p}/nationwide/", "全美远程" if lang == "zh" else "Nationwide", "Remote US-wide"))
+    related.append((f"{p}/states/", "美国各州" if lang == "zh" else "US States", "50 states + DC"))
     related.append((f"{p}/contact/", "免费咨询" if lang == "zh" else "Contact", "24h" if lang == "en" else "24h 内回复"))
     return related
+
+
+INDUSTRY_LABEL = {
+    "restaurants": ("餐馆 / 外卖", "Restaurants & takeout"),
+    "healthcare": ("医疗诊所", "Healthcare clinics"),
+    "retail": ("零售门店", "Retail"),
+    "tourism": ("旅游接待", "Tourism & hospitality"),
+    "professional services": ("专业服务", "Professional services"),
+    "real estate": ("房产中介", "Real estate"),
+    "medical spa": ("医美 / 美容", "Med spa & beauty"),
+    "contractors": ("装修承包", "Contractors"),
+    "beauty": ("美容美发", "Beauty & salons"),
+    "tech": ("科技 / 创业", "Tech & startups"),
+    "legal": ("律师事务所", "Law firms"),
+    "finance": ("金融财务", "Finance"),
+    "education": ("教育培训", "Education"),
+    "auto services": ("汽修服务", "Auto services"),
+    "agriculture services": ("农业服务", "Agribusiness services"),
+    "energy services": ("能源服务", "Energy services"),
+    "manufacturing services": ("制造配套", "Manufacturing services"),
+    "music business": ("音乐产业", "Music business"),
+    "government contractors": ("政府承包商", "Gov contractors"),
+    "oil services": ("能源油服", "Energy / oil services"),
+    "ngo": ("非营利机构", "NGOs"),
+}
+
+
+def _industry_list(state: dict, lang: str) -> str:
+    parts = []
+    for key in state["industries"][:4]:
+        zh, en = INDUSTRY_LABEL.get(key, (key, key))
+        parts.append(zh if lang == "zh" else en)
+    return "、".join(parts) if lang == "zh" else ", ".join(parts)
+
+
+def state_meta(state: dict, lang: str) -> dict:
+    p = prefix(lang)
+    name = state["name_zh"] if lang == "zh" else state["name_en"]
+    cities = state["cities_zh"] if lang == "zh" else state["cities"]
+    city_str = "、".join(cities[:4]) if lang == "zh" else ", ".join(cities[:4])
+    industries = _industry_list(state, lang)
+    code = state["code"]
+    note = state.get("note_zh" if lang == "zh" else "note_en", "")
+
+    if lang == "zh":
+        title = f"{name}网站设计与SEO｜华人企业远程服务｜70NYC"
+        description = (
+            f"70NYC 从纽约为{name}华人企业提供远程网站设计、本地 SEO、Google Ads 与 AI 营销。"
+            f"覆盖{city_str}等地，流程与纽约客户一致。"
+        )
+        keywords = (
+            f"{name}网站设计, {name}SEO, {name}华人网站, {code} web design, "
+            f"{cities[0]}网站设计, {name}Google Ads, 华人企业远程营销"
+        )
+        lead = (
+            f"人在{name}、客户在本地或全美——我们通过视频会议与微信远程交付网站、SEO 与广告。"
+            f"重点城市包括 <strong>{city_str}</strong>。"
+            f"常见行业：{industries}。"
+            + (f" {note}" if note else "")
+        )
+        topics = [
+            (
+                f"{name}远程合作怎么做",
+                f"Kickoff 用 Zoom；日常微信/邮件同步。设计稿、上线验收视频过稿——与曼哈顿、法拉盛本地客户相同阶段标准。时区以美东为主，可按{name}客户时间安排会议。",
+            ),
+            (
+                "本地 SEO 与 Google 地图",
+                f"针对「{cities[0]} + 行业」类关键词优化网站结构、GBP 与评价策略；多城服务范围写清服务半径，避免空模板堆砌。详见 <a href=\"/services/seo/\">SEO 服务</a>。",
+            ),
+            (
+                "适合哪些生意",
+                f"{name}华人{industries}等——需要中英双语官网、新店上线、或已有站但搜索曝光不足时，可打包网站 + SEO + <a href=\"/services/google-ads/\">Google Ads</a>。",
+            ),
+            (
+                "与纽约总部的关系",
+                f"签约、设计、开发、广告账户均由纽约团队交付；不因远程降低质量。大纽约面谈见 <a href=\"/areas/\">服务区域</a>；其他州见本页与 <a href=\"/nationwide/\">全美远程总览</a>。",
+            ),
+        ]
+        faq = [
+            {
+                "q": f"人不在纽约，{name}能做网站和 SEO 吗？",
+                "a": f"可以。我们通过远程流程服务{name}客户，交付物、验收节点与报价逻辑与纽约本地一致。",
+            },
+            {
+                "q": f"{name}本地 SEO 需要见面吗？",
+                "a": "多数项目可全程远程。若需拍摄门店或面谈，可协调当地合作方或您自行提供素材。",
+            },
+            {
+                "q": "多久能上线？",
+                "a": "标准企业站通常数周内分阶段交付；含 SEO / Ads 的方案按月迭代。具体以需求评估为准。",
+            },
+        ]
+        return {
+            "title": title,
+            "description": description,
+            "keywords": keywords,
+            "breadcrumb": name,
+            "eyebrow": f"{name} · {code} · 远程交付",
+            "h1": f"{name}华人企业<br><span>网站设计、SEO 与数字营销</span>",
+            "lead": lead,
+            "topics": topics,
+            "highlights": [
+                "响应式中英网站",
+                f"{cities[0]}本地 SEO",
+                "Google Ads 投放",
+                "AI 线索跟进",
+                "餐馆 / 门店站",
+                "按月透明报告",
+            ],
+            "highlights_title": "常选服务组合",
+            "label": f"70NYC · {name}",
+            "section_h2": f"服务{name}客户时我们做什么",
+            "footer_seo": f"{name}网站设计 · {name}SEO · {city_str} · 华人企业远程营销 · 70NYC",
+            "faq": faq,
+            "tags": [
+                f"{name}网站设计",
+                f"{name}SEO",
+                f"{cities[0]}网站",
+                "华人企业",
+                "远程SEO",
+                "Google Ads",
+            ],
+            "cta_primary": ("获取本州方案", f"{p}/contact/"),
+            "cta_ghost": ("全美远程总览", f"{p}/nationwide/"),
+            "stats": [
+                ("远程", "全州可服务"),
+                ("13+", "年经验"),
+                ("中英", "双语"),
+                ("24h", "内回复"),
+            ],
+        }
+
+    title = f"{name} Web Design & SEO for Chinese Businesses | Remote | 70NYC"
+    description = (
+        f"70NYC delivers remote web design, local SEO, Google Ads, and AI marketing for Chinese-owned "
+        f"businesses in {name} — covering {city_str} and statewide."
+    )
+    keywords = (
+        f"{name} web design, {name} SEO, {code} Chinese business website, "
+        f"{cities[0]} web design, {name} Google Ads, remote digital marketing"
+    )
+    lead = (
+        f"Based in New York, we serve {name} clients remotely via video and WeChat. "
+        f"Key metros: <strong>{city_str}</strong>. Common industries: {industries}."
+        + (f" {note}" if note else "")
+    )
+    topics = [
+        (
+            f"How remote work in {name} works",
+            f"Kickoff on Zoom; WeChat/email day-to-day. Design and launch reviews on video — same milestones as NYC clients. Meetings scheduled around {name} time zones when needed.",
+        ),
+        (
+            "Local SEO & Google Maps",
+            f'We structure pages for "{cities[0]} + service" intent, GBP, and honest service-area coverage — no empty template farms. See our <a href="/en/services/seo/">SEO services</a>.',
+        ),
+        (
+            "Who it's for",
+            f"{name} Chinese {industries} and more — bilingual sites, new openings, or low search visibility. Pair with <a href=\"/en/services/google-ads/\">Google Ads</a> when you need faster leads.",
+        ),
+        (
+            "NYC HQ delivery",
+            f"Contracts, design, build, and ad accounts run from our New York team. Metro NYC meetings: <a href=\"/en/areas/\">areas</a>. Other states: this page and <a href=\"/en/nationwide/\">nationwide remote</a>.",
+        ),
+    ]
+    faq = [
+        {
+            "q": f"Can you build sites and SEO for {name} if I'm not in NYC?",
+            "a": f"Yes. Remote delivery for {name} uses the same checkpoints and quality bar as local NYC projects.",
+        },
+        {
+            "q": f"Do {name} local SEO projects require on-site visits?",
+            "a": "Most work is remote. For photos or walkthroughs, we coordinate local help or use assets you provide.",
+        },
+        {
+            "q": "Typical timeline?",
+            "a": "Standard business sites launch in weeks with phased milestones; SEO/Ads continue monthly. Scope depends on your brief.",
+        },
+    ]
+    return {
+        "title": title,
+        "description": description,
+        "keywords": keywords,
+        "breadcrumb": name,
+        "eyebrow": f"{name} · {code} · Remote",
+        "h1": f"{name} Chinese Businesses<br><span>Web Design, SEO & Digital Marketing</span>",
+        "lead": lead,
+        "topics": topics,
+        "highlights": [
+            "Bilingual responsive sites",
+            f"{cities[0]} local SEO",
+            "Google Ads",
+            "AI lead follow-up",
+            "Restaurant / storefront sites",
+            "Monthly reporting",
+        ],
+        "highlights_title": "Popular stacks",
+        "label": f"70NYC · {name}",
+        "section_h2": f"What we deliver for {name} clients",
+        "footer_seo": f"{name} web design · {name} SEO · {city_str} · Chinese business remote marketing · 70NYC",
+        "faq": faq,
+        "tags": [
+            f"{name} web design",
+            f"{name} SEO",
+            f"{cities[0]} website",
+            "Chinese business",
+            "Remote SEO",
+            "Google Ads",
+        ],
+        "cta_primary": ("Get State Proposal", f"{p}/contact/"),
+        "cta_ghost": ("Nationwide Overview", f"{p}/nationwide/"),
+        "stats": [
+            ("Remote", "Statewide"),
+            ("13+", "Years"),
+            ("Bilingual", "EN / 中文"),
+            ("24h", "Reply"),
+        ],
+    }
+
+
+def state_related(lang: str, current_slug: str) -> list[tuple[str, str, str]]:
+    p = prefix(lang)
+    idx = next(i for i, s in enumerate(US_STATES) if s["slug"] == current_slug)
+    neighbors = []
+    for offset in (1, 2, -1):
+        n = US_STATES[(idx + offset) % len(US_STATES)]
+        if n["slug"] != current_slug and n["slug"] not in {x["slug"] for x in neighbors}:
+            neighbors.append(n)
+        if len(neighbors) >= 2:
+            break
+    related = [
+        (
+            f"{p}/states/{n['slug']}/",
+            n["name_zh"] if lang == "zh" else n["name_en"],
+            n["code"],
+        )
+        for n in neighbors
+    ]
+    related.append((f"{p}/states/", "全部州" if lang == "zh" else "All States", "50 + DC"))
+    related.append((f"{p}/nationwide/", "全美远程" if lang == "zh" else "Nationwide", "Overview"))
+    related.append((f"{p}/contact/", "免费咨询" if lang == "zh" else "Contact", "24h"))
+    return related
+
+
+def generate_states() -> list[str]:
+    urls: list[str] = []
+    for lang in ("zh", "en"):
+        p = prefix(lang)
+        hub_path = f"{p}/states/"
+        if lang == "zh":
+            hub = {
+                "title": "美国各州网站设计与SEO｜50州+华盛顿特区远程服务｜70NYC",
+                "description": "70NYC 从纽约为美国 50 个州及华盛顿特区华人企业提供远程网站设计、本地 SEO、Google Ads 与数字营销。按州查看服务说明与重点城市。",
+                "breadcrumb": "美国各州",
+                "eyebrow": "50 States + DC · 远程交付",
+                "h1": "覆盖美国各州<br><span>华人企业远程网站与 SEO</span>",
+                "lead": "从加州、德州、佛州到华盛顿州——选择您所在的州，了解远程合作方式、重点华人城市与本地搜索策略。大纽约面谈请见服务区域页。",
+                "section_h2": "选择您的州 / 特区",
+                "intro": "以下共 51 个落地页（50 州 + 华盛顿特区）。内容按州定制关键词与城市，交付团队仍为纽约 70NYC。",
+            }
+        else:
+            hub = {
+                "title": "US State Web Design & SEO | 50 States + DC Remote | 70NYC",
+                "description": "70NYC serves Chinese-owned businesses in all 50 US states and Washington, D.C. with remote web design, local SEO, Google Ads, and digital marketing from New York.",
+                "breadcrumb": "US States",
+                "eyebrow": "50 States + DC · Remote",
+                "h1": "Web Design & SEO<br><span>Across Every US State</span>",
+                "lead": "From California and Texas to Florida and Washington — pick your state for remote delivery details, key Chinese metros, and local search notes. NYC in-person: see our area pages.",
+                "section_h2": "Choose your state / district",
+                "intro": "51 landing pages (50 states + D.C.), each with state-specific cities and keywords — delivered by the same NYC 70NYC team.",
+            }
+        schema = breadcrumb_schema(lang, [
+            ("首页" if lang == "zh" else "Home", f"{DOMAIN}/" if lang == "zh" else f"{DOMAIN}/en/"),
+            (hub["breadcrumb"], f"{DOMAIN}{hub_path}"),
+        ])
+        cards = []
+        for st in US_STATES:
+            label = st["name_zh"] if lang == "zh" else st["name_en"]
+            cities = st["cities_zh"] if lang == "zh" else st["cities"]
+            span = f"{st['code']} · {cities[0]}"
+            cards.append(
+                f'          <a class="page-seo-related-card" href="{p}/states/{st["slug"]}/">\n'
+                f'            <span class="page-seo-related-arrow" aria-hidden="true">→</span>\n'
+                f"            <b>{label}</b>\n"
+                f"            <span>{span}</span>\n"
+                f"          </a>"
+            )
+        hub_main = (
+            hero_html(lang, {**hub, "tags": [], "stats": []}, [(hub["breadcrumb"], None)], theme_idx=1, show_actions=False)
+            + f"""    <section class="page-seo-supplement">
+      <div class="page-seo-supplement-inner">
+        <div class="page-seo-supplement-head">
+          <span class="label">70NYC States</span>
+          <h2>{hub['section_h2']}</h2>
+          <p style="margin-top:12px;color:var(--text-muted)">{hub['intro']}</p>
+        </div>
+        <div class="page-seo-related-grid">
+{chr(10).join(cards)}
+        </div>
+      </div>
+    </section>
+"""
+            + related_html(
+                lang,
+                [
+                    (f"{p}/nationwide/", "全美远程" if lang == "zh" else "Nationwide", "Overview"),
+                    (f"{p}/areas/", "纽约区域" if lang == "zh" else "NYC Areas", "Metro"),
+                    (f"{p}/contact/", "联系" if lang == "zh" else "Contact", ""),
+                ],
+                "更多" if lang == "zh" else "More",
+            )
+        )
+        footer = (
+            "美国50州+特区 · 远程网站设计 · SEO · Google Ads · 华人企业"
+            if lang == "zh"
+            else "50 US states + DC · remote web design · SEO · Google Ads · Chinese businesses"
+        )
+        out = ROOT / "states" / "index.html" if lang == "zh" else ROOT / "en" / "states" / "index.html"
+        write_page(out, assemble_page(lang, {**hub, "keywords": ""}, hub_path, hub_main, schema, footer))
+        urls.append(f"{DOMAIN}{hub_path}")
+
+    for idx, state in enumerate(US_STATES):
+        for lang in ("zh", "en"):
+            meta = state_meta(state, lang)
+            p = prefix(lang)
+            path = f"{p}/states/{state['slug']}/"
+            crumbs = [
+                ("美国各州" if lang == "zh" else "US States", f"{p}/states/"),
+                (meta["breadcrumb"], None),
+            ]
+            schema = breadcrumb_schema(lang, [
+                ("首页" if lang == "zh" else "Home", f"{DOMAIN}/" if lang == "zh" else f"{DOMAIN}/en/"),
+                ("美国各州" if lang == "zh" else "US States", f"{DOMAIN}{p}/states/"),
+                (meta["breadcrumb"], f"{DOMAIN}{path}"),
+            ])
+            schema += "\n" + local_business_schema(
+                meta["title"].split("｜")[0] if lang == "zh" else meta["title"].split("|")[0].strip(),
+                meta["description"],
+                state["name_en"],
+            )
+            if meta.get("faq"):
+                schema += "\n" + faq_page_schema(meta["faq"])
+            faq_block = area_faq_html(lang, meta["faq"], meta["breadcrumb"]) + "\n" if meta.get("faq") else ""
+            main = (
+                hero_html(lang, meta, crumbs, theme_idx=idx)
+                + "\n"
+                + supplement_html(lang, meta)
+                + "\n"
+                + faq_block
+                + service_grid_html(lang)
+                + "\n"
+                + related_html(lang, state_related(lang, state["slug"]))
+            )
+            out = (
+                ROOT / "states" / state["slug"] / "index.html"
+                if lang == "zh"
+                else ROOT / "en" / "states" / state["slug"] / "index.html"
+            )
+            write_page(out, assemble_page(lang, meta, path, main, schema, meta["footer_seo"]))
+            urls.append(f"{DOMAIN}{path}")
+    return urls
 
 
 def generate_areas() -> list[str]:
@@ -1895,6 +2265,7 @@ def generate_areas() -> list[str]:
                 lang,
                 [
                     (f"{p}/nationwide/", "全美远程" if lang == "zh" else "Nationwide", "Remote"),
+                    (f"{p}/states/", "美国各州" if lang == "zh" else "US States", "50+DC"),
                     (f"{p}/services/", "服务总览" if lang == "zh" else "All Services", ""),
                     (f"{p}/contact/", "联系" if lang == "zh" else "Contact", ""),
                 ],
@@ -2162,6 +2533,9 @@ def collect_paths_for_sitemap(target: str) -> list[str]:
     if target in ("all", "areas"):
         paths.append("/areas/")
         paths.extend(f"/areas/{a['slug']}/" for a in AREAS)
+    if target in ("all", "states"):
+        paths.append("/states/")
+        paths.extend(f"/states/{s['slug']}/" for s in US_STATES)
     if target in ("all", "blog"):
         paths.append("/blog/")
         paths.extend(f"/blog/{p['slug']}/" for p in BLOG_POSTS)
@@ -2176,7 +2550,7 @@ def main() -> None:
         "target",
         nargs="?",
         default="all",
-        choices=["all", "nationwide", "areas", "blog", "sitemap"],
+        choices=["all", "nationwide", "areas", "states", "blog", "sitemap"],
         help="Which pages to generate (default: all)",
     )
     args = parser.parse_args()
@@ -2190,6 +2564,8 @@ def main() -> None:
         urls.extend(generate_nationwide())
     if args.target in ("all", "areas"):
         urls.extend(generate_areas())
+    if args.target in ("all", "states"):
+        urls.extend(generate_states())
     if args.target in ("all", "blog"):
         urls.extend(generate_blog())
 

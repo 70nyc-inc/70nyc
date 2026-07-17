@@ -20,6 +20,8 @@ EN_BLOG = '        <a href="/en/blog/">Blog</a>\n'
 
 ZH_AI = '        <a href="/services/ai-marketing/">AI 智能营销</a>\n'
 EN_AI = '        <a href="/en/services/ai-marketing/">AI Marketing</a>\n'
+ZH_STATES = '        <a href="/states/">美国各州</a>\n'
+EN_STATES = '        <a href="/en/states/">US States</a>\n'
 
 
 def patch(text: str) -> tuple[str, bool]:
@@ -33,6 +35,16 @@ def patch(text: str) -> tuple[str, bool]:
         old = '        <a href="/en/services/seo/">SEO</a>\n        <a href="/en/services/social-media/">Social Media</a>'
         if old in text:
             text = text.replace(old, '        <a href="/en/services/seo/">SEO</a>\n' + EN_AI + '        <a href="/en/services/social-media/">Social Media</a>', 1)
+            changed = True
+    if 'href="/states/"' not in text and 'href="/nationwide/"' in text:
+        old = '        <a href="/nationwide/">全美远程</a>\n'
+        if old in text:
+            text = text.replace(old, old + ZH_STATES, 1)
+            changed = True
+    if 'href="/en/states/"' not in text and 'href="/en/nationwide/"' in text:
+        old = '        <a href="/en/nationwide/">Nationwide Remote</a>\n'
+        if old in text:
+            text = text.replace(old, old + EN_STATES, 1)
             changed = True
     if 'href="/areas/"' not in text:
         old = '        <a href="/services/social-media/">社交媒体管理</a>\n        <a href="/process/">项目流程</a>'
