@@ -450,4 +450,87 @@
       el.classList.add('is-visible');
     });
   }
+
+  function formatCountValue(n) {
+    return String(Math.round(n));
+  }
+
+  function animateCountEl(el, delay) {
+    var target = parseFloat(el.getAttribute('data-value') || '0');
+    if (!isFinite(target)) return;
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = target >= 100 ? 1400 : 1100;
+    var start = null;
+
+    function frame(ts) {
+      if (start === null) start = ts;
+      var t = Math.min(1, (ts - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = prefix + formatCountValue(target * eased) + suffix;
+      if (t < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.textContent = prefix + formatCountValue(target) + suffix;
+        el.classList.add('is-counted');
+      }
+    }
+
+    setTimeout(function () {
+      el.classList.add('is-counting');
+      el.textContent = prefix + '0' + suffix;
+      requestAnimationFrame(frame);
+    }, delay || 0);
+  }
+
+  function initCountUps() {
+    var nodes = document.querySelectorAll('[data-count-up]');
+    if (!nodes.length) return;
+
+    if (reducedMotion) {
+      nodes.forEach(function (el) {
+        var prefix = el.getAttribute('data-prefix') || '';
+        var suffix = el.getAttribute('data-suffix') || '';
+        var target = el.getAttribute('data-value') || '0';
+        el.textContent = prefix + target + suffix;
+        el.classList.add('is-counted');
+      });
+      return;
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      nodes.forEach(function (el, i) {
+        animateCountEl(el, i * 80);
+      });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        if (el.getAttribute('data-counted') === '1') return;
+        el.setAttribute('data-counted', '1');
+        var siblings = el.closest('[data-count-group], .stats, .industries-stats, .about-visual');
+        var delay = 0;
+        if (siblings) {
+          var list = siblings.querySelectorAll('[data-count-up]');
+          for (var i = 0; i < list.length; i++) {
+            if (list[i] === el) {
+              delay = i * 90;
+              break;
+            }
+          }
+        }
+        animateCountEl(el, delay);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.35, rootMargin: '0px 0px -8% 0px' });
+
+    nodes.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
+
+  initCountUps();
 })();

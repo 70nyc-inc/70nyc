@@ -524,6 +524,18 @@ img, video { display: block; max-width: 100%; }
   letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.stat-item b.is-counting {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.stat-item b.is-counted {
+  filter: none;
+  transform: none;
 }
 
 .stat-item span {
@@ -1299,6 +1311,7 @@ img, video { display: block; max-width: 100%; }
   line-height: 1;
   margin-bottom: 4px;
   letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
 }
 
 .about-float-card span {
@@ -2029,6 +2042,7 @@ img, video { display: block; max-width: 100%; }
   letter-spacing: -1px;
   line-height: 1;
   margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
 }
 
 .industries-stat span {
