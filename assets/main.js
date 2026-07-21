@@ -533,4 +533,85 @@
   }
 
   initCountUps();
+
+  function initMobileDock() {
+    if (window.matchMedia('(min-width: 769px)').matches) return;
+    if (document.getElementById('mobileDock')) return;
+
+    var isEn = /^\/en(\/|$)/.test(window.location.pathname);
+    var contactHref = isEn ? '/en/contact/' : '/contact/';
+    var labels = isEn
+      ? { call: 'Call', wechat: 'WeChat', contact: 'Contact', copied: 'WeChat ID copied: i70nyc', copyFail: 'Copy failed — WeChat: i70nyc' }
+      : { call: '电话', wechat: '微信', contact: '咨询', copied: '已复制微信号：i70nyc', copyFail: '复制失败，微信号：i70nyc' };
+
+    var dock = document.createElement('nav');
+    dock.id = 'mobileDock';
+    dock.className = 'mobile-dock';
+    dock.setAttribute('aria-label', isEn ? 'Quick contact' : '快捷联系');
+    dock.innerHTML =
+      '<a class="mobile-dock-btn mobile-dock-btn--call" href="tel:3863161848">' +
+        '<span class="mobile-dock-icon" aria-hidden="true"></span>' +
+        '<span class="mobile-dock-label">' + labels.call + '</span>' +
+      '</a>' +
+      '<button type="button" class="mobile-dock-btn mobile-dock-btn--wechat" id="mobileDockWechat">' +
+        '<span class="mobile-dock-icon" aria-hidden="true"></span>' +
+        '<span class="mobile-dock-label">' + labels.wechat + '</span>' +
+        '<span class="mobile-dock-sub">i70nyc</span>' +
+      '</button>' +
+      '<a class="mobile-dock-btn mobile-dock-btn--contact" href="' + contactHref + '">' +
+        '<span class="mobile-dock-icon" aria-hidden="true"></span>' +
+        '<span class="mobile-dock-label">' + labels.contact + '</span>' +
+      '</a>';
+    document.body.appendChild(dock);
+    document.documentElement.classList.add('has-mobile-dock');
+
+    var toast = document.createElement('div');
+    toast.id = 'mobileDockToast';
+    toast.className = 'mobile-dock-toast';
+    toast.setAttribute('role', 'status');
+    toast.hidden = true;
+    document.body.appendChild(toast);
+
+    var toastTimer = null;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.hidden = false;
+      toast.classList.add('is-visible');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        toast.classList.remove('is-visible');
+        toast.hidden = true;
+      }, 2200);
+    }
+
+    function copyWechat() {
+      var id = 'i70nyc';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(id).then(function () {
+          showToast(labels.copied);
+        }).catch(function () {
+          showToast(labels.copyFail);
+        });
+      } else {
+        var input = document.createElement('input');
+        input.value = id;
+        document.body.appendChild(input);
+        input.select();
+        try {
+          document.execCommand('copy');
+          showToast(labels.copied);
+        } catch (e) {
+          showToast(labels.copyFail);
+        }
+        document.body.removeChild(input);
+      }
+    }
+
+    var wechatBtn = document.getElementById('mobileDockWechat');
+    if (wechatBtn) {
+      wechatBtn.addEventListener('click', copyWechat);
+    }
+  }
+
+  initMobileDock();
 })();
