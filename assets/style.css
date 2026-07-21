@@ -4635,11 +4635,10 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
   display: block;
   margin-top: 5px;
   font-size: 11px;
-  text-transform: none;
-}
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.4px;
+  text-transform: none;
 }
 
 .page-seo-keywords {
