@@ -37,7 +37,7 @@ DOMAIN = "https://70nyc.com"
 
 SITE = {
     "style_css": "v=11",
-    "main_js": "v=14",
+    "main_js": "v=15",
     "lang_detect_js": "v=4",
     "og_image": f"{DOMAIN}/assets/nyc-hero.png",
 }
@@ -1466,7 +1466,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "与 70NYC 远程合作",
                     "paragraphs": [
-                        "我们从纽约为休斯顿餐馆交付网站、GBP 优化与广告——微信 <strong>i70nyc</strong>，通常 24 小时内回复。免费初诊：<a href=\"/contact/?from=blog-houston-restaurant\">联系我们</a>。",
+                        "我们从纽约为休斯顿餐馆交付网站、GBP 优化与广告——微信 <strong>we70nyc</strong>，通常 24 小时内回复。免费初诊：<a href=\"/contact/?from=blog-houston-restaurant\">联系我们</a>。",
                         "相关：<a href=\"/cities/dallas/\">达拉斯</a> · <a href=\"/states/texas/\">德州总览</a> · <a href=\"/services/seo/\">SEO 服务</a>。",
                     ],
                 },
@@ -1504,7 +1504,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "Work with 70NYC remotely",
                     "paragraphs": [
-                        "We deliver sites, GBP, and ads for Houston restaurants from NYC — WeChat <strong>i70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-houston-restaurant\">Free consult</a>.",
+                        "We deliver sites, GBP, and ads for Houston restaurants from NYC — WeChat <strong>we70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-houston-restaurant\">Free consult</a>.",
                         "Also: <a href=\"/en/cities/dallas/\">Dallas</a> · <a href=\"/en/states/texas/\">Texas</a> · <a href=\"/en/services/seo/\">SEO</a>.",
                     ],
                 },
@@ -1546,7 +1546,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "远程交付与联系",
                     "paragraphs": [
-                        "70NYC 从纽约为尔湾 / 橙县客户远程交付——微信 <strong>i70nyc</strong>，24 小时内回复。<a href=\"/contact/?from=blog-irvine\">免费咨询</a>。",
+                        "70NYC 从纽约为尔湾 / 橙县客户远程交付——微信 <strong>we70nyc</strong>，24 小时内回复。<a href=\"/contact/?from=blog-irvine\">免费咨询</a>。",
                         "相关：<a href=\"/states/california/\">加州</a> · <a href=\"/cities/san-francisco/\">湾区</a> · <a href=\"/nationwide/\">全美远程</a>。",
                     ],
                 },
@@ -1584,7 +1584,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "Remote delivery",
                     "paragraphs": [
-                        "70NYC delivers from NYC — WeChat <strong>i70nyc</strong>, reply within 24h. <a href=\"/en/contact/?from=blog-irvine\">Free consult</a>.",
+                        "70NYC delivers from NYC — WeChat <strong>we70nyc</strong>, reply within 24h. <a href=\"/en/contact/?from=blog-irvine\">Free consult</a>.",
                         "Related: <a href=\"/en/states/california/\">California</a> · <a href=\"/en/cities/san-francisco/\">Bay Area</a> · <a href=\"/en/nationwide/\">Nationwide</a>.",
                     ],
                 },
@@ -1626,7 +1626,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "联系 70NYC",
                     "paragraphs": [
-                        "远程服务波士顿大都会——微信 <strong>i70nyc</strong>，通常 24h 内回复。<a href=\"/contact/?from=blog-boston\">免费咨询</a>。",
+                        "远程服务波士顿大都会——微信 <strong>we70nyc</strong>，通常 24h 内回复。<a href=\"/contact/?from=blog-boston\">免费咨询</a>。",
                         "相关：<a href=\"/states/massachusetts/\">马萨诸塞州</a> · <a href=\"/cities/philadelphia/\">费城</a> · <a href=\"/services/seo/\">SEO</a>。",
                     ],
                 },
@@ -1664,7 +1664,7 @@ BLOG_POSTS: list[dict[str, Any]] = [
                 {
                     "h2": "Contact 70NYC",
                     "paragraphs": [
-                        "Remote delivery for Greater Boston — WeChat <strong>i70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-boston\">Free consult</a>.",
+                        "Remote delivery for Greater Boston — WeChat <strong>we70nyc</strong>, typically within 24h. <a href=\"/en/contact/?from=blog-boston\">Free consult</a>.",
                         "Also: <a href=\"/en/states/massachusetts/\">Massachusetts</a> · <a href=\"/en/cities/philadelphia/\">Philadelphia</a> · <a href=\"/en/services/seo/\">SEO</a>.",
                     ],
                 },
@@ -2165,7 +2165,7 @@ def state_meta(state: dict, lang: str) -> dict:
             f"人在{name}、客户在本地或全美——我们通过视频会议与微信远程交付网站、SEO 与广告。"
             f"重点城市包括 <strong>{city_str}</strong>。"
             f"常见行业：{industries}。"
-            f"微信 <strong>i70nyc</strong>，通常 24 小时内回复。"
+            f"微信 <strong>we70nyc</strong>，通常 24 小时内回复。"
             + (f" {note}" if note else "")
         )
         topics = [
@@ -2234,7 +2234,7 @@ def state_meta(state: dict, lang: str) -> dict:
             "cta_ghost": ("全美远程总览", f"{p}/nationwide/"),
             "stats": [
                 ("远程", "全州可服务"),
-                ("微信", "i70nyc"),
+                ("微信", "we70nyc"),
                 ("中英", "双语"),
                 ("24h", "内回复"),
             ],
@@ -2252,7 +2252,7 @@ def state_meta(state: dict, lang: str) -> dict:
     lead = (
         f"Based in New York, we serve {name} clients remotely via video and WeChat. "
         f"Key metros: <strong>{city_str}</strong>. Common industries: {industries}. "
-        f"WeChat <strong>i70nyc</strong> — typically within 24h."
+        f"WeChat <strong>we70nyc</strong> — typically within 24h."
         + (f" {note}" if note else "")
     )
     topics = [
@@ -2321,7 +2321,7 @@ def state_meta(state: dict, lang: str) -> dict:
         "cta_ghost": ("Nationwide Overview", f"{p}/nationwide/"),
         "stats": [
             ("Remote", "Statewide"),
-            ("WeChat", "i70nyc"),
+            ("WeChat", "we70nyc"),
             ("Bilingual", "EN / 中文"),
             ("24h", "Reply"),
         ],
@@ -2391,7 +2391,7 @@ def city_meta(city: dict, lang: str) -> dict:
             "lead": (
                 f"服务 <strong>{name}</strong>（{state_name}）华人餐馆、美容、房产、医疗与专业服务。"
                 f"重点区域：{hood_str}。{angle} "
-                f"远程交付 · 微信 <strong>i70nyc</strong> · 通常 24 小时内回复——"
+                f"远程交付 · 微信 <strong>we70nyc</strong> · 通常 24 小时内回复——"
                 f"详见 <a href=\"{state_path}\">{state_name}服务页</a>。"
             ),
             "topics": [
@@ -2416,7 +2416,7 @@ def city_meta(city: dict, lang: str) -> dict:
                 f"{name}本地 SEO",
                 "中英双语网站",
                 "Google 地图 / GBP",
-                "微信 i70nyc",
+                "微信 we70nyc",
                 "远程 · 24h 回复",
                 "Google Ads",
             ],
@@ -2427,7 +2427,7 @@ def city_meta(city: dict, lang: str) -> dict:
             "faq": [
                 {
                     "q": f"{name}不在纽约，能做网站和 SEO 吗？",
-                    "a": f"可以。我们为{name}及周边（{hood_str}）华人企业提供远程交付，流程与报价逻辑与纽约客户一致。微信 i70nyc，通常 24 小时内回复。",
+                    "a": f"可以。我们为{name}及周边（{hood_str}）华人企业提供远程交付，流程与报价逻辑与纽约客户一致。微信 we70nyc，通常 24 小时内回复。",
                 },
                 {
                     "q": f"{name}本地 SEO 关键词怎么选？",
@@ -2435,7 +2435,7 @@ def city_meta(city: dict, lang: str) -> dict:
                 },
                 {
                     "q": "怎么联系最快？",
-                    "a": "电话 386-316-1848，微信 i70nyc，或通过网站表单留言——我们通常 24 小时内回复。",
+                    "a": "电话 386-316-1848，微信 we70nyc，或通过网站表单留言——我们通常 24 小时内回复。",
                 },
             ],
             "tags": [
@@ -2446,11 +2446,11 @@ def city_meta(city: dict, lang: str) -> dict:
                 "华人企业",
                 "远程SEO",
             ],
-            "cta_primary": ("免费咨询 · 微信 i70nyc", f"{p}/contact/?from=city-{city['slug']}"),
+            "cta_primary": ("免费咨询 · 微信 we70nyc", f"{p}/contact/?from=city-{city['slug']}"),
             "cta_ghost": (state_name, state_path),
             "stats": [
                 ("远程", "本城可服务"),
-                ("微信", "i70nyc"),
+                ("微信", "we70nyc"),
                 ("中英", "双语"),
                 ("24h", "内回复"),
             ],
@@ -2472,7 +2472,7 @@ def city_meta(city: dict, lang: str) -> dict:
         "lead": (
             f"Serving Chinese restaurants, salons, real estate, clinics, and professionals in "
             f"<strong>{name}</strong> ({city['state_en']}). Focus areas: {hood_str}. {angle} "
-            f"Remote delivery · WeChat <strong>i70nyc</strong> · typically within 24h — "
+            f"Remote delivery · WeChat <strong>we70nyc</strong> · typically within 24h — "
             f"see our <a href=\"{state_path}\">{city['state_en']} page</a>."
         ),
         "topics": [
@@ -2497,7 +2497,7 @@ def city_meta(city: dict, lang: str) -> dict:
             f"{name} local SEO",
             "Bilingual websites",
             "Google Maps / GBP",
-            "WeChat i70nyc",
+            "WeChat we70nyc",
             "Remote · 24h reply",
             "Google Ads",
         ],
@@ -2508,7 +2508,7 @@ def city_meta(city: dict, lang: str) -> dict:
         "faq": [
             {
                 "q": f"Can you serve {name} remotely from NYC?",
-                "a": f"Yes. We deliver for {name} and nearby areas ({hood_str}) with the same checkpoints as local NYC projects. WeChat i70nyc — typically within 24h.",
+                "a": f"Yes. We deliver for {name} and nearby areas ({hood_str}) with the same checkpoints as local NYC projects. WeChat we70nyc — typically within 24h.",
             },
             {
                 "q": f"How do you pick {name} SEO keywords?",
@@ -2516,7 +2516,7 @@ def city_meta(city: dict, lang: str) -> dict:
             },
             {
                 "q": "Fastest way to reach you?",
-                "a": "Call 386-316-1848, WeChat i70nyc, or the website form — we typically reply within 24 hours.",
+                "a": "Call 386-316-1848, WeChat we70nyc, or the website form — we typically reply within 24 hours.",
             },
         ],
         "tags": [
@@ -2527,11 +2527,11 @@ def city_meta(city: dict, lang: str) -> dict:
             "Chinese business",
             "Remote SEO",
         ],
-        "cta_primary": ("Free Consult · WeChat i70nyc", f"{p}/contact/?from=city-{city['slug']}"),
+        "cta_primary": ("Free Consult · WeChat we70nyc", f"{p}/contact/?from=city-{city['slug']}"),
         "cta_ghost": (city["state_en"], state_path),
         "stats": [
             ("Remote", "This metro"),
-            ("WeChat", "i70nyc"),
+            ("WeChat", "we70nyc"),
             ("Bilingual", "EN / 中文"),
             ("24h", "Reply"),
         ],

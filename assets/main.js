@@ -541,8 +541,8 @@
     var isEn = /^\/en(\/|$)/.test(window.location.pathname);
     var contactHref = isEn ? '/en/contact/' : '/contact/';
     var labels = isEn
-      ? { call: 'Call', wechat: 'WeChat', contact: 'Contact', copied: 'Copied: i70nyc', copyFail: 'Copy failed — i70nyc' }
-      : { call: '电话', wechat: '微信', contact: '咨询', copied: '已复制：i70nyc', copyFail: '复制失败 — i70nyc' };
+      ? { call: 'Call', wechat: 'WeChat', contact: 'Contact', copied: 'Copied: we70nyc', copyFail: 'Copy failed — we70nyc' }
+      : { call: '电话', wechat: '微信', contact: '咨询', copied: '已复制：we70nyc', copyFail: '复制失败 — we70nyc' };
 
     var dock = document.createElement('nav');
     dock.id = 'mobileDock';
@@ -556,7 +556,7 @@
       '<button type="button" class="mobile-dock-btn mobile-dock-btn--wechat" id="mobileDockWechat">' +
         '<span class="mobile-dock-icon" aria-hidden="true"></span>' +
         '<span class="mobile-dock-label">' + labels.wechat + '</span>' +
-        '<span class="mobile-dock-sub">i70nyc</span>' +
+        '<span class="mobile-dock-sub">we70nyc</span>' +
       '</button>' +
       '<a class="mobile-dock-btn mobile-dock-btn--contact" href="' + contactHref + '">' +
         '<span class="mobile-dock-icon" aria-hidden="true"></span>' +
@@ -585,7 +585,7 @@
     }
 
     function copyWechat() {
-      var id = 'i70nyc';
+      var id = 'we70nyc';
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(id).then(function () {
           showToast(labels.copied);
