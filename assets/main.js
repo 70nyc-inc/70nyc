@@ -541,8 +541,8 @@
     var isEn = /^\/en(\/|$)/.test(window.location.pathname);
     var contactHref = isEn ? '/en/contact/' : '/contact/';
     var labels = isEn
-      ? { call: 'Call', wechat: 'WeChat', contact: 'Contact', copied: 'WeChat ID copied: i70nyc', copyFail: 'Copy failed — WeChat: i70nyc' }
-      : { call: '电话', wechat: '微信', contact: '咨询', copied: '已复制微信号：i70nyc', copyFail: '复制失败，微信号：i70nyc' };
+      ? { call: 'Call', wechat: 'WeChat', contact: 'Contact', copied: 'Copied: i70nyc', copyFail: 'Copy failed — i70nyc' }
+      : { call: '电话', wechat: '微信', contact: '咨询', copied: '已复制：i70nyc', copyFail: '复制失败 — i70nyc' };
 
     var dock = document.createElement('nav');
     dock.id = 'mobileDock';

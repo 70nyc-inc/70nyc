@@ -36,8 +36,8 @@ from us_cities_data import US_CITIES  # noqa: E402
 DOMAIN = "https://70nyc.com"
 
 SITE = {
-    "style_css": "v=9",
-    "main_js": "v=13",
+    "style_css": "v=10",
+    "main_js": "v=14",
     "lang_detect_js": "v=4",
     "og_image": f"{DOMAIN}/assets/nyc-hero.png",
 }

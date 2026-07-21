@@ -3759,11 +3759,14 @@ img, video { display: block; max-width: 100%; }
   font-weight: 600;
   color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.3px;
+  text-transform: none;
 }
 
 .cta-wechat-id strong {
   color: var(--gold-light);
   font-weight: 800;
+  text-transform: none;
+  font-variant: normal;
 }
 
 /* ── Footer ── */
@@ -4632,6 +4635,8 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
   display: block;
   margin-top: 5px;
   font-size: 11px;
+  text-transform: none;
+}
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.4px;
@@ -5151,13 +5156,17 @@ html.perf-lite .faq-bg .ember:nth-of-type(n+9) {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.1;
+    text-transform: none;
   }
 
   .mobile-dock-sub {
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     color: var(--gold-light);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-variant: normal;
+    font-feature-settings: normal;
   }
 
   .mobile-dock-toast {
