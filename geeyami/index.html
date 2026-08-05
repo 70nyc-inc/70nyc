@@ -1,157 +1,89 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>GeeYami App 安装 / 下载</title>
+  <meta charset="utf-8">
+  <title>GeeYami App 安装中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #0c121c;
-      --card: rgba(255, 255, 255, 0.05);
-      --line: rgba(255, 255, 255, 0.12);
-      --text: #f5f7fb;
-      --muted: rgba(245, 247, 251, 0.62);
-      --blue: #0a84ff;
-      --blue-dark: #0066d6;
-      --gold: #c9a227;
-    }
-    * { box-sizing: border-box; }
     body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       margin: 0;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, "Noto Sans SC", Arial, sans-serif;
-      background:
-        radial-gradient(900px 420px at 15% -10%, rgba(10, 132, 255, 0.22), transparent 60%),
-        radial-gradient(700px 380px at 90% 0%, rgba(201, 162, 39, 0.14), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      padding: 40px 18px 64px;
+      padding: 40px 20px;
+      text-align: center;
     }
-    .wrap { max-width: 640px; margin: 0 auto; }
+
     h1 {
-      margin: 0 0 10px;
-      font-size: clamp(26px, 5vw, 34px);
-      letter-spacing: -0.03em;
+      font-size: 24px;
+      margin-bottom: 10px;
     }
-    .lead {
-      margin: 0 0 28px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
+
+    p {
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #666;
     }
-    .note {
-      margin: 0 0 28px;
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.55;
-    }
-    .card {
-      margin-bottom: 16px;
-      padding: 18px 16px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--card);
-    }
-    .card h2 {
-      margin: 0 0 4px;
-      font-size: 18px;
-    }
-    .card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      border: 1px solid transparent;
-    }
-    .btn-primary {
+
+    .app-link {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 25px;
+      font-size: 16px;
       color: #fff;
-      background: var(--blue);
+      background-color: #007aff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-    .btn-primary:hover { background: var(--blue-dark); }
-    .btn-ghost {
-      color: var(--text);
-      background: transparent;
-      border-color: var(--line);
+
+    .app-link:hover {
+      background-color: #005fcc;
     }
-    .btn-ghost:hover {
-      border-color: rgba(201, 162, 39, 0.5);
-      color: var(--gold);
+
+    .label {
+      font-size: 14px;
+      color: #888;
+      margin-top: 5px;
     }
-    footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: 12px;
+
+    .block {
+      margin-bottom: 40px;
     }
-    footer a { color: var(--gold); }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>GeeYami App 安装中心</h1>
-    <p class="lead">用 iPhone Safari 打开本页，点「安装」可直接安装；也可点「下载 IPA」保存安装包。</p>
-    <div class="note">
-      仅支持 iOS。安装时请用 <strong>Safari</strong> 打开本页。若提示未受信任的企业级开发者，请到「设置 → 通用 → VPN 与设备管理」中信任证书。
-    </div>
 
-    <article class="card">
-      <h2>GeeCallIn 厨房沟通</h2>
-      <p>Network Calling App</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/call/manifest.plist">安装</a>
-        <a class="btn btn-ghost" href="https://cdn.jsdelivr.net/gh/70nyc-inc/70nyc@ba6137b/geeyami/call/geecallin.ipa" download>下载 IPA</a>
-      </div>
-    </article>
+  <h1>GeeYami App 安装中心</h1>
+  <p>点击下方按钮安装不同模块的 App（仅支持 iOS）</p>
 
-    <article class="card">
-      <h2>商家订单管理</h2>
-      <p>Business Order App</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/server/manifest.plist">安装</a>
-        <a class="btn btn-ghost" href="https://cdn.jsdelivr.net/gh/70nyc-inc/70nyc@ba6137b/geeyami/server/Geeyami-Business.ipa" download>下载 IPA</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <h2>Vendor 商户版</h2>
-      <p>Vendor App</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/vendor/manifest.plist">安装</a>
-        <a class="btn btn-ghost" href="https://cdn.jsdelivr.net/gh/70nyc-inc/70nyc@ba6137b/geeyami/vendor/vendor_manage.ipa" download>下载 IPA</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <h2>GeeYami 叫货</h2>
-      <p>Supply Ordering App</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/order/manifest.plist">安装</a>
-        <a class="btn btn-ghost" href="https://cdn.jsdelivr.net/gh/70nyc-inc/70nyc@ba6137b/geeyami/order/store_order.ipa" download>下载 IPA</a>
-      </div>
-    </article>
-
-    <footer>
-      70NYC · <a href="/">返回官网</a> · 本页不对搜索引擎公开
-    </footer>
+  <div class="block">
+    <a class="app-link" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/call/manifest.plist">
+      安装 GeeCallIn 厨房沟通 App
+    </a>
+    <div class="label">Network Calling App</div>
   </div>
+
+  <div class="block">
+    <a class="app-link" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/server/manifest.plist">
+      安装 商家订单管理 App
+    </a>
+    <div class="label">Business Order App</div>
+  </div>
+
+  <div class="block">
+    <a class="app-link" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/vendor/manifest.plist">
+      安装 Vendor 商户版 App
+    </a>
+    <div class="label">Vendor App</div>
+  </div>
+
+  <div class="block">
+    <a class="app-link" href="itms-services://?action=download-manifest&url=https://70nyc.com/geeyami/order/manifest.plist">
+      安装 GeeYami 叫货 App
+    </a>
+    <div class="label">Supply Ordering App</div>
+  </div>
+
 </body>
 </html>
