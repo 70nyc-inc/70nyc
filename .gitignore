@@ -4,6 +4,3 @@
 .env
 .env.*
 __pycache__/
-
-# GeeYami IPA binaries (hosted via jsDelivr / GitHub Release; CF Pages cannot deploy them)
-geeyami/**/*.ipa

@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /geeyami/
 
 # AI / LLM site summary: https://70nyc.com/llms.txt
 Sitemap: https://70nyc.com/sitemap.xml

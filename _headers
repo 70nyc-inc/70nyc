@@ -27,15 +27,3 @@
 
 /robots.txt
   Cache-Control: public, max-age=86400
-
-/geeyami/*
-  X-Robots-Tag: noindex, nofollow
-
-/geeyami/*.plist
-  Content-Type: application/xml
-
-/geeyami/*/*.plist
-  Content-Type: application/xml
-
-/geeyami/*/*.ipa
-  Content-Type: application/octet-stream
