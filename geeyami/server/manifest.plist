@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://70nyc.com/geeyami/server/Geeyami-Business.ipa</string>
+					<string>https://cdn.jsdelivr.net/gh/70nyc-inc/70nyc/geeyami/server/Geeyami-Business.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>

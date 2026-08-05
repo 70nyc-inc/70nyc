@@ -36,11 +36,3 @@
 
 /geeyami/*/*.plist
   Content-Type: application/xml
-
-/geeyami/*.ipa
-  Content-Type: application/octet-stream
-  Content-Disposition: attachment
-
-/geeyami/*/*.ipa
-  Content-Type: application/octet-stream
-  Content-Disposition: attachment
